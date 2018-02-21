@@ -1,0 +1,72 @@
+[ 2018-02-02T15:22:06+08:00 ] ::1 /interest/index.php/__MODULE__/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:22:06+08:00 ] ::1 /interest/index.php/__MODULE__/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:23:00+08:00 ] ::1 /interest/index.php/__MODULE__/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001013s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:23:00+08:00 ] ::1 /interest/index.php/__MODULE__/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:23:07+08:00 ] ::1 /interest/index.php/__MODULE__/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:23:07+08:00 ] ::1 /interest/index.php/__MODULE__/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001480s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:24:04+08:00 ] ::1 /interest/index.php/__PUBLIC__/img/akari.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+ERR: 无法加载模块:__PUBLIC__
+
+[ 2018-02-02T15:24:51+08:00 ] ::1 /interest/index.php/__MODULE__/Article/read/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:36:16+08:00 ] ::1 /interest/index.php/__MODULE__/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:45:49+08:00 ] ::1 /interest/index.php/__MODULE__/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:45:53+08:00 ] ::1 /interest/index.php/__MODULE__/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2018-02-02T15:46:03+08:00 ] ::1 /interest/index.php/__MODULE__/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+ERR: 无法加载模块:__MODULE__
+

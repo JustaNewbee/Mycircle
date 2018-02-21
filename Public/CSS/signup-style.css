@@ -1,0 +1,54 @@
+.form-container{
+    margin: 70px auto;
+    padding: 10px 20px;
+    width: 800px;
+    min-height: 500px;
+    background: white;
+    border-radius: 5px;
+}
+.form-container  ul{
+    overflow: hidden;
+    border-bottom: solid gray 2px;
+}
+.form-container  ul li{
+    float: left;
+}
+.form-container  ul li a{
+    font-size: 30px;
+    font-weight: bold;
+    color: gray;
+    padding-left: 40px;
+    padding-right: 40px;
+    transition: 0.6s;
+}
+.form-container ul li a:hover{
+    color: rgb(217,83,79);
+}
+.form-container ul:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.form-container .user-login ,.form-container .user-signup{
+    margin:20px auto;
+    width: 300px;
+}
+.form-container .user-login .input-group{
+    margin-bottom: 20px;
+    width: 100%;
+}
+.user-btn{
+    background: rgb(39,40,34);
+}
+.form-container .user-signup .group{
+    margin-bottom: 10px;
+}
+.error_tip{
+    color: red;
+}
+.success_tip{
+    color: green;
+}
+.error_tip,.success_tip{
+    font-size: 15px;
+}

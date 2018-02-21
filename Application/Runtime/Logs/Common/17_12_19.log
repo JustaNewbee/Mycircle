@@ -1,0 +1,18 @@
+[ 2017-12-19T17:21:57+08:00 ] ::1 /interest/__MODULE__/Account/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000557s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2017-12-19T17:22:41+08:00 ] ::1 /interest/__MODULE__/Account/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+ERR: 无法加载模块:__MODULE__
+
+[ 2017-12-19T17:30:39+08:00 ] ::1 /interest/__MODULE__/Account/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000627s ]
+ERR: 无法加载模块:__MODULE__
+

@@ -1,0 +1,631 @@
+/*页面样式初始化开始*/
+body,div,p,hr{
+    margin: 0;
+    padding: 0;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+iframe{
+    border: none;
+}
+
+a,a:visited,a:hover,a:link,a:visited,a:active{
+    text-decoration: none;
+    color: white;
+}
+input,select,option,textarea{
+    outline: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.cr{
+    clear: both;
+}
+.bg{
+    background: rgba(220,220,220,0.2);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 black;
+}
+/*页面样式初始化结束*/
+.main-body{
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    position: absolute;
+    background: url("../img/body_bg.jpg") no-repeat;
+    background-position: center;
+    background-attachment:fixed;
+    background-size: cover;
+    font-family: 微软雅黑 ;
+    font-size: 20px;
+    min-width: 1280px;
+}
+.my-circle,.user-login-window,.user
+,.rank,.article,.user-menu ul li a,.circle-user{
+    transition: all 0.5s;
+}
+.my-circle:hover,.user-login-window:hover,.user:hover
+,.rank:hover,.article:hover,.user-menu ul li a:hover,.circle-user:hover{
+    box-shadow: 0 0 70px 0 black;
+    /*background: rgba(255,255,255,0.6);*/
+}
+/*导航栏样式开始*/
+
+.nav_container{
+    height: 36px;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav-menu{
+    margin-left: 15%;
+    position: relative;
+}
+.nav-menu-list{
+    margin-left: 15px;
+}
+.nav-menu-list li{
+    float: left;
+    text-align: center;
+}
+.nav-menu-list li a{
+    width: 100%;
+    color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-shadow:0 0 5px #FFFFFF;
+}
+
+.li-bottom{
+    position: absolute;
+    top: 32px;
+    left: 170px;
+    transition: left 0.5s ease;
+    border-top: 4px solid #ea6f6e;
+}
+.nav-menu-list li:nth-child(1):hover~.li-bottom{
+    left: 170px;
+    width: 40px;
+}
+.nav-menu-list li:nth-child(2):hover~.li-bottom{
+    left: 240px;
+    width: 60px;
+
+}
+.nav-menu-list li:nth-child(3):hover~.li-bottom{
+    left: 330px;
+    width: 80px;
+
+}
+.nav-menu-list li:nth-child(4):hover~.li-bottom{
+    left: 480px;
+    width: 80px;
+
+}
+.logo{
+    width: 140px;
+}
+.nav-user{
+    margin-right: 20%;
+}
+.user-status{
+    height: 36px;
+    margin-left: 10px;
+}
+.user-status ul li{
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.user-status ul li a{
+    color: black;
+    text-shadow:0 0 5px #FFFFFF;
+}
+.top-face{
+    width: 36px;
+    height: 36px;
+}
+.face:hover{
+    transform: scale(1.1,1.1);
+}
+.img-face{
+    height: 100%;
+    width: 100%;
+}
+/*导航栏样式结束*/
+/*首页内容主体开始*/
+
+.container{
+    margin: 80px auto;
+    width: 1160px;
+}
+.article-list{
+    width: 754px;
+}
+.article{
+    margin-bottom: 5px;
+    padding: 10px;
+    overflow: auto;
+}
+.article-list a,.user-menu-article a{
+    transition: all 0.7s;
+}
+.article-title a:hover{
+    animation :light-font 1.5s ease-in-out infinite alternate;
+}
+.user-menu-article a:hover{
+    animation :light-font-small 1.5s ease-in-out infinite alternate;
+}
+@keyframes light-font{
+    from{
+        text-shadow: 0 0 10px white,
+        0 0 20px white,
+        0 0 40px white,
+        0 0 60px #228DFF,
+        0 0 80px #228DFF,
+        0 0 100px #228DFF,
+        0 0 120px #228DFF;
+    }
+    to{
+        text-shadow: 0 0 5px white,
+        0 0 10px white,
+        0 0 20px white,
+        0 0 30px #228DFF,
+        0 0 40px #228DFF,
+        0 0 50px #228DFF,
+        0 0 60px #228DFF;
+
+    }
+}
+@keyframes light-font-small{
+    from{
+        text-shadow: 0 0 5px white,
+        0 0 6px white,
+        0 0 7px white,
+        0 0 7px #228DFF,
+        0 0 8px #228DFF,
+        0 0 9px #228DFF,
+        0 0 10px #228DFF;
+    }
+    to{
+        text-shadow: 0 0 1px white,
+        0 0 2px white,
+        0 0 3px white,
+        0 0 3px #228DFF,
+        0 0 4px #228DFF,
+        0 0 5px #228DFF,
+        0 0 6px #228DFF;
+    }
+}
+.article-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.article-title,.article-content,.article-info{
+    margin-left: 120px;
+}
+.line-limit,.line-limit p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.article-title{
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+.article-content{
+    font-size: 17px;
+    margin-top: 5px;
+}
+.article-content p,.article-info,.article-info a{
+    color: gray;
+    font-weight: bold;
+}
+.article-info{
+    font-size: 12px;
+    margin-top: 15px;
+}
+.article-info span{
+    margin-right: 20px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.article-info span:nth-child(1){
+    width: 100px;
+    margin-right: 10px;
+}
+
+/*首页主体内容结束*/
+/*兴趣圈内容开始*/
+.circle-container{
+    width: 65%;
+}
+.circle-nav{
+    overflow: hidden;
+}
+/*兴趣圈区导航栏效果开始*/
+.circle-nav li{
+    float: left;
+    text-align: center;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: solid white 1px;
+    padding: 0;
+    margin: 0;
+}
+.circle-nav li a{
+    width: 100%;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    position: relative;
+}
+.circle-nav li a:hover,.circle-nav li a:hover:before,.circle-nav li a:hover:after{
+    color: rgb(217,83,79);
+}
+.circle-nav li a,.circle-nav li a:before,.circle-nav li a:after{
+    transition: all 0.5s;
+}
+.circle-nav li a:before,.circle-nav li a:after{
+    position: absolute;
+}
+.circle-nav li a:before{
+    content: "\5B";
+    left: 2px;
+    opacity: 0;
+}
+.circle-nav li a:after{
+    content: "\5D";
+    right: 2px;
+    opacity: 0;
+}
+.circle-nav li a:hover:before{
+    left: -2px;
+    opacity: 1;
+}
+.circle-nav li a:hover:after{
+    right: -2px;
+    opacity: 1;
+}
+/*兴趣圈区导航栏效果结束*/
+.circle-display{
+    margin-top: 40px;
+}
+.my-circle{
+    width: 42%;
+    margin-bottom: 30px;
+    padding: 5px;
+}
+.my-circle-right{
+    margin-left: 5%;
+}
+.circle-img,.circle-img-mini{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.circle-img{
+    width: 72px;
+    height: 72px;
+}
+.circle-img-mini{
+    width: 36px;
+    height: 36px;
+}
+.circle-content{
+    margin-left: 10px;
+    width: 90px;
+}
+.circle-name{
+    font-weight: bolder;
+    width: 200px;
+}
+.circle-intro{
+    color: gray;
+}
+.circle-people,.circle-article,.circle-intro{
+    font-size: 15px;
+}
+.circle-people,.circle-article{
+    float: left;
+    margin-right: 20px;
+}
+.circle-user{
+    margin-bottom: 20px;
+}
+.circle-user,.user-login-window{
+    display: none;
+}
+/*兴趣圈内容结束*/
+/*侧边栏样式开始*/
+.sidebar{
+    width: 348px;
+    color: white;
+}
+.user-login-window{
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+.user-login-window .user-login{
+    font-size: 12px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.user-login a{
+    margin-bottom: 5px;
+}
+.user-login-window .user-login{
+    text-align: left;
+}
+.user-login a{
+    display: inline-block;
+    margin-top: 5px;
+}
+.input{
+    overflow: hidden;
+    font-size: 16px;
+    margin-bottom: -20px;
+}
+.input-field{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    margin-top: 30px;
+    padding: 3px 0;
+}
+
+.input-label{
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    position: relative;
+    top :0;
+    left: 0;
+    text-align: left;
+}
+.input-label span{
+    position: relative;
+    top : -25px;
+    left: 0;
+    display: inline-block;
+}
+@keyframes span-move {
+    50%{
+        opacity: 0;
+        transform: translate3d(5px, 0, 0);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate3d(0, -25px, 0);
+    }
+}
+.input-label::before,.input-label::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 100%;
+    border-bottom: 1px solid #FFFAFA;
+}
+.input-label::after {
+    border-bottom: 3px solid rgb(217,83,79);
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.5s ;
+}
+
+.input-field:focus+.input-label::after,.input-label-end::after {
+    transform: translate3d(0, 0, 0) ;
+}
+
+.input-field:focus+.input-label span{
+    animation: span-move 0.5s forwards;
+}
+.input-label-span-end{
+    animation: span-move  forwards;
+}
+.user-btn{
+    background: rgba(39,40,34,0.3);
+    width: 100%;
+    color: white;
+}
+.user-btn:hover,.user-btn:focus{
+    color: white;
+    background: rgb(217,83,79);
+}
+.user{
+    margin-bottom: 20px;
+    display: none;
+}
+
+
+.face{
+    border: solid 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.side-face{
+    margin: 0 auto;
+    width: 72px;
+    height: 72px;
+}
+.welcome{
+    text-align: center;
+}
+.user-menu{
+    overflow: hidden;
+    padding: 10px;
+}
+
+.user-menu-circle li{
+    float: left;
+    width: 45%;
+    margin: 5px;
+}
+.user-menu-circle li a{
+    padding: 5px;
+    float: left;
+    width: 100%;
+
+}
+.user-menu-circle li a div p{
+    font-size: 15px;
+    font-weight: bolder;
+    line-height: 36px;
+}
+
+/*侧边栏样式结束*/
+
+/*文章区开始*/
+.article-container{
+    width: 65%;
+}
+.bord{
+    padding: 20px;
+}
+.title h2{
+    text-align: center;
+    font-weight: bolder;
+}
+.content{
+    margin-top: 40px;
+    background: rgba(255,255,255,0.5);
+    padding: 20px;
+}
+/*文章区结束*/
+/*评论区*/
+.comment-container{
+    width: 65%;
+    margin-top: 40px;
+    clear: both;
+    padding: 20px;
+}
+.comment-face{
+    width: 48px;
+    height: 48px;
+    position: relative;
+    left: -48px;
+    top: -48px;
+}
+.comment-textarea{
+    width: 100%;
+    margin-top: -48px;
+}
+.shoot-btn{
+    padding: 0;
+    background: rgba(39,40,34,0.5);
+    width: 100%;
+    height: 40px;
+}
+.shoot-btn:hover,.shoot-btn:focus{
+    background: rgb(217,83,79);
+
+}
+textarea{
+    resize: none;
+    outline:none;
+}
+/*评论区*/
+/*创建兴趣圈部分开始*/
+.create-container{
+    width: 70%;
+    margin: 80px auto;
+    padding: 10px;
+}
+.circle-create{
+    width: 400px;
+}
+.circle-create h1{
+    margin: 0;
+}
+.circle_class{
+    width: 120px;
+    float: left;
+}
+.circle_class_son{
+    display: none;
+    margin-left: 20px;
+}
+.circle-create input[type=submit]{
+    width: 200px;
+}
+/*创建兴趣圈部分结束*/
+/*上传文章*/
+.edit-container{
+    width: 60%;
+    margin: 80px auto;
+    padding: 20px;
+}
+.edit-container input{
+    margin-top: 10px;
+}
+.edit-textarea{
+    width: 100%;
+    font-size: 25px;
+    height: 45px;
+    vertical-align: middle;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+#editor{
+    width: 100%;
+    margin-top: 10px;
+    background: white;
+}
+.img-uploader{
+    width: 100px;
+    height: 100px;
+    background: white;
+    text-align: center;
+    color: black;
+    display: block;
+    font-size: 50px;
+
+}
+.img-uploader span{
+    height: 100px;
+    line-height: 100px;
+}
+.img-uploader input[type=file]{
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+}
+.img-uploader:hover{
+    color: rgb(217,83,79);
+    box-shadow: 0 0 50px 0 black;
+}
+#portrait{
+    position: absolute;
+    top: 100px;
+    width: 100px;
+    height: 100px;
+}
+.edit h2{
+    margin-left: 20px;
+}
+
+
+
+
+
+
+

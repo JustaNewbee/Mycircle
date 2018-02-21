@@ -1,0 +1,30 @@
+[ 2017-12-03T11:45:05+08:00 ] ::1 /interest/Public/CSS/__PUBLIC__/img/body_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-03T11:45:23+08:00 ] ::1 /interest/Public/CSS/__PUBLIC__/img/body_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000632s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-03T11:45:59+08:00 ] ::1 /interest/Public/CSS/img/body_bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-03T13:20:31+08:00 ] ::1 /interest/Public/img/default.hp
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+ERR: 无法加载模块:Public
+
+[ 2017-12-03T13:20:49+08:00 ] ::1 /interest/Public/img/default_hp.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000645s ]
+ERR: 无法加载模块:Public
+
