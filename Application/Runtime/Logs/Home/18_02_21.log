@@ -1,0 +1,50 @@
+[ 2018-02-21T22:04:45+08:00 ] ::1 /interest/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.067891s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.090787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.090897s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002468s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002586s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.614741s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.614858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.056768s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.056859s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.060915s ]
+INFO: [ app_end ] --END-- [ RunTime:0.061019s ]
+
+[ 2018-02-21T22:04:50+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+
+[ 2018-02-21T22:04:51+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001072s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.3318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001152s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001375s ]
+
+[ 2018-02-21T22:04:51+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.1903s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.1319s ]
+

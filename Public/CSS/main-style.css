@@ -43,9 +43,10 @@ input,select,option,textarea{
     background-position: center;
     background-attachment:fixed;
     background-size: cover;
-    font-family: 微软雅黑 ;
+    font-family: Helvetica,Arial,微软雅黑;
     font-size: 20px;
     min-width: 1280px;
+    z-index:-1;
 }
 .my-circle,.user-login-window,.user
 ,.rank,.article,.user-menu ul li a,.circle-user{
@@ -506,6 +507,14 @@ input,select,option,textarea{
     background: rgba(255,255,255,0.5);
     padding: 20px;
 }
+
+.content p img {
+    max-width: 100%;
+}
+.article p img {
+    width: 100px;
+
+}
 /*文章区结束*/
 /*评论区*/
 .comment-container{
@@ -530,10 +539,11 @@ input,select,option,textarea{
     background: rgba(39,40,34,0.5);
     width: 100%;
     height: 40px;
+    color: white;
 }
 .shoot-btn:hover,.shoot-btn:focus{
     background: rgb(217,83,79);
-
+    color: white;
 }
 textarea{
     resize: none;
@@ -566,20 +576,32 @@ textarea{
 /*创建兴趣圈部分结束*/
 /*上传文章*/
 .edit-container{
-    width: 60%;
+    width: 768px;
     margin: 80px auto;
     padding: 20px;
 }
-.edit-container input{
-    margin-top: 10px;
+.edit-input-field{
+    float: left;
+    width: 608px;
+    margin-left: 20px;
 }
-.edit-textarea{
+.edit:after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+.edit-input-field .edit-input-title {
     width: 100%;
     font-size: 25px;
     height: 45px;
-    vertical-align: middle;
-    margin-top: 10px;
     font-weight: bolder;
+}
+.edit-input-field .article_class {
+    width: 150px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    height: 45px;
 }
 #editor{
     width: 100%;
@@ -592,9 +614,11 @@ textarea{
     background: white;
     text-align: center;
     color: black;
-    display: block;
+    display: inline-block;
     font-size: 50px;
-
+    float: left;
+    border-radius: 5px;
+    transition: ease-in-out .25s;
 }
 .img-uploader span{
     height: 100px;
@@ -606,22 +630,152 @@ textarea{
     height: 100px;
     opacity: 0;
     z-index: 1;
-    position: absolute;
-    top: 100px;
+    position: relative;
+    top:-100px;
 }
 .img-uploader:hover{
     color: rgb(217,83,79);
     box-shadow: 0 0 50px 0 black;
 }
 #portrait{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    top:-200px;
+}
+/* 气泡背景 */
+.bg-bubbles {
     position: absolute;
-    top: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+@keyframes square {
+    0%{
+        opacity: 0;
+        transform:  rotate(45deg);
+        top: 95%;
+    }
+    25%{
+        transform: rotate(90deg);
+        opacity: 0.5;
+        top: 65%;
+    }
+    50%{
+        transform:  rotate(135deg);
+        opacity: 0.75;
+        top: 35%;
+    }
+    100%{
+        opacity: 0;
+        transform:  rotate(180deg);
+        top: 5%;
+    }
+}
+.bg-bubbles li {
+    position:  absolute;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255,255,255,0.15);
+    animation: square 15s infinite linear;
+    opacity: 0;
+}
+.bg-bubbles li:nth-child(1){
+    left: 10%;
+    animation-duration: 13s;
+}
+.bg-bubbles li:nth-child(2){
+    left: 20%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 3s;
+}
+.bg-bubbles li:nth-child(3){
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+.bg-bubbles li:nth-child(4){
+    left: 40%;
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+    animation-delay: 5s;
+    animation-duration: 7s;
+}
+.bg-bubbles li:nth-child(5){
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+.bg-bubbles li:nth-child(6){
+    left: 60%;
+    animation-delay: 4s;
+    animation-duration: 6s;
+}
+.bg-bubbles li:nth-child(7){
+    left: 70%;
     width: 100px;
     height: 100px;
 }
-.edit h2{
-    margin-left: 20px;
+.bg-bubbles li:nth-child(8){
+    left: 80%;
+    width: 120px;
+    height: 120px;
+    animation-duration: 10s;
 }
+.bg-bubbles li:nth-child(9){
+    left: 90%
+}
+.bg-bubbles li:nth-child(10){
+    left: 95%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1s;
+}
+.search {
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    width: 150px;
+    height: 100%;
+    padding: 5px;
+    border-bottom: solid 1px;
+
+}
+.search-field {
+    float: left;
+    height: 100%;
+    color: #fff;
+}
+.search-field button {
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    vertical-align: middle;
+    background: transparent;
+}
+
+.search-field ::-webkit-input-placeholder{
+    color: #fff;
+}
+.search-field ::-moz-placeholder{
+    color: #fff;
+}
+.search-placeholder{
+    z-index:-1;
+    position: absolute;
+    top: 0;
+    color: white;
+}
+
+
 
 
 

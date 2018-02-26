@@ -1,0 +1,48 @@
+[ 2018-02-26T21:24:43+08:00 ] ::1 /interest/Public/fonts/fontawesome-webfont.woff2?v=4.7.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T21:24:43+08:00 ] ::1 /interest/Public/fonts/fontawesome-webfont.woff?v=4.7.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000903s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T21:24:43+08:00 ] ::1 /interest/Public/fonts/fontawesome-webfont.ttf?v=4.7.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004235s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T21:24:45+08:00 ] ::1 /interest/Public/fonts/fontawesome-webfont.woff2?v=4.7.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000753s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T21:24:45+08:00 ] ::1 /interest/Public/fonts/fontawesome-webfont.woff?v=4.7.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T21:24:46+08:00 ] ::1 /interest/Public/fonts/fontawesome-webfont.ttf?v=4.7.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T22:04:44+08:00 ] ::1 /interest/Public/js/my_circle.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+ERR: 无法加载模块:Public
+
+[ 2018-02-26T22:04:45+08:00 ] ::1 /interest/Public/js/my_circle.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+ERR: 无法加载模块:Public
+

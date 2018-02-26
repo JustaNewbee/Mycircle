@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo ($title); ?></title>
+    <title><?php echo ($title); ?>-MyiCircle</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=2.0, user-scalable=no" />
     <link href="/interest/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/interest/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">

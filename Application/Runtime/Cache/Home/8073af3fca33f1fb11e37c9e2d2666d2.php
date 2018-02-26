@@ -9,18 +9,10 @@
     <script src="/interest/Public/js/jquery-3.2.1.js"></script>
     <script src="/interest/Public/ueditor/ueditor.config.js"></script>
     <script src="/interest/Public/ueditor/ueditor.all.js"></script>
+    <script src="/interest/Public/js/my_circle.js"></script>
     <script>
-        $(function () {
-            $.ajax({
-                type:"post",
-                url:"/interest/index.php/Home/Account/check_login",
-                success:function(confirm){
-
-                },error:function () {
-                    alert("error");
-                }
-            });
-        })
+        var MODULE ="/interest/index.php/Home";
+        var PUBLIC ="/interest/Public";
     </script>
 </head>
 <body>
@@ -31,9 +23,8 @@
                 <img src="/interest/Public/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
                     <li><a href="/interest/index.php/Home">首页</a></li>
-                    <li><a href="/interest/index.php/Home/Circle/circle_index">兴趣圈</a></li>
-                    <!--<li>我的文章</li>-->
-                    <!--<li>我的收藏</li>-->
+                    <li><a href="/interest/index.php/Home/Circle/">兴趣圈</a></li>
+
                     <li class="li-bottom"></li>
                 </ul>
             </div>
@@ -46,28 +37,29 @@
                                 <img src="/interest/Public/img/akari.jpg" class="img-face" alt="头像">
                             </div>
                         </a></li>
-                        <!--<li><a href="#">登录</a></li>-->
-                        <!--<li><a href="#">注册</a></li>-->
+
                         <li><input type="button" class="btn btn-write" value="发表"></li>
                     </ul>
                 </div>
-                <!--<div class="test bg">-->
-                <!--123333-->
-                <!--</div>-->
+
             </div>
 
         </div>
     </header>
     <div class="edit-container bg">
         <div class="edit">
-            <a id="img-uploader" class="img-uploader fl"  >
+            <a id="img-uploader" class="img-uploader "  >
                 <span class="glyphicon glyphicon-upload"></span>
-                <input type="file" id="upload-btn" name="" >
+                <input type="file" id="upload-btn" name="user-portrait" >
+                <img  id="portrait" >
             </a>
-            <h2 class="fl">请在此上传封面</h2>
-            <img  id="portrait" >
-            <textarea class="edit-textarea" placeholder="请在此输入20字以内的标题" maxlength="20"></textarea>
-            <script id="editor" name="content" type="text/plain" ></script>
+            <div class="edit-input-field">
+                <input type="text" class="form-control edit-input-title" placeholder="请在此输入20字以内的标题" maxlength="20" />
+                <input type="text" id="article_class" class="form-control article_class" maxlength="10"/>
+                <input type="button" value="+" class="form-control">
+            </div>
+
+            <!--<script id="editor" name="content" type="text/plain" ></script>-->
         </div>
     </div>
 </div>
@@ -92,6 +84,16 @@
         autoHeightEnabled: true,
         autoFloatEnabled: true
     });
+    ue.execCommand( 'justify', 'center');
+    ue.addListener('afterExecCommand',function(t, e, arg){
+        afterUploadImage(e);
+    });
+    function afterUploadImage() {
+        if (arguments[0] == "inserthtml" || arguments[0] == "insertimage") {
+            ue.execCommand('insertparagraph');
+
+        }
+    }
     $(".btn-write").click(function () {
         var title = $(".edit-textarea");
         if(title.val()==""){
@@ -100,12 +102,15 @@
         }else if(!ue.hasContents()){
             alert("请输入正文内容");
             ue.focus();
-        }else{
-//            alert(ue.getContent());
+        }else if(!checkContent(ue.getContent())){
+            alert("正文不能为纯图片");
+            ue.focus();
+        }
+        else{
             $.ajax({
                 type:"post",
                 url:"/interest/index.php/Home/Article/article_submit",
-                data:{content:ue.getContent(),title:title.val(),circle_name:"<?php echo ($circle_name); ?>"},
+                data:{content:ue.getContent(),title:title.val(),circle_name:"<?php echo ($circle_name); ?>",circle_id:getString("circle_id")},
                 success:function () {
                     alert("发表成功");
                     window.location.reload();
@@ -114,7 +119,23 @@
                 }
             })
         }
+        function checkContent(text) {
+            var start = text.indexOf("<p>");
+            var end = text.indexOf("</p>");
 
+            while (start!=-1) {
+                start = start + 3;
+                var txt = text.substring(start, end);
+                start = text.indexOf("<p>", end);
+                end = text.indexOf("</p>", start);
+                if(txt.search("<br/>")!=-1) continue;
+                if(txt.search("<img") == -1 && txt.search('"/>') == -1 ){
+                    return true;
+                }
+            }
+            //alert(text);
+            return false;
+        }
     })
 </script>
 

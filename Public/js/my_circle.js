@@ -1,5 +1,6 @@
 $(function () {
     getLoginState();
+    searchPlaceholder();
     $(".user-login").submit(function () {
         $.ajax({
             type:"post",
@@ -48,5 +49,31 @@ function getLoginState() {
             alert("check error");
         }
     });
+
+}
+function searchPlaceholder() {
+        var placeholder_txt = "搜索文章或者兴趣圈";
+        var temp = "";
+        var i = 0;
+        setTimeout(function(){inputPlaceholder(i,temp)},400);
+        function inputPlaceholder(i,temp) {
+            temp = temp + placeholder_txt[i];
+            $(".search").attr("placeholder",temp );
+            i++;
+            console.log(i);
+            if(i<=placeholder_txt.length){
+                setTimeout(function(){inputPlaceholder(i,temp)},400);
+            }
+            else{
+                setTimeout(clearPlaceholder(),400);
+            }
+
+        }
+        function clearPlaceholder() {
+            $(".search").attr("placeholder","");
+            setTimeout(function(){inputPlaceholder(0,"")},400);
+        }
+
+
 
 }

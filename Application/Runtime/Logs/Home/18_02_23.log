@@ -1,0 +1,2976 @@
+[ 2018-02-23T11:59:41+08:00 ] ::1 /interest/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.023091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.038840s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.038950s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000239s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000342s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.201771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.201967s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.022300s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022381s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.019258s ]
+INFO: [ app_end ] --END-- [ RunTime:0.019349s ]
+
+[ 2018-02-23T11:59:42+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001107s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001209s ]
+
+[ 2018-02-23T11:59:42+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000063s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000658s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000934s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0635s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000939s ]
+
+[ 2018-02-23T11:59:43+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003642s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0212s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0264s ]
+
+[ 2018-02-23T11:59:53+08:00 ] ::1 /interest/index.php/Home/Article/read/7
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0610s ]
+SQL: SELECT * FROM `my_article` WHERE `article_id` = 7 LIMIT 1   [ RunTime:0.0103s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.057607s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057725s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2018-02-23T11:59:53+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000884s ]
+
+[ 2018-02-23T11:59:58+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000930s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001028s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000209s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080651s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000972s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006826s ]
+
+[ 2018-02-23T11:59:59+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000863s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000963s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0745s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0387s ]
+
+[ 2018-02-23T11:59:59+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+
+[ 2018-02-23T11:59:59+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0435s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001079s ]
+
+[ 2018-02-23T11:59:59+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000865s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001093s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0609s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0475s ]
+
+[ 2018-02-23T12:00:04+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001004s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001330s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013649s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014047s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002031s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002229s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001675s ]
+
+[ 2018-02-23T12:00:04+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000973s ]
+
+[ 2018-02-23T12:00:04+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1039s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001502s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001679s ]
+
+[ 2018-02-23T12:00:04+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000765s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.1090s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0337s ]
+
+[ 2018-02-23T12:00:11+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000575s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000881s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020573s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000800s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001242s ]
+
+[ 2018-02-23T12:00:11+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001007s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0468s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T12:00:12+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+
+[ 2018-02-23T12:00:12+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001755s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001095s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001218s ]
+
+[ 2018-02-23T12:00:12+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000892s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0404s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0547s ]
+
+[ 2018-02-23T12:00:13+08:00 ] ::1 /interest/index.php/Home/Circle/?category=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000057s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001360s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014625s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2018-02-23T12:00:13+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display?category=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001251s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001356s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0549s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class='9' [ RunTime:0.0025s ]
+
+[ 2018-02-23T12:00:14+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+
+[ 2018-02-23T12:00:14+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000606s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000938s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001021s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0588s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0351s ]
+
+[ 2018-02-23T12:00:14+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001025s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0456s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001364s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001459s ]
+
+[ 2018-02-23T12:00:16+08:00 ] ::1 /interest/index.php/Home/Circle/?category=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001288s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000203s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018093s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018195s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000506s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000903s ]
+
+[ 2018-02-23T12:00:17+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display?category=10
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1111s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class='10' [ RunTime:0.0351s ]
+
+[ 2018-02-23T12:00:17+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000942s ]
+
+[ 2018-02-23T12:00:17+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000931s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0832s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2018-02-23T12:00:17+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001052s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.006099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006194s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0379s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0452s ]
+
+[ 2018-02-23T12:00:18+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027465s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027559s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000906s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000992s ]
+
+[ 2018-02-23T12:00:18+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001127s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001342s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1389s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0020s ]
+
+[ 2018-02-23T12:00:18+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+
+[ 2018-02-23T12:00:19+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000860s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001540s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001658s ]
+
+[ 2018-02-23T12:00:19+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000620s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000920s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0335s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0344s ]
+
+[ 2018-02-23T12:00:20+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000767s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011545s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001465s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001546s ]
+
+[ 2018-02-23T12:00:20+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000574s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000777s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+
+[ 2018-02-23T12:00:20+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000989s ]
+
+[ 2018-02-23T12:00:20+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000841s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000940s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0297s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0219s ]
+
+[ 2018-02-23T12:00:23+08:00 ] ::1 /interest/index.php/Home/Account/user_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0729s ]
+SQL: SELECT * FROM `my_user` WHERE ( username='xiaohei' and password='123456' ) LIMIT 1   [ RunTime:0.0231s ]
+
+[ 2018-02-23T12:00:23+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000490s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001143s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001237s ]
+
+[ 2018-02-23T12:00:24+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000892s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000981s ]
+
+[ 2018-02-23T12:00:24+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000893s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0541s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0209s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0134s ]
+
+[ 2018-02-23T12:00:24+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000784s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001015s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0514s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0324s ]
+
+[ 2018-02-23T15:42:07+08:00 ] ::1 /interest/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.028425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.034221s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.034341s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.004505s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.004622s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.196935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.197048s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.027345s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.027429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.043075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.043205s ]
+
+[ 2018-02-23T15:42:08+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000945s ]
+
+[ 2018-02-23T15:42:09+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001049s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001145s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001203s ]
+
+[ 2018-02-23T15:42:09+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001272s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001387s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0275s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0331s ]
+
+[ 2018-02-23T15:46:34+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000107s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001054s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000220s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039148s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039263s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000776s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001029s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001108s ]
+
+[ 2018-02-23T15:46:35+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000802s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0565s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0012s ]
+
+[ 2018-02-23T15:46:35+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001077s ]
+
+[ 2018-02-23T15:46:35+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000738s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001094s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001196s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001197s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001295s ]
+
+[ 2018-02-23T15:46:35+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000839s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001208s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001311s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0562s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0807s ]
+
+[ 2018-02-23T15:46:36+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000635s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000973s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0637s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092147s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000940s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001017s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002098s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002198s ]
+
+[ 2018-02-23T15:46:37+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+
+[ 2018-02-23T15:46:40+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000636s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001100s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031807s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000846s ]
+
+[ 2018-02-23T15:46:41+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000872s ]
+
+[ 2018-02-23T15:46:41+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000650s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0594s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000918s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2018-02-23T15:46:41+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001059s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0528s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0445s ]
+
+[ 2018-02-23T15:49:58+08:00 ] ::1 /interest/index.php/Home/account/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000979s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001069s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046679s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001244s ]
+
+[ 2018-02-23T15:49:59+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000669s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001166s ]
+
+[ 2018-02-23T15:50:26+08:00 ] ::1 /interest/index.php/Home/account/register.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001181s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000701s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000764s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001035s ]
+
+[ 2018-02-23T15:50:26+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+
+[ 2018-02-23T15:50:27+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000788s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000879s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014153s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2018-02-23T15:50:28+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+
+[ 2018-02-23T15:50:28+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000894s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001249s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001334s ]
+
+[ 2018-02-23T15:50:28+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004796s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001021s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0277s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0261s ]
+
+[ 2018-02-23T15:50:48+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000698s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001076s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019984s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020087s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000793s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003859s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003939s ]
+
+[ 2018-02-23T15:50:49+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000853s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0621s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T15:50:49+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000901s ]
+
+[ 2018-02-23T15:50:49+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000589s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0424s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002218s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002465s ]
+
+[ 2018-02-23T15:50:49+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001046s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001146s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0283s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0282s ]
+
+[ 2018-02-23T15:50:52+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001653s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015485s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001038s ]
+
+[ 2018-02-23T15:50:52+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001620s ]
+
+[ 2018-02-23T15:50:52+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000876s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000916s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000998s ]
+
+[ 2018-02-23T15:50:52+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000676s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0290s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0263s ]
+
+[ 2018-02-23T15:50:54+08:00 ] ::1 /interest/index.php/Home/Article/read/5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000576s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0621s ]
+SQL: SELECT * FROM `my_article` WHERE `article_id` = 5 LIMIT 1   [ RunTime:0.0030s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.053646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.053769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000927s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001046s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001577s ]
+
+[ 2018-02-23T15:50:54+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+
+[ 2018-02-23T15:51:00+08:00 ] ::1 /interest/index.php/Home/Article/read/6
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000602s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0676s ]
+SQL: SELECT * FROM `my_article` WHERE `article_id` = 6 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015057s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015157s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000543s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001156s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001230s ]
+
+[ 2018-02-23T15:51:01+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000630s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+
+[ 2018-02-23T15:51:06+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001128s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001217s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2018-02-23T15:51:06+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000044s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001033s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+
+[ 2018-02-23T15:51:07+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000578s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000804s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000890s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0535s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000926s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001012s ]
+
+[ 2018-02-23T15:51:07+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000590s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0505s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0418s ]
+
+[ 2018-02-23T15:51:08+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000874s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000994s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000163s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000313s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015289s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015397s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2018-02-23T15:51:08+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000898s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0657s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0008s ]
+
+[ 2018-02-23T15:51:08+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000882s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+
+[ 2018-02-23T15:51:08+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000850s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000941s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001445s ]
+
+[ 2018-02-23T15:51:09+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000873s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000891s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0311s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0283s ]
+
+[ 2018-02-23T15:51:10+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000180s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000849s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001346s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0659s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0018s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015711s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000803s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001657s ]
+
+[ 2018-02-23T15:51:10+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001170s ]
+
+[ 2018-02-23T15:51:12+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000607s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0585s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.123728s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123844s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000565s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001135s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001209s ]
+
+[ 2018-02-23T15:51:12+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000706s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000939s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001063s ]
+
+[ 2018-02-23T15:53:47+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000810s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003741s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003859s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0851s ]
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+
+[ 2018-02-23T15:53:52+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001117s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001200s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0311s ]
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+
+[ 2018-02-23T15:53:57+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000688s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001369s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001606s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000539s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056308s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056422s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000983s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001353s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001435s ]
+
+[ 2018-02-23T15:53:58+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001169s ]
+
+[ 2018-02-23T15:53:58+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001066s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1035s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001105s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001186s ]
+
+[ 2018-02-23T15:53:58+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000962s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001019s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001119s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0459s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0286s ]
+
+[ 2018-02-23T15:56:03+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001075s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0268s ]
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+
+[ 2018-02-23T15:56:12+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002534s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0301s ]
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<img src=\"/upload/article/image/20180223/1519372354100139.jpg\" title=\"1519372354100139.jpg\" alt=\"b1.jpg\"/><p><br/></p><img src=\"/upload/article/image/20180223/1519372359938996.jpg\" title=\"1519372359938996.jpg\" alt=\"b2.jpg\"/><p><img src=\"/upload/article/image/20180223/1519372389688637.jpg\" title=\"1519372389688637.jpg\" alt=\"b3.jpg\"/></p><p><img src=\"/upload/article/image/20180223/1519372414905819.jpg\" title=\"1519372414905819.jpg\" alt=\"b4.jpg\"/></p><p>222222233333333</p>','test','热爱学习',NULL,'2018-02-23')
+
+[ 2018-02-23T16:01:52+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025101s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.040623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.040775s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0415s ]
+NOTIC: [8] Undefined index: content C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 31 行.
+NOTIC: [8] Undefined index: title C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 32 行.
+NOTIC: [8] Undefined index: circle_name C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 33 行.
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+
+[ 2018-02-23T16:02:54+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001191s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001303s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0777s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0026s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.239282s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.239433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.022774s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022854s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015224s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015311s ]
+
+[ 2018-02-23T16:02:55+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000989s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001123s ]
+
+[ 2018-02-23T16:03:30+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0805s ]
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<p><img src=\"/upload/article/image/20180223/1519372990490562.jpg\" title=\"1519372990490562.jpg\" alt=\"b4.jpg\"/><img src=\"/upload/article/image/20180223/1519372995551581.jpg\" title=\"1519372995551581.jpg\" alt=\"b3.jpg\"/></p><p>testttststes</p>','teteest','热爱学习',NULL,'2018-02-23')
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<p><img src=\"/upload/article/image/20180223/1519372990490562.jpg\" title=\"1519372990490562.jpg\" alt=\"b4.jpg\"/><img src=\"/upload/article/image/20180223/1519372995551581.jpg\" title=\"1519372995551581.jpg\" alt=\"b3.jpg\"/></p><p>testttststes</p>','teteest','热爱学习',NULL,'2018-02-23')
+
+[ 2018-02-23T16:06:43+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000709s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001718s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0571s ]
+NOTIC: [8] Undefined index: content C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 31 行.
+NOTIC: [8] Undefined index: title C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 32 行.
+NOTIC: [8] Undefined index: circle_name C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 33 行.
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+
+[ 2018-02-23T16:07:15+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000957s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001266s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001371s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0525s ]
+NOTIC: [8] Undefined index: content C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 31 行.
+NOTIC: [8] Undefined index: title C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 32 行.
+NOTIC: [8] Undefined index: circle_name C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 33 行.
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+
+[ 2018-02-23T16:10:42+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001185s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0411s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073165s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000685s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000747s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001025s ]
+
+[ 2018-02-23T16:10:43+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000930s ]
+
+[ 2018-02-23T16:10:50+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000843s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0252s ]
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<p>t&#39;t&#39;t&#39;t&#39;t&#39;t&#39;tt&#39;t&#39;t&#39;t&#39;t&#39;t&#39;t&#39;t</p>','t\'t\'t\'t','热爱学习',NULL,'2018-02-23')
+ERR: 1048:Column 'editor' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<p>t&#39;t&#39;t&#39;t&#39;t&#39;t&#39;tt&#39;t&#39;t&#39;t&#39;t&#39;t&#39;t&#39;t</p>','t\'t\'t\'t','热爱学习',NULL,'2018-02-23')
+
+[ 2018-02-23T16:11:00+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000592s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000915s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0840s ]
+NOTIC: [8] Undefined index: content C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 31 行.
+NOTIC: [8] Undefined index: title C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 32 行.
+NOTIC: [8] Undefined index: circle_name C:\xampp\htdocs\interest\Application\Home\Controller\ArticleController.class.php 第 33 行.
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+ERR: 1048:Column 'content' cannot be null
+ [ SQL语句 ] : INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES (NULL,NULL,NULL,NULL,'2018-02-23')
+
+[ 2018-02-23T16:11:26+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000857s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000961s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000211s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000359s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.085258s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.085357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000778s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2018-02-23T16:11:27+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000622s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000810s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000900s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1688s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0014s ]
+
+[ 2018-02-23T16:11:27+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001227s ]
+
+[ 2018-02-23T16:11:27+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000675s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001920s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001410s ]
+
+[ 2018-02-23T16:11:27+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001045s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0937s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.2107s ]
+
+[ 2018-02-23T16:11:40+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000644s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000947s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001077s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001153s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001031s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001110s ]
+
+[ 2018-02-23T16:11:41+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001391s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1303s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:11:42+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000910s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.1434s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0760s ]
+
+[ 2018-02-23T16:11:42+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014244s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014341s ]
+
+[ 2018-02-23T16:11:42+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000743s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001230s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001344s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0784s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001475s ]
+
+[ 2018-02-23T16:11:46+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001648s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.1038s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0762s ]
+
+[ 2018-02-23T16:11:59+08:00 ] ::1 /interest/index.php/Home/Circle/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000884s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001297s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001408s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0535s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.107556s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108818s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000830s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000900s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001184s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2018-02-23T16:12:00+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003817s ]
+
+[ 2018-02-23T16:12:22+08:00 ] ::1 /interest/index.php/Home/Account/user_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001082s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0439s ]
+SQL: SELECT * FROM `my_user` WHERE ( username='xiaohei' and password='123456' ) LIMIT 1   [ RunTime:0.0008s ]
+
+[ 2018-02-23T16:12:22+08:00 ] ::1 /interest/index.php/Home?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001154s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001251s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.090504s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.090602s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000820s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001151s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001307s ]
+
+[ 2018-02-23T16:12:23+08:00 ] ::1 /interest/index.php/Home
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003961s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001142s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001246s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015510s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015673s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001907s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001990s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001753s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001876s ]
+
+[ 2018-02-23T16:12:23+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001294s ]
+
+[ 2018-02-23T16:12:23+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001199s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001075s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001163s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0866s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0100s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0010s ]
+
+[ 2018-02-23T16:12:23+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0470s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0580s ]
+
+[ 2018-02-23T16:12:26+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000050s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001266s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012138s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000517s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000775s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2018-02-23T16:12:26+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1238s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0308s ]
+
+[ 2018-02-23T16:12:26+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000677s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001125s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001221s ]
+
+[ 2018-02-23T16:12:27+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0592s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0014s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0011s ]
+
+[ 2018-02-23T16:12:27+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0576s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0457s ]
+
+[ 2018-02-23T16:12:30+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0675s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015134s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000556s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000898s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000968s ]
+
+[ 2018-02-23T16:12:30+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000959s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001082s ]
+
+[ 2018-02-23T16:12:32+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001200s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0528s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073718s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073825s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000774s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001496s ]
+
+[ 2018-02-23T16:12:32+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000667s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+
+[ 2018-02-23T16:13:10+08:00 ] ::1 /interest/index.php/Home/Article/article_submit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001015s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002429s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002517s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0328s ]
+SQL: INSERT INTO `my_article` (`content`,`title`,`circle`,`editor`,`publish_date`) VALUES ('<p><img src=\"/upload/article/image/20180223/1519373569100324.jpg\" title=\"1519373569100324.jpg\" alt=\"b1.jpg\"/><img src=\"/upload/article/image/20180223/1519373574758736.jpg\" title=\"1519373574758736.jpg\" alt=\"b2.jpg\"/><img src=\"/upload/article/image/20180223/1519373579246399.jpg\" title=\"1519373579246399.jpg\" alt=\"b3.jpg\"/><img src=\"/upload/article/image/20180223/1519373587870791.jpg\" title=\"1519373587870791.jpg\" alt=\"b4.jpg\"/></p>','mmmmmmmmmmmmmmmmmmm','热爱学习','xiaohei','2018-02-23') [ RunTime:0.0119s ]
+SQL: SHOW COLUMNS FROM `my_write` [ RunTime:0.0219s ]
+SQL: INSERT INTO `my_write` (`w_aid`,`w_uid`) VALUES ('8','10000') [ RunTime:0.0051s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002880s ]
+
+[ 2018-02-23T16:13:11+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000158s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004137s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002795s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0361s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024618s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002194s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002716s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002794s ]
+
+[ 2018-02-23T16:13:12+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002903s ]
+
+[ 2018-02-23T16:13:14+08:00 ] ::1 /interest/index.php/Home/Circle/circle_index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001059s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001164s ]
+ERR: 模板不存在:./Application/Home/View/Circle/circle_index.html
+
+[ 2018-02-23T16:13:53+08:00 ] ::1 /interest/index.php/Home/Circle/circle_index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+ERR: 模板不存在:./Application/Home/View/Circle/circle_index.html
+
+[ 2018-02-23T16:13:57+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001839s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0407s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013563s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013680s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000860s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001384s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001472s ]
+
+[ 2018-02-23T16:13:58+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000711s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000871s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000964s ]
+
+[ 2018-02-23T16:13:59+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000585s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000860s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000956s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000503s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2018-02-23T16:13:59+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000621s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001219s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0357s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0007s ]
+
+[ 2018-02-23T16:13:59+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000686s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002942s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003038s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0306s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0008s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0008s ]
+
+[ 2018-02-23T16:13:59+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0359s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.1260s ]
+
+[ 2018-02-23T16:13:59+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.035308s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035405s ]
+
+[ 2018-02-23T16:14:01+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000872s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001549s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019977s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004197s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004278s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001269s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001348s ]
+
+[ 2018-02-23T16:14:01+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000689s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001096s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001187s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0508s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0059s ]
+
+[ 2018-02-23T16:14:01+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000762s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001187s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001289s ]
+
+[ 2018-02-23T16:14:01+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002630s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0531s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0006s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0005s ]
+
+[ 2018-02-23T16:14:01+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0306s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0285s ]
+
+[ 2018-02-23T16:14:03+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000735s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000896s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000998s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0633s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003369s ]
+
+[ 2018-02-23T16:14:03+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000838s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+
+[ 2018-02-23T16:14:04+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001140s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001293s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1414s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000098s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087118s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000558s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000797s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000867s ]
+
+[ 2018-02-23T16:14:05+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000848s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000944s ]
+
+[ 2018-02-23T16:14:06+08:00 ] ::1 /interest/index.php/Home/Circle/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001138s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000197s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.027036s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000886s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001222s ]
+
+[ 2018-02-23T16:14:07+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000795s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001413s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1012s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:14:07+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000665s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002279s ]
+
+[ 2018-02-23T16:14:07+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001083s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001168s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0578s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0010s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:14:07+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000758s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001462s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0223s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0259s ]
+
+[ 2018-02-23T16:14:14+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001507s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034119s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034368s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001780s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001988s ]
+
+[ 2018-02-23T16:14:15+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000680s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001319s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0621s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:14:15+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001118s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001249s ]
+
+[ 2018-02-23T16:14:15+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0593s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0099s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0021s ]
+
+[ 2018-02-23T16:14:15+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000754s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001679s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001786s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0458s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0320s ]
+
+[ 2018-02-23T16:14:17+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001120s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001224s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1010s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0056s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019348s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000763s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001104s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001176s ]
+
+[ 2018-02-23T16:14:18+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000914s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+
+[ 2018-02-23T16:14:21+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001063s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001153s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025378s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025477s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000786s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000852s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001314s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001395s ]
+
+[ 2018-02-23T16:14:22+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001174s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0558s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0014s ]
+
+[ 2018-02-23T16:14:22+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+
+[ 2018-02-23T16:14:22+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001554s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0514s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0007s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:14:22+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000662s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001814s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001930s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0452s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0295s ]
+
+[ 2018-02-23T16:14:36+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003568s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000249s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045362s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045473s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000947s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001016s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001176s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001251s ]
+
+[ 2018-02-23T16:14:36+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000875s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001283s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001390s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.2262s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0102s ]
+
+[ 2018-02-23T16:14:37+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000968s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001155s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001253s ]
+
+[ 2018-02-23T16:14:37+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000906s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000794s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000885s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0579s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0019s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0010s ]
+
+[ 2018-02-23T16:14:37+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000702s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001214s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0773s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0858s ]
+
+[ 2018-02-23T16:14:37+08:00 ] ::1 /interest/index.php/Home/Circle/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001857s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0870s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0022s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000158s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000314s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024891s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001027s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001670s ]
+
+[ 2018-02-23T16:14:38+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000801s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001225s ]
+
+[ 2018-02-23T16:14:41+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001442s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.084729s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.084837s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000879s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001183s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001261s ]
+
+[ 2018-02-23T16:14:42+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000912s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001519s ]
+
+[ 2018-02-23T16:14:44+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000076s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001665s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001832s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0563s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000105s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019861s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019976s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000840s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001605s ]
+
+[ 2018-02-23T16:14:44+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001212s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001527s ]
+
+[ 2018-02-23T16:14:51+08:00 ] ::1 /interest/index.php/Home/Circle/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001746s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000193s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022088s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022275s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000841s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001100s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001167s ]
+
+[ 2018-02-23T16:14:51+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001152s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001252s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0965s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:14:51+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000821s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000908s ]
+
+[ 2018-02-23T16:14:52+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001029s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001131s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001233s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0609s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0414s ]
+
+[ 2018-02-23T16:14:52+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002019s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0376s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0006s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0005s ]
+
+[ 2018-02-23T16:14:54+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001143s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001244s ]
+
+[ 2018-02-23T16:15:37+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000732s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001147s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001254s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0395s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 1 LIMIT 1   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083915s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001239s ]
+
+[ 2018-02-23T16:15:38+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000715s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001346s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001479s ]
+
+[ 2018-02-23T16:15:43+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001230s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.1959s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0008s ]
+
+[ 2018-02-23T16:15:43+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000847s ]
+
+[ 2018-02-23T16:15:43+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001106s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001198s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1136s ]
+SQL: SELECT circle_id,circle_name FROM my_user 
+            JOIN my_relation on my_relation.r_uid=my_user.uid 
+            JOIN my_circle on my_relation.r_cid=my_circle.circle_id
+            where uid = '10000' [ RunTime:0.0006s ]
+SQL: SELECT title ,article_id FROM my_user 
+                              JOIN my_write ON my_user.uid = my_write.w_uid 
+                              JOIN my_article ON my_article.article_id = my_write.w_aid
+                              WHERE uid = '10000' [ RunTime:0.0005s ]
+
+[ 2018-02-23T16:15:44+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000712s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001038s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001137s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0231s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0331s ]
+
+[ 2018-02-23T16:15:45+08:00 ] ::1 /interest/index.php/Home/Circle/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000624s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001397s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0674s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000113s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000216s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022294s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001658s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001750s ]
+
+[ 2018-02-23T16:15:45+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000651s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+
+[ 2018-02-23T16:15:47+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000831s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000916s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001024s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0628s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000151s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000257s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014909s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015033s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000999s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001113s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001689s ]
+
+[ 2018-02-23T16:15:48+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001193s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001475s ]
+
+[ 2018-02-23T16:16:36+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000563s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000872s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0346s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000310s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083890s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000751s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000950s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001024s ]
+
+[ 2018-02-23T16:16:37+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000598s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000852s ]
+
+[ 2018-02-23T16:16:37+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000783s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+
+[ 2018-02-23T16:16:54+08:00 ] ::1 /interest/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001034s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001141s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000196s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015037s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015261s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000699s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000948s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001041s ]
+
+[ 2018-02-23T16:16:55+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000782s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+
+[ 2018-02-23T16:16:55+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001084s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001189s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.1187s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001271s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001376s ]
+
+[ 2018-02-23T16:16:55+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000966s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001224s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001326s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0534s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0615s ]
+
+[ 2018-02-23T16:17:00+08:00 ] ::1 /interest/index.php/Home/Circle
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001199s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001309s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000201s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059750s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059866s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000864s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001302s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001383s ]
+
+[ 2018-02-23T16:17:00+08:00 ] ::1 /interest/index.php/Home/Circle/circle_display
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000727s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001247s ]
+NOTIC: [8] Undefined index: category C:\xampp\htdocs\interest\Application\Home\Controller\CircleController.class.php 第 15 行.
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0450s ]
+SQL: SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id [ RunTime:0.0006s ]
+
+[ 2018-02-23T16:17:00+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000682s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001213s ]
+
+[ 2018-02-23T16:17:00+08:00 ] ::1 /interest/index.php/Home/Circle/user_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000903s ]
+SQL: SHOW COLUMNS FROM `my_user` [ RunTime:0.0709s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001013s ]
+
+[ 2018-02-23T16:17:00+08:00 ] ::1 /interest/index.php/Home/Article/article_list
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+SQL: SHOW COLUMNS FROM `my_article` [ RunTime:0.0781s ]
+SQL: SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC [ RunTime:0.0610s ]
+
+[ 2018-02-23T16:17:03+08:00 ] ::1 /interest/index.php/Home/Circle/3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000884s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000985s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0515s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021683s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021788s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000820s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000892s ]
+
+[ 2018-02-23T16:17:04+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+
+[ 2018-02-23T16:17:07+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000673s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001056s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0558s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.087276s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087386s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000862s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001266s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001354s ]
+
+[ 2018-02-23T16:17:07+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000936s ]
+
+[ 2018-02-23T16:17:07+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001186s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001282s ]
+
+[ 2018-02-23T16:47:42+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000896s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001428s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0601s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020743s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000854s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000960s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001432s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001521s ]
+
+[ 2018-02-23T16:47:42+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000041s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001324s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001438s ]
+
+[ 2018-02-23T16:47:42+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000779s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002966s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003068s ]
+
+[ 2018-02-23T16:47:56+08:00 ] ::1 /interest/index.php/Home/Article/write/?circle_id=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001889s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002023s ]
+SQL: SHOW COLUMNS FROM `my_circle` [ RunTime:0.0581s ]
+SQL: SELECT * FROM `my_circle` WHERE `circle_id` = 3 LIMIT 1   [ RunTime:0.0031s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000311s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.080674s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080794s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000917s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001111s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001197s ]
+
+[ 2018-02-23T16:47:57+08:00 ] ::1 /interest/index.php/Home/Account/check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000618s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000805s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000904s ]
+

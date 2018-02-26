@@ -37,13 +37,22 @@ class ArticleController extends Controller{
         $data['w_aid'] = $aid;
         $data['w_uid'] = session("uid");
         M('write')->add($data);
+        $data['p_aid'] = $aid;
+        $data['p_cid'] = $_POST["circle_id"];
+        M('post')->add($data);
     }
     public function article_list(){
         $article = M('article');
         $result = $article->query("SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC");
         for($i=0;$i<count($result);$i++) {
             $content = $result[$i]['content'] ;
-            $result[$i]['content']= substr($content,0,strpos($content, "</p>")+4);
+            $point = strpos($content, "</p>")+4;
+            $result[$i]['content']= substr($content,0,$point);
+            if(strchr($result[$i]['content'],"<img")) {
+                $result[$i]['content']= substr($content,$point,strpos($content, "</p>")+4);
+            }
+
+
         }
         $this->ajaxReturn($result);
     }

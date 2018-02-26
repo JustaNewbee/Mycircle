@@ -45,7 +45,7 @@ function getUserSubmitList() {
                     }
                     if(i==1){
                         $li= '<li>\n' +
-                            '       <a href="'+PUBLIC+'/Article/read/'+data[i][j]['article_id']+'" target="_blank" title="'+data[i][j]['title']+'">\n' +
+                            '       <a href="'+MODULE+'/Article/read/'+data[i][j]['article_id']+'" target="_blank" title="'+data[i][j]['title']+'">\n' +
                             '            <p class="line-limit">'+data[i][j]['title']+'</p>\n' +
                             '       </a>\n' +
                             '</li>';
