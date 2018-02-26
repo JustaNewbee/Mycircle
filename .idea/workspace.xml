@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02810a0-471f-4f05-92b3-cee6fe3fdca6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Article/read.html" afterPath="$PROJECT_DIR$/Application/Home/View/Article/read.html" />
@@ -90,8 +89,8 @@
       <file leaf-file-name="main-style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="769" column="1" lean-forward="false" selection-start-line="769" selection-start-column="1" selection-end-line="769" selection-end-column="1" />
+            <state relative-caret-position="406">
+              <caret line="773" column="11" lean-forward="true" selection-start-line="773" selection-start-column="11" selection-end-line="773" selection-end-column="11" />
               <folding>
                 <element signature="e#303#323#0" expanded="false" />
                 <element signature="e#327#348#0" expanded="false" />
@@ -865,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="769" column="1" lean-forward="false" selection-start-line="769" selection-start-column="1" selection-end-line="769" selection-end-column="1" />
+        <state relative-caret-position="406">
+          <caret line="773" column="11" lean-forward="true" selection-start-line="773" selection-start-column="11" selection-end-line="773" selection-end-column="11" />
           <folding>
             <element signature="e#303#323#0" expanded="false" />
             <element signature="e#327#348#0" expanded="false" />
