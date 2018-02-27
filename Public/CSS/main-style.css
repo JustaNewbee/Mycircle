@@ -584,24 +584,38 @@ textarea{
     float: left;
     width: 608px;
     margin-left: 20px;
+    height: 100px;
 }
-.edit:after {
+.clearfix::before {
     content: ' ';
     clear: both;
     display: block;
 }
 .edit-input-field .edit-input-title {
     width: 100%;
-    font-size: 25px;
-    height: 45px;
+    font-size: 22px;
     font-weight: bolder;
+    padding: 0 10px;
+    height: 45px;
 }
 .edit-input-field .article_class {
-    width: 150px;
-    margin-top: 10px;
-    font-size: 20px;
+    width: 120px;
+    font-size: 18px;
     font-weight: bolder;
-    height: 45px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    border-bottom: solid #2aa198 2px;
+    margin-top:20px;
+
+}
+.edit-input-field .add_article_class {
+    position: relative;
+    background: transparent;
+    z-index: 10;
+    border: none;
+    font-size: 15px;
+    color: #fff;
 }
 #editor{
     width: 100%;
@@ -774,12 +788,3 @@ textarea{
     top: 0;
     color: white;
 }
-
-
-
-
-
-
-
-
-
