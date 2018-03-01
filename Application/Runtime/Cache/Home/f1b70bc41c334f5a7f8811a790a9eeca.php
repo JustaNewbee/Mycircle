@@ -15,35 +15,39 @@
 </head>
 <body>
 <div class="main-body">
-    <header>
-        <div class="nav_container bg">
-            <div class="nav-menu fl">
-                <img src="/mycircle/Public/img/logo.png" class="logo fl">
-                <ul class="nav-menu-list fl">
-                    <li><a href="/mycircle/index.php/Home">首页</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle">兴趣圈</a></li>
-                    <!--<li>我的文章</li>-->
-                    <!--<li>我的收藏</li>-->
-                    <li class="li-bottom"></li>
-                </ul>
-            </div>
-            <div class="fr nav-user">
-                <div class="fl user-status">
-                    <ul>
-                        <li><a href="#">
-                            <div class="top-face face fl">
-                                <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
-                            </div>
-                        </a></li>
-                    </ul>
-                </div>
-                <!--<div class="test bg">-->
-                <!--123333-->
-                <!--</div>-->
-            </div>
-
-        </div>
-    </header>
+  <header>
+      <div class="nav_container bg">
+          <div class="nav-menu fl">
+              <a href="/mycircle/index.php/Home" class="fl">
+                  <img src="/mycircle/Public/img/logo.png" class="logo">
+              </a>
+              <ul class="nav-menu-list fl">
+                  <li><a href="/mycircle/index.php/Home">首页</a></li>
+                  <li><a href="/mycircle/index.php/Home/Circle">兴趣圈</a></li>
+                  <li class="li-bottom"></li>
+              </ul>
+          </div>
+          <div class="search-field">
+              <form>
+                  <input type="search"  class="search" name="search"  maxlength="20"/>
+                  <button type="submit" class="glyphicon glyphicon-search" name="searchSubmit"></button>
+              </form>
+          </div>
+          <div class="fr nav-user">
+              <div class="fl user-status">
+                  <ul>
+                      <li>
+                          <a href="#">
+                              <div class="top-face face fl">
+                                  <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
+                              </div>
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </header>
     <div class="container">
         <aside class="sidebar fr">
             <aside class="circle-user bg">
