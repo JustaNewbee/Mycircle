@@ -51,6 +51,9 @@ class CircleController extends Controller{
         if(isset($_GET['id'])) {
             $data = $circle->find($_GET['id']);
             $this->assign("name",$data['circle_name']);
+            $this->assign("intro",$data["circle_intro"]);
+            $this->assign("people",$data["circle_people_num"]);
+            $this->assign("article",$data["circle_article_num"]);
             $this->assign("id",$_GET['id']);
         }
         $this->display();

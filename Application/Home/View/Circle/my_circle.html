@@ -16,50 +16,61 @@
 </head>
 <body>
 <div class="main-body">
-    <<header>
+    <header >
         <div class="nav_container bg">
             <div class="nav-menu fl">
-                <a href="__MODULE__" class="fl">
-                    <img src="__PUBLIC__/img/logo.png" class="logo">
-                </a>
+                <img src="__PUBLIC__/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
                     <li><a href="__MODULE__">首页</a></li>
                     <li><a href="__MODULE__/Circle">兴趣圈</a></li>
+                    <!--<li>我的文章</li>-->
+                    <!--<li>我的收藏</li>-->
                     <li class="li-bottom"></li>
                 </ul>
             </div>
-            <div class="search-field">
-                <form>
-                    <input type="search"  class="search" name="search"  maxlength="20"/>
-                    <button type="submit" class="glyphicon glyphicon-search" name="searchSubmit"></button>
-                </form>
-            </div>
+
             <div class="fr nav-user">
                 <div class="fl user-status">
                     <ul>
-                        <li>
-                            <a href="#">
-                                <div class="top-face face fl">
-                                    <img src="__PUBLIC__/img/akari.jpg" class="img-face" alt="头像">
-                                </div>
-                            </a>
-                        </li>
+                        <li><a href="#">
+                            <div class="top-face face fl">
+                                <img src="__PUBLIC__/img/akari.jpg" class="img-face" alt="头像">
+                            </div>
+                        </a></li>
                     </ul>
                 </div>
+                <!--<div class="test bg">-->
+                <!--123333-->
+                <!--</div>-->
             </div>
+
         </div>
     </header>
     <div class="container bg">
-        <h1>这里是---{$name}</h1>
-        <button type="button" class="btn user-btn" style="width: 200px" id="join">加入</button>
-        <button type="button" class="btn user-btn" style="width: 200px" id="write">发表文章</button>
+        <div class="outer-wrapper">
+            <div class="circle-header">
+                <div class="circle-portrait">
+                    <img src="__PUBLIC__/img/akari.jpg"/>
+                </div>
+                <div class="circle-wrapper">
+                    <h1 class="circle-title">{$name}</h1>
+                    <p class="circle-intro">简介：{$intro}</p>
+                    <span class="glyphicon glyphicon-user circle-people"> {$people}</span>
+                    <span class="glyphicon glyphicon-edit circle-article"> {$article}</span>
+                </div>
+            </div>
+            <ul class="circle-article-list"></ul>
+        </div>
+    </div>
+        <!--<a  class="btn user-btn" style="width: 200px" id="join">加入</a>-->
+        <!--<a  class="btn user-btn" style="width: 200px" id="write">发表文章</a>-->
     </div>
 </div>
 
 </body>
 <script>
     $(function () {
-        $(":button").click(function () {
+        $("a.user-btn").click(function () {
             if(this.id=="join"){
                 $.ajax({
                     url:"__MODULE__/Circle/join/?circle_id={$id}",
@@ -73,7 +84,23 @@
             if(this.id=="write"){
                 window.open("__MODULE__/Article/write/?circle_id={$id}");
             }
-
+        });
+        $.ajax({
+            type:"post",
+            dataType:"json",
+            data:{circle_id:"{$id}"},
+            url:"__MODULE__/Article/article_list",
+            success:function (data) {
+                for(i = 0;i<data.length;i++){
+                    $li = '<li>\n' +
+                        '<a class="circle-article-title" href="#">'+data[i]['title']+'</a>\n' +
+                        '<p class="circle-article-intro">'+data[i]['content']+'</p>\n' +
+                        '</li>';
+                    $(".circle-article-list").append($li);
+                }
+            },error:function () {
+                alert("get article list error");
+            }
         })
     })
 </script>

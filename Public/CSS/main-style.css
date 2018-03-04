@@ -146,7 +146,8 @@ input,select,option,textarea{
 
 .container{
     margin: 80px auto;
-    width: 1160px;
+    padding: 0;
+    width: 1120px;
 }
 .article-list{
     width: 754px;
@@ -247,11 +248,14 @@ input,select,option,textarea{
     width: 100px;
     margin-right: 10px;
 }
-
+.user-menu .circle-content {
+    max-width: 86px;
+    margin-left: 15px;
+}
 /*首页主体内容结束*/
 /*兴趣圈内容开始*/
 .circle-container{
-    width: 65%;
+    width: 754px;
 }
 .circle-nav{
     overflow: hidden;
@@ -266,14 +270,20 @@ input,select,option,textarea{
     border-bottom: solid white 1px;
     padding: 0;
     margin: 0;
+
 }
 .circle-nav li a{
     width: 100%;
     display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
     padding-bottom: 5px;
     position: relative;
+}
+.circle-nav ul:after {
+    content:"";
+    clear: both;
+    display:table;
 }
 .circle-nav li a:hover,.circle-nav li a:hover:before,.circle-nav li a:hover:after{
     color: rgb(217,83,79);
@@ -303,22 +313,22 @@ input,select,option,textarea{
     opacity: 1;
 }
 /*兴趣圈区导航栏效果结束*/
-.circle-display{
+.circle-container .circle-display{
     margin-top: 40px;
 }
-.my-circle{
-    width: 42%;
+.circle-container .my-circle{
+    width: 350px;
     margin-bottom: 30px;
-    padding: 5px;
+    padding: 5px 10px;
 }
-.my-circle-right{
-    margin-left: 5%;
+.circle-container .my-circle-right{
+    margin-left: 50px;
 }
-.circle-img,.circle-img-mini{
+.circle-container .circle-img,.circle-img-mini{
     border-radius: 50%;
     overflow: hidden;
 }
-.circle-img{
+.circle-container .circle-img{
     width: 72px;
     height: 72px;
 }
@@ -326,23 +336,30 @@ input,select,option,textarea{
     width: 36px;
     height: 36px;
 }
-.circle-content{
-    margin-left: 10px;
-    width: 90px;
+.circle-container .circle-content{
+    margin-left: 20px;
+    max-width: 238px;
 }
-.circle-name{
+.circle-container .circle-name{
     font-weight: bolder;
-    width: 200px;
+
 }
-.circle-intro{
+.circle-container .circle-intro{
     color: gray;
 }
-.circle-people,.circle-article,.circle-intro{
+.circle-people, .circle-article,.circle-container .circle-intro{
     font-size: 15px;
 }
-.circle-people,.circle-article{
-    float: left;
+.circle-people {
     margin-right: 20px;
+}
+.circle-people,.circle-article{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    color: #fff;
 }
 .circle-user{
     margin-bottom: 20px;
@@ -428,7 +445,6 @@ input,select,option,textarea{
     transform: translate3d(-100%, 0, 0);
     transition: transform 0.5s ;
 }
-
 .input-field:focus+.input-label::after,.input-label-end::after {
     transform: translate3d(0, 0, 0) ;
 }
@@ -452,8 +468,6 @@ input,select,option,textarea{
     margin-bottom: 20px;
     display: none;
 }
-
-
 .face{
     border: solid 0;
     border-radius: 50%;
@@ -787,4 +801,33 @@ textarea{
     position: absolute;
     top: 0;
     color: white;
+}
+/*circle页面*/
+.container .outer-wrapper {
+    padding: 20px 30px;
+    color: #fff;
+}
+.container .outer-wrapper .circle-header .circle-title {
+    margin: 0;
+}
+.container .outer-wrapper .circle-header .circle-portrait {
+    float: left;
+    width: 100px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.container .outer-wrapper .circle-header .circle-portrait img {
+    width: 100%;
+}
+.outer-wrapper .circle-header .circle-wrapper {
+    float: left;
+    margin-left: 20px;
+}
+.circle-header::after {
+    content: " ";
+    clear: both;
+    display: table;
+}
+.circle-header .circle-intro {
+    margin: 10px 0;
 }

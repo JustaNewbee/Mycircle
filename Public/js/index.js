@@ -71,7 +71,7 @@ function getRecommendArticleList() {
                     '                <div class="article-title ">\n' +
                     '                    <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" title="'+data[i]['title']+'" target="_blank">'+data[i]['title']+'</a>\n' +
                     '                </div>\n' +
-                    '                <div class="article-content line-limit" >'+data[i]['content']+'\n' +
+                    '                <div class="article-content line-limit" ><p>'+data[i]['content']+'</p>\n' +
                     '                </div>\n' +
                     '\n' +
                     '                <div class="article-info">\n' +
@@ -104,8 +104,8 @@ function getCircleList() {
                     '                    <div class="circle-content fl">\n' +
                     '                        <p class="circle-name line-limit">'+data[i]['circle_name']+'</p>\n' +
                     '                        <p class="circle-intro line-limit">'+data[i]['circle_intro']+'</p>\n' +
-                    '                        <span class="glyphicon glyphicon-user circle-people">0</span>\n' +
-                    '                        <span class="glyphicon glyphicon-edit circle-article">0</span>\n' +
+                    '                        <span class="glyphicon glyphicon-user circle-people">'+' '+data[i]['circle_people_num']+'</span>\n' +
+                    '                        <span class="glyphicon glyphicon-edit circle-article">'+' '+data[i]['circle_article_num']+'</span>\n' +
                     '                    </div>\n' +
                     '                </a>';
                 div_circle.append(add);

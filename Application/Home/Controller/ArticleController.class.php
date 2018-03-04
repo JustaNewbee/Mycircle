@@ -43,7 +43,16 @@ class ArticleController extends Controller{
     }
     public function article_list(){
         $article = M('article');
-        $result = $article->query("SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC");
+        if(isset($_POST['circle_id'])){
+            $cid = $_POST['circle_id'];
+            $result = $article->query("SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id JOIN my_circle ON my_circle.circle_id = my_post.p_cid WHERE circle_id = '$cid' ORDER BY publish_date DESC");
+        }else{
+            $result = $article->query("SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id ORDER BY publish_date DESC");
+        }
+        $return = $this->return_text($result);
+        $this->ajaxReturn($return);
+    }
+    public function return_text($result){
         for($i=0;$i<count($result);$i++) {
             $content = $result[$i]['content'] ;
             $point = strpos($content, "</p>")+4;
@@ -51,9 +60,8 @@ class ArticleController extends Controller{
             if(strchr($result[$i]['content'],"<img")) {
                 $result[$i]['content']= substr($content,$point,strpos($content, "</p>")+4);
             }
-
-
+            $result[$i]['content'] = strip_tags($result[$i]['content']);
         }
-        $this->ajaxReturn($result);
+        return $result;
     }
 }

@@ -7,47 +7,56 @@
     <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="__PUBLIC__/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
     <script src="__PUBLIC__/js/jquery-3.2.1.js"></script>
-    <script src="__PUBLIC__/js/my_circle.js"></script>
     <script>
-        var MODULE = "__MODULE__";
+        var module="__MODULE__";
+        $(function () {
+            $.ajax({
+                type:"post",
+                url:"__MODULE__/Account/check_login",
+                success:function(confirm){
+//                    if(confirm)
+                },error:function () {
+                    alert("error");
+                }
+            });
+        })
     </script>
     <script src="__PUBLIC__/js/create_circle.js"></script>
 </head>
 <body>
 <div class="main-body">
-  <header>
-      <div class="nav_container bg">
-          <div class="nav-menu fl">
-              <a href="__MODULE__" class="fl">
-                  <img src="__PUBLIC__/img/logo.png" class="logo">
-              </a>
-              <ul class="nav-menu-list fl">
-                  <li><a href="__MODULE__">首页</a></li>
-                  <li><a href="__MODULE__/Circle">兴趣圈</a></li>
-                  <li class="li-bottom"></li>
-              </ul>
-          </div>
-          <div class="search-field">
-              <form>
-                  <input type="search"  class="search" name="search"  maxlength="20"/>
-                  <button type="submit" class="glyphicon glyphicon-search" name="searchSubmit"></button>
-              </form>
-          </div>
-          <div class="fr nav-user">
-              <div class="fl user-status">
-                  <ul>
-                      <li>
-                          <a href="#">
-                              <div class="top-face face fl">
-                                  <img src="__PUBLIC__/img/akari.jpg" class="img-face" alt="头像">
-                              </div>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </header>
+    <header >
+        <div class="nav_container bg">
+            <div class="nav-menu fl">
+                <img src="__PUBLIC__/img/logo.png" class="logo fl">
+                <ul class="nav-menu-list fl">
+                    <li><a href="__MODULE__">首页</a></li>
+                    <li><a href="__MODULE__/Circle/circle_index">兴趣圈</a></li>
+                    <!--<li>我的文章</li>-->
+                    <!--<li>我的收藏</li>-->
+                    <li class="li-bottom"></li>
+                </ul>
+            </div>
+
+            <div class="fr nav-user">
+                <div class="fl user-status">
+                    <ul>
+                        <li><a href="#">
+                            <div class="top-face face fl">
+                                <img src="__PUBLIC__/img/akari.jpg" class="img-face" alt="头像">
+                            </div>
+                        </a></li>
+                        <li><a href="#">登录</a></li>
+                        <li><a href="#">注册</a></li>
+                    </ul>
+                </div>
+                <!--<div class="test bg">-->
+                <!--123333-->
+                <!--</div>-->
+            </div>
+
+        </div>
+    </header>
     <div class="create-container bg">
         <form class="circle-create">
             <h1>Circle创建</h1>
