@@ -44,9 +44,6 @@
                         </a></li>
                     </ul>
                 </div>
-                <!--<div class="test bg">-->
-                <!--123333-->
-                <!--</div>-->
             </div>
 
         </div>
@@ -60,16 +57,23 @@
                 <div class="circle-wrapper">
                     <h1 class="circle-title"><?php echo ($name); ?></h1>
                     <p class="circle-intro">简介：<?php echo ($intro); ?></p>
+                    <span class="circle-class">所属分类: <a href="/mycircle/index.php/Home/Circle/?category=<?php echo ($category); ?>"><?php echo ($class); ?></a></span>
                     <span class="glyphicon glyphicon-user circle-people"> <?php echo ($people); ?></span>
                     <span class="glyphicon glyphicon-edit circle-article"> <?php echo ($article); ?></span>
                 </div>
             </div>
-            <ul class="circle-article-list"></ul>
+            <div class="article-wrapper">
+                <div class="circle-article-nav">
+                    <ul>
+                        <li><a href="#">全部</a></li>
+                    </ul>
+                </div>
+                <ul class="circle-article-list"></ul>
+            </div>
         </div>
     </div>
         <!--<a  class="btn user-btn" style="width: 200px" id="join">加入</a>-->
         <!--<a  class="btn user-btn" style="width: 200px" id="write">发表文章</a>-->
-    </div>
     <ul class="bg-bubbles">
     <li></li>
     <li></li>

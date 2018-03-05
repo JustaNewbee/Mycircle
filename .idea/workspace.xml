@@ -3,22 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e02810a0-471f-4f05-92b3-cee6fe3fdca6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Article/read.html" afterPath="$PROJECT_DIR$/Application/Home/View/Article/read.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Article/write.html" afterPath="$PROJECT_DIR$/Application/Home/View/Article/write.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" afterPath="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8073af3fca33f1fb11e37c9e2d2666d2.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8073af3fca33f1fb11e37c9e2d2666d2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b5b28dc7b70a1ff349db6111893d58bd.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b5b28dc7b70a1ff349db6111893d58bd.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c2ec99fb9408a977f905db98c5cf1f8c.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c2ec99fb9408a977f905db98c5cf1f8c.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c5a6a18b13ef751c6d40893ca898b2c8.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c5a6a18b13ef751c6d40893ca898b2c8.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/f1b70bc41c334f5a7f8811a790a9eeca.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/f1b70bc41c334f5a7f8811a790a9eeca.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/CSS/main-style.css" afterPath="$PROJECT_DIR$/Public/CSS/main-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/js/index.js" afterPath="$PROJECT_DIR$/Public/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/js/my_circle.js" afterPath="$PROJECT_DIR$/Public/js/my_circle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/ueditor/dialogs/image/image.js" afterPath="$PROJECT_DIR$/Public/ueditor/dialogs/image/image.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/ueditor/ueditor.all.js" afterPath="$PROJECT_DIR$/Public/ueditor/ueditor.all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/ueditor/ueditor.config.js" afterPath="$PROJECT_DIR$/Public/ueditor/ueditor.config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,28 +29,34 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_mycircle" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_mycircle" type="e3449647:DbNodeDescriptor" />
+        <item name="my_circle" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_mycircle" type="e3449647:DbNodeDescriptor" />
+        <item name="my_class" type="e3449647:DbNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="my_article" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_article">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="read.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/read.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
+            <state relative-caret-position="0">
               <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-              <folding>
-                <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,9 +64,13 @@
       <file leaf-file-name="my_circle.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="301">
+              <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+              <folding>
+                <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,8 +78,8 @@
       <file leaf-file-name="write.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/write.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="71" column="10" lean-forward="true" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+            <state relative-caret-position="406">
+              <caret line="71" column="10" lean-forward="false" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -89,27 +88,13 @@
       <file leaf-file-name="main-style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="773" column="11" lean-forward="true" selection-start-line="773" selection-start-column="11" selection-end-line="773" selection-end-column="11" />
+            <state relative-caret-position="508">
+              <caret line="884" column="1" lean-forward="true" selection-start-line="884" selection-start-column="1" selection-end-line="884" selection-end-column="1" />
               <folding>
                 <element signature="e#303#323#0" expanded="false" />
                 <element signature="e#327#348#0" expanded="false" />
                 <element signature="e#352#372#0" expanded="false" />
-                <element signature="e#1829#1867#0" expanded="false" />
-                <element signature="e#1915#1953#0" expanded="false" />
-                <element signature="e#2001#2039#0" expanded="false" />
-                <element signature="e#2045#2066#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -117,28 +102,9 @@
       <file leaf-file-name="my_circle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/js/my_circle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="522">
               <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circle_create.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2088">
-              <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="74" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_circle" pinned="false" current-in-tab="false">
-        <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_circle">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -146,10 +112,26 @@
       <file leaf-file-name="ArticleController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1537">
+            <state relative-caret-position="1392">
               <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <marker date="1519548850774" expanded="true" signature="1458:1563" ph="SELECT * FRO... my_article" />
+                <marker date="1520173668908" expanded="true" signature="1542:1726" ph="SELECT * FRO... my_article" />
+                <marker date="1520173668908" expanded="true" signature="1784:1889" ph="SELECT * FRO... my_article" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CircleController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-449">
+              <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+              <folding>
+                <marker date="1520256539935" expanded="true" signature="434:635" ph="SELECT circl... my_circle" />
+                <marker date="1520256539935" expanded="true" signature="694:864" ph="SELECT circl... my_circle" />
+                <marker date="1520256539935" expanded="true" signature="2940:3144" ph="SELECT circl... my_user" />
+                <marker date="1520256539935" expanded="true" signature="3223:3475" ph="SELECT title... my_user" />
               </folding>
             </state>
           </provider>
@@ -232,7 +214,6 @@
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Public/ueditor/php/config.json" />
         <option value="$PROJECT_DIR$/Application/Home/Conf/config.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php" />
         <option value="$PROJECT_DIR$/Public/js/circle_index.js" />
         <option value="$PROJECT_DIR$/Public/js/login.js" />
         <option value="$PROJECT_DIR$/Application/Home/View/Circle/circle_index.html" />
@@ -244,7 +225,6 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Account/register.html" />
         <option value="$PROJECT_DIR$/Public/CSS/signup-style.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Circle/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" />
         <option value="$PROJECT_DIR$/Public/ueditor/ueditor.config.js" />
         <option value="$PROJECT_DIR$/Public/ueditor/dialogs/image/image.js" />
         <option value="$PROJECT_DIR$/Public/ueditor/ueditor.all.js" />
@@ -254,6 +234,8 @@
         <option value="$PROJECT_DIR$/Public/js/index.js" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
         <option value="$PROJECT_DIR$/Public/js/my_circle.js" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" />
         <option value="$PROJECT_DIR$/Public/CSS/main-style.css" />
       </list>
     </option>
@@ -291,87 +273,41 @@
         <subPane>
           <expand>
             <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Conf" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Article" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Circle" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Index" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="CSS" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="interest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="interest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ueditor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -383,7 +319,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hp_backstage" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -481,11 +417,12 @@
       <workItem from="1519371499258" duration="3075000" />
       <workItem from="1519536155618" duration="24080000" />
       <workItem from="1519650041633" duration="10372000" />
+      <workItem from="1520250613982" duration="7275000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529172000" />
+    <option name="totallyTimeSpent" value="536447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -494,7 +431,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15959005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.112737924" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11420205" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -525,13 +462,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/js/jquery-3.2.1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2262">
@@ -540,13 +470,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/js/login-control.js" />
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_login">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_login" />
     <entry file="file://$PROJECT_DIR$/Public/CSS/initial.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/VerifyModel.class.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/console.sql">
@@ -573,13 +497,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/mycircle/index.html" />
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_join">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_join" />
     <entry file="file://$PROJECT_DIR$/Public/ueditor/php/controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -602,47 +520,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_dataforuser">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_class">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_articleancircle">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="81" column="5" lean-forward="false" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <marker date="1516794708512" expanded="true" signature="434:635" ph="SELECT circl... my_circle" />
-            <marker date="1516794708512" expanded="true" signature="694:864" ph="SELECT circl... my_circle" />
-            <marker date="1516794708512" expanded="true" signature="2575:2779" ph="SELECT circl... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2581:2779" ph="SELECT circl... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:2961" ph="SELECT title... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:2967" ph="SELECT title... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:3030" ph="SELECT title... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:3046" ph="SELECT title... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:3104" ph="SELECT title... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:3105" ph="SELECT title... my_user" />
-            <marker date="1516794708512" expanded="true" signature="2858:3110" ph="SELECT title... my_user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_dataforuser" />
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_class" />
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_articleancircle" />
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -662,7 +542,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,13 +552,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_user" />
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Account/register.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2146">
@@ -731,13 +604,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_data">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_data" />
     <entry file="file://$PROJECT_DIR$/Public/ueditor/ueditor.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8845">
@@ -759,66 +626,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_relation">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_post">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_write">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_article">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1537">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <marker date="1519548850774" expanded="true" signature="1458:1563" ph="SELECT * FRO... my_article" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2088">
-          <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="74" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_circle">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_relation" />
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_post" />
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_write" />
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_article" />
+    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_circle" />
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/read.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
+        <state relative-caret-position="0">
           <caret line="9" column="44" lean-forward="false" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -826,54 +643,92 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1291">
           <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1392">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <marker date="1520173668908" expanded="true" signature="1542:1726" ph="SELECT * FRO... my_article" />
+            <marker date="1520173668908" expanded="true" signature="1784:1889" ph="SELECT * FRO... my_article" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-261">
+          <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="72" column="16" lean-forward="false" selection-start-line="72" selection-start-column="16" selection-end-line="74" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/93525a74/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_class">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-449">
+          <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+          <folding>
+            <marker date="1520256539935" expanded="true" signature="434:635" ph="SELECT circl... my_circle" />
+            <marker date="1520256539935" expanded="true" signature="694:864" ph="SELECT circl... my_circle" />
+            <marker date="1520256539935" expanded="true" signature="2940:3144" ph="SELECT circl... my_user" />
+            <marker date="1520256539935" expanded="true" signature="3223:3475" ph="SELECT title... my_user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/js/my_circle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/write.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="71" column="10" lean-forward="true" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
+        <state relative-caret-position="406">
+          <caret line="71" column="10" lean-forward="false" selection-start-line="71" selection-start-column="10" selection-end-line="71" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/js/my_circle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
-          <folding />
+        <state relative-caret-position="301">
+          <caret line="68" column="25" lean-forward="true" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+          <folding>
+            <element signature="n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="773" column="11" lean-forward="true" selection-start-line="773" selection-start-column="11" selection-end-line="773" selection-end-column="11" />
+        <state relative-caret-position="508">
+          <caret line="884" column="1" lean-forward="true" selection-start-line="884" selection-start-column="1" selection-end-line="884" selection-end-column="1" />
           <folding>
             <element signature="e#303#323#0" expanded="false" />
             <element signature="e#327#348#0" expanded="false" />
             <element signature="e#352#372#0" expanded="false" />
-            <element signature="e#1829#1867#0" expanded="false" />
-            <element signature="e#1915#1953#0" expanded="false" />
-            <element signature="e#2001#2039#0" expanded="false" />
-            <element signature="e#2045#2066#0" expanded="false" />
           </folding>
         </state>
       </provider>

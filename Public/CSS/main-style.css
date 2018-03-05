@@ -853,6 +853,15 @@ textarea{
     float: left;
     margin-left: 20px;
 }
+.outer-wrapper .circle-class {
+    float: left;
+    width: 120px;
+    font-size: 15px;
+    margin-right: 15px;
+}
+.outer-wrapper .circle-class a:hover{
+    border-bottom: 2px solid #fff;
+}
 .circle-header::after {
     content: " ";
     clear: both;
@@ -860,4 +869,17 @@ textarea{
 }
 .circle-header .circle-intro {
     margin: 10px 0;
+}
+.outer-wrapper .article-wrapper {
+    width: 658px;
+}
+.circle-article-nav ul {
+    border-bottom: 1px solid #dadada;
+}
+.circle-article-nav ul li {
+    padding: 5px 10px;
+}
+.circle-article-list li{
+    padding: 10px 10px;
+    border-bottom: 1px solid #7a7a7a;
 }
