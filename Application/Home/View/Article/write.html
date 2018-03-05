@@ -28,7 +28,12 @@
                     <li class="li-bottom"></li>
                 </ul>
             </div>
-
+            <div class="search-field">
+                  <form>
+                        <input type="search"  class="search" name="search"  maxlength="20"/>
+                        <button type="submit" class="glyphicon glyphicon-search" name="searchSubmit"></button>
+                  </form>
+            </div>
             <div class="fr nav-user">
                 <div class="fl user-status">
                     <ul>
@@ -49,7 +54,7 @@
     <div class="edit-container bg">
         <div class="edit">
           <div class="clearfix">
-            <a id="img-uploader" class="img-uploader "  >
+            <a id="img-uploader" class="img-uploader"  >
                 <span class="glyphicon glyphicon-upload"></span>
                 <input type="file" id="upload-btn" name="user-portrait" >
                 <img  id="portrait" >
@@ -64,6 +69,18 @@
             <script id="editor" name="content" type="text/plain" ></script>
         </div>
     </div>
+    <ul class="bg-bubbles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 </div>
 <script>
     document.getElementById('upload-btn').onchange = function() {
