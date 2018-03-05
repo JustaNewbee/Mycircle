@@ -65,7 +65,21 @@ input,select,option,textarea{
     position: fixed;
     z-index: 999;
 }
-
+.nav_container .btn-write {
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+    background: rgba(39,40,34,0.3);
+    font-weight: 400;
+    padding: 6px 12px;
+    vertical-align: middle;
+    margin: 3px 0;
+    height: 30px;
+    font-size: 14px;
+}
+.nav_container .btn-write:hover{
+    background: rgb(217,83,79);
+}
 .nav-menu{
     margin-left: 15%;
     position: relative;
@@ -611,17 +625,21 @@ textarea{
     font-weight: bolder;
     padding: 0 10px;
     height: 45px;
+    display: block;
+    border:  1px solid #ccc;
+    border-radius: 5px;
+    transition: ease-in-out .25s;
 }
 .edit-input-field .article_class {
-    width: 120px;
+    width: 80px;
     font-size: 18px;
     font-weight: bolder;
     color: #fff;
     background: transparent;
     border: none;
-    border-bottom: solid #2aa198 2px;
+    border-bottom: solid #fff 2px;
     margin-top:20px;
-
+    transition: ease-in-out .25s;
 }
 .edit-input-field .add_article_class {
     position: relative;
@@ -630,6 +648,18 @@ textarea{
     border: none;
     font-size: 15px;
     color: #fff;
+    transition: ease-in-out .25s;
+}
+.edit-input-field .edit-input-title:hover,
+.edit-input-title:focus {
+    box-shadow:  0 0 20px rgba(217,83,79,0.5);
+}
+.edit-input-field .add_article_class:hover{
+    color: rgb(217,83,79);
+}
+.edit-input-field .article_class:hover,
+.edit-input-field .article_class:focus{
+    border-bottom: solid rgb(217,83,79) 2px;
 }
 #editor{
     width: 100%;
