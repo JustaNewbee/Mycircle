@@ -171,7 +171,7 @@ input,select,option,textarea{
     padding: 10px;
     overflow: auto;
 }
-.article-list a,.user-menu-article a{
+.article-list .article-title a,.user-menu-article a{
     transition: all 0.7s;
 }
 .article-title a:hover{
@@ -244,12 +244,18 @@ input,select,option,textarea{
     margin-top: 5px;
 }
 .article-content p,.article-info,.article-info a{
-    color: gray;
+    color: #ababab;
     font-weight: bold;
 }
 .article-info{
     font-size: 12px;
     margin-top: 15px;
+}
+.article-info a{
+    transition: all .5s ease-in-out;
+}
+.article-info a:hover {
+    color:#ececec;
 }
 .article-info span{
     margin-right: 20px;
@@ -805,19 +811,26 @@ textarea{
     height: 100%;
     padding: 5px;
     border-bottom: solid 1px;
-
+    transition: all .5s ease-in-out;
+}
+.search:focus,
+.search:hover {
+    border-bottom: solid 1px rgb(217,89,71);
 }
 .search-field {
     float: left;
     height: 100%;
     color: #fff;
 }
-.search-field button {
+.search-field a {
     height: 100%;
     border: none;
     font-size: 20px;
     vertical-align: middle;
-    background: transparent;
+    transition: all .5s ease-in-out;
+}
+.search-field a:hover {
+    color: rgb(217,89,71);
 }
 
 .search-field ::-webkit-input-placeholder{
@@ -882,4 +895,14 @@ textarea{
 .circle-article-list li{
     padding: 10px 10px;
     border-bottom: 1px solid #7a7a7a;
+}
+.circle-article-list .circle-article-title {
+    transition: .5s;
+    font-size: 25px;
+}
+.circle-article-list .circle-article-title:hover {
+    animation :light-font 1.5s ease-in-out infinite alternate;
+}
+.circle-article-list .circle-article-intro {
+    color: #ababab;
 }

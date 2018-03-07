@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="main-body">
-    <header >
+    <header>
         <div class="nav_container bg">
             <div class="nav-menu fl">
                 <img src="/mycircle/Public/img/logo.png" class="logo fl">
@@ -31,7 +31,7 @@
         <div class="search-field">
             <form>
               <input type="search"  class="search" name="search"  maxlength="20"/>
-              <button type="submit" class="glyphicon glyphicon-search" name="searchSubmit"></button>
+              <a class="glyphicon glyphicon-search" name="searchSubmit"></a>
             </form>
        </div>
             <div class="fr nav-user">
