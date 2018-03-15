@@ -11,7 +11,7 @@
     <script src="__PUBLIC__/ueditor/ueditor.all.js"></script>
     <script src="__PUBLIC__/js/my_circle.js"></script>
     <script>
-        var MODULE ="__MODULE__";
+        var MODULE ="__ROOT__";
         var PUBLIC ="__PUBLIC__";
     </script>
 </head>
@@ -22,8 +22,8 @@
             <div class="nav-menu fl">
                 <img src="__PUBLIC__/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
-                    <li><a href="__MODULE__">首页</a></li>
-                    <li><a href="__MODULE__/Circle/">兴趣圈</a></li>
+                    <li><a href="__ROOT__">首页</a></li>
+                    <li><a href="__ROOT__/Circle/">兴趣圈</a></li>
 
                     <li class="li-bottom"></li>
                 </ul>
@@ -84,6 +84,7 @@
 </ul>
 </div>
 <script>
+    //上传文章封面
     document.getElementById('upload-btn').onchange = function() {
         var imgFile = this.files[0];
         var fr = new FileReader();
@@ -97,6 +98,7 @@
     }
 </script>
 <script>
+    //调用百度UE编辑器
     var ue = UE.getEditor('editor', {
         toolbars: [
             ['fullscreen', 'undo', 'redo', 'forecolor','bold','italic','underline','strikethrough','|','insertorderedlist','insertunorderedlist','blockquote','|','simpleupload','preview','cleardoc']
@@ -104,18 +106,43 @@
         autoHeightEnabled: true,
         autoFloatEnabled: true
     });
-    ue.execCommand( 'justify', 'center');
+    ue.execCommand('justify', 'center');
     ue.addListener('afterExecCommand',function(t, e, arg){
         afterUploadImage(e);
     });
+    //插入图片换行
     function afterUploadImage() {
         if (arguments[0] == "inserthtml" || arguments[0] == "insertimage") {
             ue.execCommand('insertparagraph');
 
         }
     }
+    //添加文章标签
+    $('.edit-input-field  .add_article_class').click(function(){
+        var class_val = $('#article_class').val();
+        if(class_val==""){
+            $("#article_class").focus();
+            return false;
+        }
+        $label = '<span class="article-label">'+class_val+'</span>';
+        $(this).before($label);
+        $article_label =$('.edit-input-field  .article-label');
+        $("#article_class").val("");
+        $article_label.on("click",function(){
+            $(this).remove();
+            if($('.edit-input-field  .article-label').length<3) {
+                $(".edit-input-field .add_article_class").show();
+                $(".edit-input-field .article_class").show();
+            }
+        });
+        if($article_label.length>=3) {
+            $(this).hide();
+            $(".article_class").hide();
+        }
+    });
+    //文章提交验证
     $(".btn-write").click(function () {
-        var title = $(".edit-textarea");
+        var title = $(".edit-input-title");
         if(title.val()==""){
             alert("请输入标题");
             title.focus();
@@ -129,8 +156,8 @@
         else{
             $.ajax({
                 type:"post",
-                url:"__MODULE__/Article/article_submit",
-                data:{content:ue.getContent(),title:title.val(),circle_name:"{$circle_name}",circle_id:getString("circle_id")},
+                url:MODULE+"/Article/article_submit",
+                data:{content:ue.getContent(),title:title.val(),circle_name:"{$circle_name}",circle_id:getString("circle_id"),label:getLabel()},
                 success:function () {
                     alert("发表成功");
                     window.location.reload();
@@ -142,19 +169,27 @@
         function checkContent(text) {
             var start = text.indexOf("<p>");
             var end = text.indexOf("</p>");
-
             while (start!=-1) {
                 start = start + 3;
                 var txt = text.substring(start, end);
                 start = text.indexOf("<p>", end);
                 end = text.indexOf("</p>", start);
-                if(txt.search("<br/>")!=-1) continue;
-                if(txt.search("<img") == -1 && txt.search('"/>') == -1 ){
+                if(txt.search("<img") == -1 && txt.search('src=') == -1 ){
+                    console.log("OK");
                     return true;
                 }
             }
-            //alert(text);
             return false;
+        }
+        function getLabel(){
+            var length = $('.edit-input-field .article-label').length;
+            var label = "";
+            for(var i = 0;i < length;i++){
+                var val = $('.edit-input-field .article-label').eq(i).text();
+                val = val + "/";
+                label = label + val;
+            }
+            return label;
         }
     })
 </script>

@@ -8,11 +8,11 @@
     <link href="__PUBLIC__/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
     <script src="__PUBLIC__/js/jquery-3.2.1.js"></script>
     <script>
-        var module="__MODULE__";
+        var module="__ROOT__";
         $(function () {
             $.ajax({
                 type:"post",
-                url:"__MODULE__/Account/check_login",
+                url:module+"/Account/check_login",
                 success:function(confirm){
 //                    if(confirm)
                 },error:function () {
@@ -30,8 +30,8 @@
             <div class="nav-menu fl">
                 <img src="__PUBLIC__/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
-                    <li><a href="__MODULE__">首页</a></li>
-                    <li><a href="__MODULE__/Circle/circle_index">兴趣圈</a></li>
+                    <li><a href="__ROOT__">首页</a></li>
+                    <li><a href="__ROOT__/Circle/circle_index">兴趣圈</a></li>
                     <!--<li>我的文章</li>-->
                     <!--<li>我的收藏</li>-->
                     <li class="li-bottom"></li>

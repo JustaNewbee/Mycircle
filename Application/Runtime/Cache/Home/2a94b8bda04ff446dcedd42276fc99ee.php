@@ -9,7 +9,7 @@
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script src="/mycircle/Public/js/my_circle.js"></script>
     <script>
-        var MODULE="/mycircle/index.php/Home";
+        var MODULE="/mycircle";
         var PUBLIC="/mycircle/Public";
     </script>
 </head>
@@ -18,12 +18,12 @@
     <header>
         <div class="nav_container bg">
             <div class="nav-menu fl">
-                <a href="/mycircle/index.php/Home" class="fl">
+                <a href="/mycircle" class="fl">
                     <img src="/mycircle/Public/img/logo.png" class="logo">
                 </a>
                 <ul class="nav-menu-list fl">
-                    <li><a href="/mycircle/index.php/Home">首页</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle">兴趣圈</a></li>
+                    <li><a href="/mycircle">首页</a></li>
+                    <li><a href="/mycircle/Circle">兴趣圈</a></li>
                     <li class="li-bottom"></li>
                 </ul>
             </div>
@@ -65,7 +65,7 @@
                         </label>
                     </div>
                     <div>
-                        <a href="/mycircle/index.php/Home/account/register">立即注册</a>
+                        <a href="/mycircle/account/register">立即注册</a>
                         <a href="#" style="margin-left: 198px">忘记密码?</a>
                     </div>
                     <input id="btn-login" class="user-btn  btn" type="submit" value="快速登陆">

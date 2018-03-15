@@ -76,6 +76,11 @@ input,select,option,textarea{
     margin: 3px 0;
     height: 30px;
     font-size: 14px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.nav_container .glyphicon-edit:before {
+    padding-right: 5px;
 }
 .nav_container .btn-write:hover{
     background: rgb(217,83,79);
@@ -535,13 +540,14 @@ input,select,option,textarea{
 .title h2{
     text-align: center;
     font-weight: bolder;
+    color: #111111;
+    letter-spacing: 2px;
 }
 .content{
     margin-top: 40px;
-    background: rgba(255,255,255,0.5);
-    padding: 20px;
+    background: rgba(255,255,255,0.4);
+    padding: 10px;
 }
-
 .content p img {
     max-width: 100%;
 }
@@ -655,6 +661,31 @@ textarea{
     font-size: 15px;
     color: #fff;
     transition: ease-in-out .25s;
+    cursor: pointer;
+}
+.edit-input-field .article-label {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    transition: all .25s ease-in-out;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+.edit-input-field .article-label::after {
+    content:"\e014";
+    font-size: 15px;
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    transition: all .25s ease-in-out;
+}
+.edit-input-field .article-label:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 .edit-input-field .edit-input-title:hover,
 .edit-input-title:focus {
@@ -683,6 +714,8 @@ textarea{
     float: left;
     border-radius: 5px;
     transition: ease-in-out .25s;
+    overflow: hidden;
+    cursor: pointer;
 }
 .img-uploader span{
     height: 100px;
@@ -693,9 +726,10 @@ textarea{
     width: 100px;
     height: 100px;
     opacity: 0;
-    z-index: 1;
+    z-index: 3;
     position: relative;
     top:-100px;
+    cursor: pointer;
 }
 .img-uploader:hover{
     color: rgb(217,83,79);

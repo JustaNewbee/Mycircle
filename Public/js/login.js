@@ -2,7 +2,7 @@ $(function () {
     $(".user-login").submit(function () {
         $.ajax({
             type:"post",
-            url:"__MODULE__/Account/login",
+            url:"__ROOT__/Account/login",
             data:{
                 username:$("#inputUsername").val(),
                 password:$("#inputPassword").val()

@@ -9,7 +9,7 @@
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script src="/mycircle/Public/js/my_circle.js"></script>
     <script>
-        var MODULE ="/mycircle/index.php/Home";
+        var MODULE ="/mycircle";
         var PUBLIC ="/mycircle/Public";
     </script>
 </head>
@@ -20,8 +20,8 @@
                 <div class="nav-menu fl">
                     <img src="/mycircle/Public/img/logo.png" class="logo fl">
                     <ul class="nav-menu-list fl">
-                        <li><a href="/mycircle/index.php/Home">首页</a></li>
-                        <li><a href="/mycircle/index.php/Home/Circle">兴趣圈</a></li>
+                        <li><a href="/mycircle">首页</a></li>
+                        <li><a href="/mycircle/Circle">兴趣圈</a></li>
                         <!--<li>我的文章</li>-->
                         <!--<li>我的收藏</li>-->
                         <li class="li-bottom"></li>
@@ -30,7 +30,7 @@
                 <div class="search-field">
                   <form>
                     <input type="search"  class="search" name="search"  maxlength="20"/>
-                    <button type="submit" class="glyphicon glyphicon-search" name="searchSubmit"></button>
+                    <a class="glyphicon glyphicon-search" name="searchSubmit"></a>
                   </form>
                 </div>
                 <div class="fr nav-user">

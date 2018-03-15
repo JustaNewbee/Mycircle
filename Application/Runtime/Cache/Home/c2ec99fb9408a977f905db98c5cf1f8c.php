@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>注册页面</title>
-    <link href="/interest/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/interest/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
-    <link href="/interest/Public/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
-    <script src="/interest/Public/js/jquery-3.2.1.js"></script>
+    <link href="/mycircle/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/mycircle/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/mycircle/Public/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script>
-        var MODULE = "/interest/index.php/Home";
+        var MODULE = "/mycircle";
     </script>
-    <script src="/interest/Public/js/signup.js"></script>
-    <script src="/interest/Public/js/my_circle.js"></script>
+    <script src="/mycircle/Public/js/signup.js"></script>
+    <script src="/mycircle/Public/js/my_circle.js"></script>
 </head>
 <body>
     <div class="main-body">
     <header >
         <div class="nav_container bg">
             <div class="nav-menu fl">
-                <img src="/interest/Public/img/logo.png" class="logo fl">
+                <img src="/mycircle/Public/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
-                    <li><a href="/interest/index.php/Home">首页</a></li>
-                    <li><a href="/interest/index.php/Home/Circle">兴趣圈</a></li>
+                    <li><a href="/mycircle">首页</a></li>
+                    <li><a href="/mycircle/Circle">兴趣圈</a></li>
                     <li class="li-bottom"></li>
                 </ul>
             </div>
@@ -32,15 +32,12 @@
                         <li>
                             <a href="#">
                                 <div class="top-face face fl">
-                                    <img src="/interest/Public/img/akari.jpg" class="img-face" alt="头像">
+                                    <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                                 </div>
                             </a>
                         </li>
                     </ul>
                 </div>
-                <!--<div class="test bg">-->
-                <!--123333-->
-                <!--</div>-->
             </div>
 
         </div>
@@ -82,8 +79,20 @@
                 </div>
             </form>
         </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
 </body>
-    <script src="/interest/Public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/mycircle/Public/bootstrap/js/bootstrap.min.js"></script>
 
 </html>

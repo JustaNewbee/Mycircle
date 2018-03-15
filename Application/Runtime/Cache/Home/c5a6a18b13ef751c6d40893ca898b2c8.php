@@ -9,7 +9,7 @@
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script src="/mycircle/Public/js/my_circle.js"></script>
     <script>
-        var MODULE ="/mycircle/index.php/Home";
+        var MODULE ="/mycircle";
         var PUBLIC ="/mycircle/Public";
     </script>
 
@@ -21,8 +21,8 @@
             <div class="nav-menu fl">
                 <img src="/mycircle/Public/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
-                    <li><a href="/mycircle/index.php/Home">首页</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle">兴趣圈</a></li>
+                    <li><a href="/mycircle">首页</a></li>
+                    <li><a href="/mycircle/Circle">兴趣圈</a></li>
                     <!--<li>我的文章</li>-->
                     <!--<li>我的收藏</li>-->
                     <li class="li-bottom"></li>
@@ -57,7 +57,7 @@
                 <div class="circle-wrapper">
                     <h1 class="circle-title"><?php echo ($name); ?></h1>
                     <p class="circle-intro">简介：<?php echo ($intro); ?></p>
-                    <span class="circle-class">所属分类: <a href="/mycircle/index.php/Home/Circle/?category=<?php echo ($category); ?>"><?php echo ($class); ?></a></span>
+                    <span class="circle-class">所属分类: <a href="/mycircle/Circle/?category=<?php echo ($category); ?>"><?php echo ($class); ?></a></span>
                     <span class="glyphicon glyphicon-user circle-people"> <?php echo ($people); ?></span>
                     <span class="glyphicon glyphicon-edit circle-article"> <?php echo ($article); ?></span>
                 </div>
@@ -94,7 +94,7 @@
         $("a.user-btn").click(function () {
             if(this.id=="join"){
                 $.ajax({
-                    url:"/mycircle/index.php/Home/Circle/join/?circle_id=<?php echo ($id); ?>",
+                    url:MODULE+"/Circle/join/?circle_id=<?php echo ($id); ?>",
                     success:function () {
                         alert("加入成功");
                     },error:function () {
@@ -103,14 +103,14 @@
                 });
             }
             if(this.id=="write"){
-                window.open("/mycircle/index.php/Home/Article/write/?circle_id=<?php echo ($id); ?>");
+                window.open(MODULE+"/Article/write/?circle_id=<?php echo ($id); ?>");
             }
         });
         $.ajax({
             type:"post",
             dataType:"json",
             data:{circle_id:"<?php echo ($id); ?>"},
-            url:"/mycircle/index.php/Home/Article/article_list",
+            url:MODULE+"/Article/article_list",
             success:function (data) {
                 for(i = 0;i<data.length;i++){
                     $li = '<li>\n' +

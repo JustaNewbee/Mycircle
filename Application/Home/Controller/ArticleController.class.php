@@ -31,6 +31,7 @@ class ArticleController extends Controller{
         $data['content'] = $_POST['content'];
         $data['title'] = $_POST['title'];
         $data['circle'] = $_POST['circle_name'];
+        $data['label'] = $_POST['label'];
         $data['editor'] = session("username");
         $data['publish_date'] = date("Y-m-d");
         $aid = $article-> add($data);

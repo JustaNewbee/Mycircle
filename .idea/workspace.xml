@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02810a0-471f-4f05-92b3-cee6fe3fdca6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Home/Conf/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Account/login.html" afterPath="$PROJECT_DIR$/Application/Home/View/Account/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Account/register.html" afterPath="$PROJECT_DIR$/Application/Home/View/Account/register.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Article/read.html" afterPath="$PROJECT_DIR$/Application/Home/View/Article/read.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Article/write.html" afterPath="$PROJECT_DIR$/Application/Home/View/Article/write.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html" afterPath="$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html" />
@@ -10,9 +16,15 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" afterPath="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8073af3fca33f1fb11e37c9e2d2666d2.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/8073af3fca33f1fb11e37c9e2d2666d2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a10f9d728d1caa8e42c9443d41f3e515.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/a10f9d728d1caa8e42c9443d41f3e515.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b5b28dc7b70a1ff349db6111893d58bd.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/b5b28dc7b70a1ff349db6111893d58bd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c2ec99fb9408a977f905db98c5cf1f8c.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c2ec99fb9408a977f905db98c5cf1f8c.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c5a6a18b13ef751c6d40893ca898b2c8.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/c5a6a18b13ef751c6d40893ca898b2c8.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Runtime/Cache/Home/f1b70bc41c334f5a7f8811a790a9eeca.php" afterPath="$PROJECT_DIR$/Application/Runtime/Cache/Home/f1b70bc41c334f5a7f8811a790a9eeca.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/CSS/main-style.css" afterPath="$PROJECT_DIR$/Public/CSS/main-style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/js/login.js" afterPath="$PROJECT_DIR$/Public/js/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,40 +46,40 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_mycircle" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="db_mycircle" type="e3449647:DbNodeDescriptor" />
+        <item name="my_article" type="e3449647:DbNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="read.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/read.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="circle_create.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="my_circle.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="1276">
+              <caret line="59" column="70" lean-forward="false" selection-start-line="59" selection-start-column="70" selection-end-line="59" selection-end-column="70" />
               <folding>
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Account/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,8 +87,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+            <state relative-caret-position="479">
+              <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -85,8 +97,8 @@
       <file leaf-file-name="write.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/write.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            <state relative-caret-position="189">
+              <caret line="156" column="12" lean-forward="true" selection-start-line="156" selection-start-column="12" selection-end-line="166" selection-end-column="14" />
               <folding>
                 <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -94,26 +106,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="870">
+              <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main-style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="816" column="7" lean-forward="false" selection-start-line="816" selection-start-column="7" selection-end-line="816" selection-end-column="7" />
-              <folding>
-                <element signature="e#303#323#0" expanded="false" />
-                <element signature="e#327#348#0" expanded="false" />
-                <element signature="e#352#372#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -121,21 +119,21 @@
       <file leaf-file-name="my_circle.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/js/my_circle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2117">
+            <state relative-caret-position="1001">
               <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ArticleController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="-319">
+              <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
               <folding>
-                <marker date="1520173668908" expanded="true" signature="1542:1726" ph="SELECT * FRO... my_article" />
-                <marker date="1520173668908" expanded="true" signature="1784:1889" ph="SELECT * FRO... my_article" />
+                <marker date="1521122215230" expanded="true" signature="1584:1768" ph="SELECT * FRO... my_article" />
+                <marker date="1521122215230" expanded="true" signature="1826:1931" ph="SELECT * FRO... my_article" />
               </folding>
             </state>
           </provider>
@@ -144,13 +142,27 @@
       <file leaf-file-name="CircleController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+            <state relative-caret-position="2117">
+              <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
               <folding>
                 <marker date="1520256539935" expanded="true" signature="434:635" ph="SELECT circl... my_circle" />
                 <marker date="1520256539935" expanded="true" signature="694:864" ph="SELECT circl... my_circle" />
                 <marker date="1520256539935" expanded="true" signature="2940:3144" ph="SELECT circl... my_user" />
                 <marker date="1520256539935" expanded="true" signature="3223:3475" ph="SELECT title... my_user" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main-style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="543" column="24" lean-forward="false" selection-start-line="543" selection-start-column="24" selection-end-line="543" selection-end-column="24" />
+              <folding>
+                <element signature="e#303#323#0" expanded="false" />
+                <element signature="e#327#348#0" expanded="false" />
+                <element signature="e#352#372#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -169,11 +181,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>user-s</find>
-      <find>editor</find>
-      <find>nav</find>
-      <find>ed</find>
-      <find>user-m</find>
       <find>article-info</find>
       <find>color: white</find>
       <find>side</find>
@@ -188,7 +195,6 @@
       <find>input</find>
       <find>module</find>
       <find>user</find>
-      <find>MODULE</find>
       <find>bg</find>
       <find>art</find>
       <find>render</find>
@@ -199,6 +205,12 @@
       <find>bu</find>
       <find>sea</find>
       <find>search</find>
+      <find>__MODULE__</find>
+      <find>MODULE</find>
+      <find>write</find>
+      <find>img-upload</find>
+      <find>bord</find>
+      <find>article-c</find>
     </findStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\interest\Public\js</dir>
@@ -231,31 +243,33 @@
         <option value="$PROJECT_DIR$/Application/Home/View/Circle/mycircle/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Public/ueditor/php/config.json" />
-        <option value="$PROJECT_DIR$/Application/Home/Conf/config.php" />
         <option value="$PROJECT_DIR$/Public/js/circle_index.js" />
-        <option value="$PROJECT_DIR$/Public/js/login.js" />
         <option value="$PROJECT_DIR$/Application/Home/View/Circle/circle_index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Account/signup.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Account/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/AccountController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Account/login.html" />
         <option value="$PROJECT_DIR$/Public/js/signup.js" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Account/register.html" />
         <option value="$PROJECT_DIR$/Public/CSS/signup-style.css" />
         <option value="$PROJECT_DIR$/Public/ueditor/ueditor.config.js" />
         <option value="$PROJECT_DIR$/Public/ueditor/dialogs/image/image.js" />
         <option value="$PROJECT_DIR$/Public/ueditor/ueditor.all.js" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" />
         <option value="$PROJECT_DIR$/Public/js/index.js" />
         <option value="$PROJECT_DIR$/Public/js/my_circle.js" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Conf/config.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/Public/CSS/main-style.css" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Circle/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html" />
+        <option value="$PROJECT_DIR$/Public/js/login.js" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Account/register.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Article/read.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Article/write.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Circle/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Account/login.html" />
+        <option value="$PROJECT_DIR$/Public/CSS/main-style.css" />
       </list>
     </option>
   </component>
@@ -266,7 +280,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-62" />
     <option name="y" value="10" />
     <option name="width" value="1346" />
@@ -326,6 +340,14 @@
               <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Account" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Article" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -344,12 +366,23 @@
               <item name="View" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Index" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mycircle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mycircle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -454,20 +487,21 @@
       <workItem from="1519650041633" duration="10372000" />
       <workItem from="1520250613982" duration="7412000" />
       <workItem from="1520426053846" duration="4480000" />
+      <workItem from="1521115632100" duration="10700000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="541064000" />
+    <option name="totallyTimeSpent" value="551764000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15959005" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11493412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11420205" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.111273795" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -498,16 +532,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/js/jquery-3.2.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2262">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/js/login-control.js" />
-    <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_login" />
-    <entry file="file://$PROJECT_DIR$/Public/CSS/initial.html" />
     <entry file="file://$PROJECT_DIR$/Application/Home/Model/VerifyModel.class.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/console.sql">
       <provider selected="true" editor-type-id="text-editor">
@@ -525,13 +549,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_join.html" />
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/mycircle/index.html" />
     <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_join" />
     <entry file="file://$PROJECT_DIR$/Public/ueditor/php/controller.php">
@@ -574,28 +591,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_user" />
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Account/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2146">
-          <caret line="74" column="28" lean-forward="false" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -612,24 +608,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/js/signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/CSS/signup-style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="899">
           <caret line="31" column="23" lean-forward="false" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Account/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1508">
-          <caret line="52" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="54" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -660,13 +642,6 @@
     <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_write" />
     <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_article" />
     <entry file="das://table:/cab32822/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_circle" />
-    <entry file="file://$PROJECT_DIR$/Public/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1291">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/93525a74/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_class">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -674,29 +649,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="4" column="40" lean-forward="false" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Admin/Common/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="16" column="6" lean-forward="false" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/js/signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1836">
+          <caret line="78" column="26" lean-forward="false" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1025">
+          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/read.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Account/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-886">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1276">
+          <caret line="59" column="70" lean-forward="false" selection-start-line="59" selection-start-column="70" selection-end-line="59" selection-end-column="70" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/js/my_circle.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2117">
+        <state relative-caret-position="1001">
           <caret line="73" column="54" lean-forward="false" selection-start-line="73" selection-start-column="54" selection-end-line="73" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php">
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/write.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="189">
+          <caret line="156" column="12" lean-forward="true" selection-start-line="156" selection-start-column="12" selection-end-line="166" selection-end-column="14" />
           <folding>
-            <marker date="1520173668908" expanded="true" signature="1542:1726" ph="SELECT * FRO... my_article" />
-            <marker date="1520173668908" expanded="true" signature="1784:1889" ph="SELECT * FRO... my_article" />
+            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/CircleController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="59" column="57" lean-forward="false" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
+        <state relative-caret-position="2117">
+          <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
           <folding>
             <marker date="1520256539935" expanded="true" signature="434:635" ph="SELECT circl... my_circle" />
             <marker date="1520256539935" expanded="true" signature="694:864" ph="SELECT circl... my_circle" />
@@ -706,10 +778,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Account/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="67" column="56" lean-forward="false" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Public/CSS/main-style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="816" column="7" lean-forward="false" selection-start-line="816" selection-start-column="7" selection-end-line="816" selection-end-column="7" />
+        <state relative-caret-position="212">
+          <caret line="543" column="24" lean-forward="false" selection-start-line="543" selection-start-column="24" selection-end-line="543" selection-end-column="24" />
           <folding>
             <element signature="e#303#323#0" expanded="false" />
             <element signature="e#327#348#0" expanded="false" />
@@ -718,56 +814,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="32" column="22" lean-forward="false" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
-          <folding />
+    <entry file="das://table:/93525a74/e6c0868c-e6c9-4d53-a13a-75a9ea317b8f/db_mycircle.my_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/my_circle.html">
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ArticleController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="-319">
+          <caret line="39" column="31" lean-forward="true" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
           <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1521122215230" expanded="true" signature="1584:1768" ph="SELECT * FRO... my_article" />
+            <marker date="1521122215230" expanded="true" signature="1826:1931" ph="SELECT * FRO... my_article" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/read.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="35" column="41" lean-forward="true" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/circle_create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Article/write.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="33" column="26" lean-forward="false" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding>
-            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Circle/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="33" column="23" lean-forward="true" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>

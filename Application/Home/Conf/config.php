@@ -11,6 +11,7 @@ return array(
     'DB_CHARSET'=>'utf8',// 数据库字符集
     'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES'=>array(
+        'mycircle/' => 'mycircle/index.php/Home',
         'circle/:id\d' => 'Circle/my_circle',
         'article/read/:aid\d' => 'Article/read',
     ),

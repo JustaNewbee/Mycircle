@@ -9,7 +9,7 @@
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script src="/mycircle/Public/js/my_circle.js"></script>
     <script>
-        var MODULE ="/mycircle/index.php/Home";
+        var MODULE ="/mycircle";
         var PUBLIC ="/mycircle/Public";
     </script>
 </head>
@@ -20,10 +20,8 @@
             <div class="nav-menu fl">
                 <img src="/mycircle/Public/img/logo.png" class="logo fl">
                 <ul class="nav-menu-list fl">
-                    <li><a href="/mycircle/index.php/Home">首页</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle">兴趣圈</a></li>
-                    <!--<li>我的文章</li>-->
-                    <!--<li>我的收藏</li>-->
+                    <li><a href="/mycircle">首页</a></li>
+                    <li><a href="/mycircle/Circle">兴趣圈</a></li>
                     <li class="li-bottom"></li>
                 </ul>
             </div>
@@ -43,9 +41,6 @@
                         </a></li>
                     </ul>
                 </div>
-                <!--<div class="test bg">-->
-                <!--123333-->
-                <!--</div>-->
             </div>
 
         </div>
@@ -62,17 +57,17 @@
         <div class="circle-container fl">
             <nav class="circle-nav">
                 <ul>
-                    <li><a href="/mycircle/index.php/Home/Circle">推荐</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=1">动漫</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=2">电影</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=3">游戏</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=4">文学</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=5">生活</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=6">音乐</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=7">科技</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=8">动物</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=9">电脑数码</a></li>
-                    <li><a href="/mycircle/index.php/Home/Circle/?category=10">其它</a></li>
+                    <li><a href="/mycircle/Circle">推荐</a></li>
+                    <li><a href="/mycircle/Circle/?category=1">动漫</a></li>
+                    <li><a href="/mycircle/Circle/?category=2">电影</a></li>
+                    <li><a href="/mycircle/Circle/?category=3">游戏</a></li>
+                    <li><a href="/mycircle/Circle/?category=4">文学</a></li>
+                    <li><a href="/mycircle/Circle/?category=5">生活</a></li>
+                    <li><a href="/mycircle/Circle/?category=6">音乐</a></li>
+                    <li><a href="/mycircle/Circle/?category=7">科技</a></li>
+                    <li><a href="/mycircle/Circle/?category=8">动物</a></li>
+                    <li><a href="/mycircle/Circle/?category=9">电脑数码</a></li>
+                    <li><a href="/mycircle/Circle/?category=10">其它</a></li>
                 </ul>
             </nav>
             <div class="circle-display"></div>
