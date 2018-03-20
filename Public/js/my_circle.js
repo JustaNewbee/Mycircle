@@ -60,7 +60,6 @@ function searchPlaceholder() {
             temp = temp + placeholder_txt[i];
             $(".search").attr("placeholder",temp );
             i++;
-            //console.log(i);
             if(i<=placeholder_txt.length){
                 setTimeout(function(){inputPlaceholder(i,temp)},400);
             }
@@ -73,7 +72,4 @@ function searchPlaceholder() {
             $(".search").attr("placeholder","");
             setTimeout(function(){inputPlaceholder(0,"")},400);
         }
-
-
-
 }

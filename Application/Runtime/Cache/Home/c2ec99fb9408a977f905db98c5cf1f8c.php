@@ -45,8 +45,8 @@
         <div class="form-container">
             <nav>
                 <ul>
-                    <li><a href="login.html">登录</a></li>
-                    <li><a href="register.html">注册</a></li>
+                    <li><a href="/mycircle/Account/login">登录</a></li>
+                    <li><a href="/mycircle/Account/register">注册</a></li>
                 </ul>
             </nav>
             <form class="user-signup">

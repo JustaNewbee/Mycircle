@@ -25,7 +25,6 @@
                     <li class="li-bottom"></li>
                 </ul>
             </div>
-
             <div class="fr nav-user">
                 <div class="fl user-status">
                     <ul>

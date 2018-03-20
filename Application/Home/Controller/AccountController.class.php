@@ -39,7 +39,15 @@ class AccountController extends Controller
         $insert_data['password'] =  $password;
         $insert_data['mail'] =  $mail;
         $register->data($insert_data)->add();
-
     }
-
+    public function verify(){
+        $user = M('user');
+        $verify = $_POST['verify'];
+        $result = $user->where("username = '$verify'")->find();
+        if(is_null($result)){
+            $this->ajaxReturn(true);
+        }else{
+            $this->ajaxReturn(false);
+        }
+    }
 }

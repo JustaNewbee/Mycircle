@@ -146,11 +146,17 @@
         if(title.val()==""){
             alert("请输入标题");
             title.focus();
+        }else if($('.edit-input-field .article-label').length==0){
+            alert("请给文章添加标签");
+            $('.article_class').focus();
         }else if(!ue.hasContents()){
             alert("请输入正文内容");
             ue.focus();
         }else if(!checkContent(ue.getContent())){
             alert("正文不能为纯图片");
+            ue.focus();
+        }else if(ue.getContentTxt().length<=20){
+            alert("正文长度不得小于20个字");
             ue.focus();
         }
         else{
@@ -158,9 +164,9 @@
                 type:"post",
                 url:MODULE+"/Article/article_submit",
                 data:{content:ue.getContent(),title:title.val(),circle_name:"{$circle_name}",circle_id:getString("circle_id"),label:getLabel()},
-                success:function () {
+                success:function (data) {
                     alert("发表成功");
-                    window.location.reload();
+                    window.location.href=data;
                 },error:function () {
                     alert("error");
                 }
@@ -175,7 +181,6 @@
                 start = text.indexOf("<p>", end);
                 end = text.indexOf("</p>", start);
                 if(txt.search("<img") == -1 && txt.search('src=') == -1 ){
-                    console.log("OK");
                     return true;
                 }
             }

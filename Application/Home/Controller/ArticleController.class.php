@@ -41,6 +41,8 @@ class ArticleController extends Controller{
         $data['p_aid'] = $aid;
         $data['p_cid'] = $_POST["circle_id"];
         M('post')->add($data);
+        $url = __ROOT__."/Article/read/".$aid;
+        $this->ajaxReturn($url);
     }
     public function article_list(){
         $article = M('article');
@@ -53,6 +55,7 @@ class ArticleController extends Controller{
         $return = $this->return_text($result);
         $this->ajaxReturn($return);
     }
+    //格式化文本，处理文章的第一段文本
     public function return_text($result){
         for($i=0;$i<count($result);$i++) {
             $content = $result[$i]['content'] ;
@@ -62,7 +65,13 @@ class ArticleController extends Controller{
                 $result[$i]['content']= substr($content,$point,strpos($content, "</p>")+4);
             }
             $result[$i]['content'] = strip_tags($result[$i]['content']);
+            $result[$i]['content'] = $this->trimall($result[$i]['content']);
         }
         return $result;
+    }
+    //消除文本中的空格
+    function trimall($str){
+        $reg = array(" ","　","\t","\n","\r");
+        return str_replace($reg, '', $str);
     }
 }
