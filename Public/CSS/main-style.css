@@ -925,6 +925,7 @@ textarea{
 }
 .circle-article-nav ul li {
     padding: 5px 10px;
+    float: left;
 }
 .circle-article-list li{
     padding: 10px 10px;
@@ -961,5 +962,13 @@ textarea{
 }
 .circle-wrapper .active {
     background: rgb(217, 89, 71);
+}
+.article-wrapper .circle-article-nav li:last-child {
+    float: right;
+}
+.article-wrapper .circle-article-nav ul:after{
+    content: " ";
+    clear: both;
+    display: table;
 }
 /*circle页面*/

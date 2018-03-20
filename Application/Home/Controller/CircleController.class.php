@@ -63,12 +63,16 @@ class CircleController extends Controller{
     }
 //    加入兴趣圈操作
     public function join(){
-        $this->redirect_login();
+        if($this->redirect_login()){
+            $this->ajaxReturn('true');
+            return;
+        }
         $join = M('relation');
         $uid = session("uid");
         $data['r_cid'] = $_GET['circle_id'];
         $data['r_uid'] = $uid;
         $join->add($data);
+
     }
     public function quit(){
         $quit = M('relation');
@@ -104,8 +108,9 @@ class CircleController extends Controller{
         }
     }
     public function redirect_login(){
-        if(!session("uid")){
-            $this->success('正在跳转.....',__ROOT__+'/Account/login');
+        if(session("uid")){
+            return false;
         }
+        return true;
     }
 }

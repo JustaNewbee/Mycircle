@@ -73,5 +73,6 @@ class ArticleController extends Controller{
     function trimall($str){
         $reg = array("\t","\n","\r","&nbsp;","&emsp;");
         return str_replace($reg, '', $str);
+
     }
 }

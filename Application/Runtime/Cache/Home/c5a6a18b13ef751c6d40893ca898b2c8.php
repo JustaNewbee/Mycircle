@@ -57,7 +57,7 @@
                 <div class="circle-wrapper">
                     <div class="circle-title">
                         <h1><?php echo ($name); ?></h1>
-                        <a  class="btn join-btn" id="join">加入</a>
+                        <a class="btn join-btn" id="join">加入</a>
                     </div>
                     <p class="circle-intro">简介：<?php echo ($intro); ?></p>
                     <span class="circle-class">所属分类: <a href="/mycircle/Circle/?category=<?php echo ($category); ?>"><?php echo ($class); ?></a></span>
@@ -69,6 +69,7 @@
                 <div class="circle-article-nav">
                     <ul>
                         <li><a href="#">全部</a></li>
+                        <li><a class="glyphicon glyphicon-edit write" id="write" href="/mycircle/Article/write/?circle_id=<?php echo ($id); ?>"></a></li>
                     </ul>
                 </div>
                 <ul class="circle-article-list"></ul>
@@ -76,7 +77,6 @@
         </div>
     </div>
 
-        <!--<a  class="btn user-btn" style="width: 200px" id="write">发表文章</a>-->
     <ul class="bg-bubbles">
     <li></li>
     <li></li>
@@ -95,17 +95,17 @@
 <script>
     $(function () {
         $(".btn").click(function () {
-            if(this.id=="join"){
-                if($(this).hasClass('active')){
-                    $.post(MODULE+'/Circle/quit',{circle_id:"<?php echo ($id); ?>"});
-                    $(this).text("加入").removeClass('active');
-                }else {
-                    $.get(MODULE+"/Circle/join",{circle_id:"<?php echo ($id); ?>"});
-                    $(this).text("已加入").addClass('active');
-                }
-            }
-            if(this.id=="write"){
-                window.open(MODULE+"/Article/write/?circle_id=<?php echo ($id); ?>");
+            if($(this).hasClass('active')){
+                $.post(MODULE+'/Circle/quit',{circle_id:"<?php echo ($id); ?>"});
+                $(this).text("加入").removeClass('active');
+            }else {
+                $.get(MODULE+"/Circle/join",{circle_id:"<?php echo ($id); ?>"},function(data){
+                    if(data){
+                        window.location.href=MODULE+'/Account/login';
+                    }else {
+                        $('.join-btn').text("已加入").addClass('active');
+                    }
+                });
             }
         });
         $.ajax({
