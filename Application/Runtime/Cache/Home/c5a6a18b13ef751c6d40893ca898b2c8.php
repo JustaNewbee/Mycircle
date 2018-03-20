@@ -55,7 +55,10 @@
                     <img src="/mycircle/Public/img/akari.jpg"/>
                 </div>
                 <div class="circle-wrapper">
-                    <h1 class="circle-title"><?php echo ($name); ?></h1>
+                    <div class="circle-title">
+                        <h1><?php echo ($name); ?></h1>
+                        <a  class="btn join-btn" id="join">加入</a>
+                    </div>
                     <p class="circle-intro">简介：<?php echo ($intro); ?></p>
                     <span class="circle-class">所属分类: <a href="/mycircle/Circle/?category=<?php echo ($category); ?>"><?php echo ($class); ?></a></span>
                     <span class="glyphicon glyphicon-user circle-people"> <?php echo ($people); ?></span>
@@ -72,7 +75,7 @@
             </div>
         </div>
     </div>
-        <!--<a  class="btn user-btn" style="width: 200px" id="join">加入</a>-->
+
         <!--<a  class="btn user-btn" style="width: 200px" id="write">发表文章</a>-->
     <ul class="bg-bubbles">
     <li></li>
@@ -91,16 +94,15 @@
 </body>
 <script>
     $(function () {
-        $("a.user-btn").click(function () {
+        $(".btn").click(function () {
             if(this.id=="join"){
-                $.ajax({
-                    url:MODULE+"/Circle/join/?circle_id=<?php echo ($id); ?>",
-                    success:function () {
-                        alert("加入成功");
-                    },error:function () {
-                        alert("error");
-                    }
-                });
+                if($(this).hasClass('active')){
+                    $.post(MODULE+'/Circle/quit',{circle_id:"<?php echo ($id); ?>"});
+                    $(this).text("加入").removeClass('active');
+                }else {
+                    $.get(MODULE+"/Circle/join",{circle_id:"<?php echo ($id); ?>"});
+                    $(this).text("已加入").addClass('active');
+                }
             }
             if(this.id=="write"){
                 window.open(MODULE+"/Article/write/?circle_id=<?php echo ($id); ?>");
@@ -121,6 +123,11 @@
                 }
             },error:function () {
                 alert("get article list error");
+            }
+        });
+        $.post(MODULE+"/Circle/join_status",{cid:"<?php echo ($id); ?>"},function (data) {
+            if(data){
+                $("#join").text("已加入").addClass('active');
             }
         })
     })

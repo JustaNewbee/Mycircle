@@ -69,9 +69,9 @@ class ArticleController extends Controller{
         }
         return $result;
     }
-    //消除文本中的空格
+    //消除文本头部中的空格
     function trimall($str){
-        $reg = array(" ","　","\t","\n","\r");
+        $reg = array("\t","\n","\r","&nbsp;","&emsp;");
         return str_replace($reg, '', $str);
     }
 }

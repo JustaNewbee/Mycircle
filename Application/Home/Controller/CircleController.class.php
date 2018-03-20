@@ -63,11 +63,18 @@ class CircleController extends Controller{
     }
 //    加入兴趣圈操作
     public function join(){
+        $this->redirect_login();
         $join = M('relation');
         $uid = session("uid");
         $data['r_cid'] = $_GET['circle_id'];
         $data['r_uid'] = $uid;
         $join->add($data);
+    }
+    public function quit(){
+        $quit = M('relation');
+        $uid = session('uid');
+        $cid = $_POST['circle_id'];
+        $result = $quit->where("r_uid='$uid' and r_cid=$cid")->delete();
     }
     public function user_list(){
         $user = M('user');
@@ -84,6 +91,21 @@ class CircleController extends Controller{
                               WHERE uid = '$uid'");
             $result = array($join,$article);
             $this->ajaxReturn($result);
+        }
+    }
+    public function join_status(){
+        $relation = M('relation');
+        $uid = session('uid');
+        $cid = $_POST['cid'];
+        if($relation->where("r_uid = '$uid' and r_cid = '$cid'")->find()){
+            $this->ajaxReturn(true);
+        }else{
+            $this->ajaxReturn(false);
+        }
+    }
+    public function redirect_login(){
+        if(!session("uid")){
+            $this->success('正在跳转.....',__ROOT__+'/Account/login');
         }
     }
 }

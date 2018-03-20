@@ -9,7 +9,7 @@ $(function () {
             },
             success:function (confirm) {
                 if(confirm){
-                    window.location.reload();
+                    window.history.back();
                 }else{
                     alert("登录失败");
                 }

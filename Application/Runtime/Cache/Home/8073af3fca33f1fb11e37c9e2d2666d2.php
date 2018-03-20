@@ -181,7 +181,6 @@
                 start = text.indexOf("<p>", end);
                 end = text.indexOf("</p>", start);
                 if(txt.search("<img") == -1 && txt.search('src=') == -1 ){
-                    console.log("OK");
                     return true;
                 }
             }

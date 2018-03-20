@@ -940,3 +940,26 @@ textarea{
 .circle-article-list .circle-article-intro {
     color: #ababab;
 }
+.circle-wrapper .circle-title h1 {
+    margin: 0;
+    float: left;
+}.circle-title::after {
+     content: " ";
+     clear: both;
+     display: table;
+ }
+.circle-wrapper .join-btn {
+    width: auto;
+    margin-top: 2px;
+    margin-left: 10px;
+    float: left;
+    background: rgba(39,40,34,0.3);
+    color: #fff;
+}
+.circle-wrapper .join-btn:hover {
+    background: rgb(217, 89, 71);
+}
+.circle-wrapper .active {
+    background: rgb(217, 89, 71);
+}
+/*circle页面*/
