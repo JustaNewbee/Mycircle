@@ -15,31 +15,42 @@
 </head>
 <body>
     <div class="main-body">
-    <header >
-        <div class="nav_container bg">
-            <div class="nav-menu fl">
-                <img src="/mycircle/Public/img/logo.png" class="logo fl">
-                <ul class="nav-menu-list fl">
-                    <li><a href="/mycircle">首页</a></li>
-                    <li><a href="/mycircle/Circle">兴趣圈</a></li>
-                    <li class="li-bottom"></li>
+        <header>
+    <div class="nav_container bg">
+        <div class="nav-menu fl">
+            <a href="/mycircle" class="fl">
+                <img src="/mycircle/Public/img/logo.png" class="logo">
+            </a>
+            <ul class="nav-menu-list fl">
+                <li><a href="/mycircle">首页</a></li>
+                <li><a href="/mycircle/Circle">兴趣圈</a></li>
+                <li class="li-bottom"></li>
+            </ul>
+        </div>
+        <div class="search-field">
+            <form>
+                <input type="search"  class="search" name="search"  maxlength="20"/>
+                <a class="glyphicon glyphicon-search" name="searchSubmit"></a>
+            </form>
+        </div>
+        <div class="fr nav-user">
+            <div class="fl user-status">
+                <ul class="user-status-list">
+                    <li>
+                        <a href="/mycircle/Account/login">
+                            <div class="top-face face fl">
+                                <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
+                            </div>
+                        </a>
+                        <ul class="user-dropdown-menu">
+
+                        </ul>
+                    </li>
                 </ul>
             </div>
-            <div class="fr nav-user">
-                <div class="fl user-status">
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <div class="top-face face fl">
-                                    <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
         </div>
-    </header>
+    </div>
+</header>
         <div class="form-container">
             <nav>
                 <ul>

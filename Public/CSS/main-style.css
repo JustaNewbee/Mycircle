@@ -146,7 +146,7 @@ input,select,option,textarea{
 .user-dropdown-menu {
     position: fixed;
     top: 36px;
-    width: 200px;
+    width: 150px;
     background: #fff;
     border-right: 1px solid #dadada;
     border-left: 1px solid #dadada;
@@ -163,8 +163,8 @@ input,select,option,textarea{
 .user-dropdown-menu li a{
     color: inherit;
     width: 100%;
-    font-size: 20px;
-    padding: 10px 15px;
+    font-size: 16px;
+    padding: 10px 15px 10px 25px;
     display: block;
 }
 .user-dropdown-menu li:hover {
@@ -183,6 +183,9 @@ input,select,option,textarea{
 .top-face{
     width: 36px;
     height: 36px;
+}
+.face {
+    transition: all .25s ease-in-out;
 }
 .face:hover{
     transform: scale(1.1,1.1);
@@ -542,7 +545,6 @@ input,select,option,textarea{
     overflow: hidden;
     padding: 10px;
 }
-
 .user-menu-circle li{
     float: left;
     width: 45%;
@@ -1015,7 +1017,7 @@ textarea{
     clear: both;
     display: table;
 }
-.article-wrapper .circle-article-nav  a:hover {
+.article-wrapper .circle-article-nav a:hover {
     color: rgb(217 ,89 ,71);
     transform: scale(1.2,1.2);
 }
