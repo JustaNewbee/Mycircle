@@ -39,6 +39,12 @@ class AccountController extends Controller
         $insert_data['password'] =  $password;
         $insert_data['mail'] =  $mail;
         $register->data($insert_data)->add();
+        $login = M('user');
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $result = $login->where("username='$username' and password='$password'")->find();
+        session("uid",$result['uid']);
+        session("username",$result['username']);
     }
     public function verify(){
         $user = M('user');
@@ -49,5 +55,10 @@ class AccountController extends Controller
         }else{
             $this->ajaxReturn(false);
         }
+    }
+    public function logout(){
+        session('uid',null);
+        session('username',null);
+        redirect(U('Home/Index'));
     }
 }

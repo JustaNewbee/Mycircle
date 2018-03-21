@@ -11,15 +11,22 @@ $(function () {
             },
             success:function (confirm) {
                 if(confirm){
-                    window.location.href=MODULE;
+                    if(window.location.pathname.localeCompare(MODULE+'/')==0){
+                        //主页
+                        window.location.reload();
+                        return;
+                    }
+                    //子页
+                    window.location.href = document.referrer;
                 }else{
-                    alert("登录失败");
+                    alert("用户名或者密码错误");
                 }
             },error:function () {
                 alert("Login error");
             }
         });
     });
+    user_dropdown();
 });
 function getString(name) {
         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
@@ -40,10 +47,11 @@ function getLoginState() {
         success:function(confirm){
             if(confirm){
                 $(".user").show();
+                $(".user-status .user-dropdown-menu").append("<li><a href='"+MODULE+"/Account/logout'>退出</a></li>")
             }
             else{
                 $(".user-login-window").show();
-                $(".user-status ul").append("<li><a href='"+MODULE+"/Account/login'>登录</a></li>").append("<li><a href='"+MODULE+"/Account/register'>注册</a></li>");
+                $(".user-status .user-dropdown-menu").append("<li><a href='"+MODULE+"/Account/login'>登录</a></li>").append("<li><a href='"+MODULE+"/Account/register'>注册</a></li>");
             }
         },error:function () {
             alert("check error");
@@ -72,4 +80,11 @@ function searchPlaceholder() {
             $(".search").attr("placeholder","");
             setTimeout(function(){inputPlaceholder(0,"")},400);
         }
+}
+function user_dropdown() {
+    $(".user-status-list:first-child").mouseenter(function () {
+        $('.user-status .user-dropdown-menu').addClass('active')
+    }).mouseleave(function () {
+        $('.user-status .user-dropdown-menu').removeClass('active');
+    });
 }

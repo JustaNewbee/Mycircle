@@ -16,6 +16,7 @@ $(function () {
                 url:MODULE+"/Account/user_sign",
                 success:function () {
                     alert("注册成功");
+                    window.location.href = MODULE;
                 },
                 error:function () {
                     alert("signup fail");

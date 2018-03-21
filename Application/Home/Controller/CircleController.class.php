@@ -64,7 +64,6 @@ class CircleController extends Controller{
 //    加入兴趣圈操作
     public function join(){
         if($this->redirect_login()){
-            $this->ajaxReturn('true');
             return;
         }
         $join = M('relation');
@@ -111,6 +110,18 @@ class CircleController extends Controller{
         if(session("uid")){
             return false;
         }
+        $this->ajaxReturn(true);
         return true;
+    }
+    public function write(){
+        $this->redirect_login();
+        $relation = M('relation');
+        $uid = session('uid');
+        $cid = $_GET['cid'];
+        if($relation->where("r_uid = '$uid' and r_cid = '$cid'")->find()){
+            $this->ajaxReturn(false);
+        }else{
+            $this->ajaxReturn(true);
+        }
     }
 }

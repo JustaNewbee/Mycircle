@@ -140,15 +140,46 @@ input,select,option,textarea{
     height: 36px;
     margin-left: 10px;
 }
-.user-status ul li{
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
+.user-status .active{
+    max-height: 600px;
 }
-.user-status ul li a{
-    color: black;
-    text-shadow:0 0 5px #FFFFFF;
+.user-dropdown-menu {
+    position: fixed;
+    top: 36px;
+    width: 200px;
+    background: #fff;
+    border-right: 1px solid #dadada;
+    border-left: 1px solid #dadada;
+    box-shadow: 0 0 10px 0 black;
+    max-height: 0;
+    overflow-y: hidden;
+    transition: all .25s linear;
 }
+.user-dropdown-menu li{
+    border-bottom: 1px solid #dadada;
+    transition: .25s;
+    cursor: pointer;
+}
+.user-dropdown-menu li a{
+    color: inherit;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 15px;
+    display: block;
+}
+.user-dropdown-menu li:hover {
+    color: #fff;
+    background: rgb(217,83,79);
+}
+/*.user-status ul li{*/
+    /*float: left;*/
+    /*padding-left: 10px;*/
+    /*padding-right: 10px;*/
+/*}*/
+/*.user-status ul li a{*/
+    /*color: black;*/
+    /*text-shadow:0 0 5px #FFFFFF;*/
+/*}*/
 .top-face{
     width: 36px;
     height: 36px;
@@ -165,6 +196,7 @@ input,select,option,textarea{
 
 .container{
     margin: 80px auto;
+    margin-bottom: 0;
     padding: 0;
     width: 1120px;
 }
@@ -956,12 +988,24 @@ textarea{
     float: left;
     background: rgba(39,40,34,0.3);
     color: #fff;
+    transition: .25s ;
+    animation: light-btn  infinite ease-in-out alternate;
+    animation-duration: 3.5s;
 }
-.circle-wrapper .join-btn:hover {
-    background: rgb(217, 89, 71);
+@keyframes light-btn {
+    0%{
+        box-shadow: 0 0 0 rgba(255, 67, 81, 0.2);
+    }
+    50%{
+        box-shadow: 0 0 20px rgba(255, 67, 81, 0.5);
+    }
+    100%{
+        box-shadow: 0 0 0 rgba(255, 67, 81, 0.2);
+    }
 }
 .circle-wrapper .active {
     background: rgb(217, 89, 71);
+    animation-iteration-count: 0;
 }
 .article-wrapper .circle-article-nav li:last-child {
     float: right;
@@ -971,4 +1015,14 @@ textarea{
     clear: both;
     display: table;
 }
+.article-wrapper .circle-article-nav  a:hover {
+    color: rgb(217 ,89 ,71);
+    transform: scale(1.2,1.2);
+}
+.article-wrapper .write,
+.article-wrapper .circle-article-nav a{
+    cursor: pointer;
+    transition: all .35s ease-in-out;
+}
+
 /*circle页面*/

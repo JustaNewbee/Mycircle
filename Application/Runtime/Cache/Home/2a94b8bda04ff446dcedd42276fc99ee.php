@@ -35,13 +35,16 @@
             </div>
             <div class="fr nav-user">
                 <div class="fl user-status">
-                    <ul>
+                    <ul class="user-status-list">
                         <li>
-                            <a href="#">
+                            <a href="/mycircle/Account/login">
                                 <div class="top-face face fl">
                                     <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                                 </div>
                             </a>
+                            <ul class="user-dropdown-menu">
+
+                            </ul>
                         </li>
                     </ul>
                 </div>
