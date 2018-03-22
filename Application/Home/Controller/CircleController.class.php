@@ -67,11 +67,15 @@ class CircleController extends Controller{
             return;
         }
         $join = M('relation');
+        $circle = M('circle');
         $uid = session("uid");
-        $data['r_cid'] = $_GET['circle_id'];
+        $cid = $_GET['circle_id'];
+        $data['r_cid'] = $cid;
         $data['r_uid'] = $uid;
         $join->add($data);
-
+        $result = $circle->where("circle_id='$cid'")->find();
+        $result['circle_people_num']++;
+        $circle->where("circle_id = '$cid'")->setField('circle_people_num',$result['circle_people_num']);
     }
     public function quit(){
         $quit = M('relation');
