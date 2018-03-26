@@ -85,7 +85,11 @@ class AccountController extends Controller
             $data['d_avatar'] = $_POST['src'];
         }
         $dt = M('data');
-        $dt->where("d_uid = '$uid'")->save($data);
+        if($dt->find($uid)){
+            $dt->where("d_uid = '$uid'")->save($data);
+        }else{
+            $dt->where("d_uid = '$uid'")->add($data);
+        }
         $this->ajaxReturn('true');
     }
     public function upload(){

@@ -13,7 +13,7 @@
     <script src="/mycircle/Public/js/my_circle.js"></script>
 </head>
 <body>
-<div class="main-body datapage">
+<div class="main-body circlepage">
     <header>
     <div class="nav_container bg">
         <div class="nav-menu fl">
@@ -53,7 +53,6 @@
     <div class="container">
         <aside class="data-bar">
     <h2>个人中心</h2>
-    <hr>
     <nav>
         <ul>
             <li><a href="/mycircle/Account/mydata">我的信息</a></li>
@@ -63,6 +62,9 @@
         </ul>
     </nav>
 </aside>
+        <div class="wrapper">
+            <h2>23333</h2>
+        </div>
     </div>
     <ul class="bg-bubbles">
         <li></li>

@@ -53,7 +53,6 @@
     <div class="container">
         <aside class="data-bar">
     <h2>个人中心</h2>
-    <hr>
     <nav>
         <ul>
             <li><a href="/mycircle/Account/mydata">我的信息</a></li>

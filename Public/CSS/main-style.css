@@ -1098,7 +1098,8 @@ textarea{
 /*circle页面*/
 /*data页面*/
 .datapage .container ,
-.postpage .container{
+.postpage .container ,
+.circlepage .container {
     background: #fff;
     color: #0f0f0f;
     border-radius: 5px;
@@ -1106,7 +1107,7 @@ textarea{
     height: 600px;
     margin-bottom: 20px;
 }
- .container .data-bar {
+.container .data-bar {
     float: left;
     border-right: solid #dadada 1px;
     background: rgb(250,250,250);
@@ -1118,10 +1119,10 @@ textarea{
     clear: both;
 }
 .container .data-bar h2 {
-    margin: 20px;
-}
-.container .data-bar nav li {
-
+    padding: 20px 10px;
+    margin: 20px 10px;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
 }
 .container .data-bar nav li:hover {
     background: #dadada;
@@ -1224,7 +1225,8 @@ textarea{
     display: none;
     margin-top: -16px;
 }
-.postpage .wrapper {
+.postpage .wrapper,
+.circlepage .wrapper{
     float: left;
     width: 959px;
 }
