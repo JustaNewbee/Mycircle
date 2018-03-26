@@ -47,11 +47,18 @@ function getLoginState() {
         success:function(confirm){
             if(confirm){
                 $(".user").show();
-                $(".user-status .user-dropdown-menu").append("<li><a href='"+MODULE+"/Account/logout'>退出</a></li>")
+                $(".user-status .user-dropdown-menu")
+                    .append("<li><a href='"+MODULE+"/Account/mydata'>我的信息</a></li>")
+                    .append("<li><a href='"+MODULE+"/Account/mycircle'>我的兴趣圈</a></li>")
+                    .append("<li><a href='"+MODULE+"/Account/mypost'>我的文章</a></li>")
+                    .append("<li><a href='"+MODULE+"/Account/setting'>设置</a></li>")
+                    .append("<li><a href='"+MODULE+"/Account/logout'>退出</a></li>");
             }
             else{
                 $(".user-login-window").show();
-                $(".user-status .user-dropdown-menu").append("<li><a href='"+MODULE+"/Account/login'>登录</a></li>").append("<li><a href='"+MODULE+"/Account/register'>注册</a></li>");
+                $(".user-status .user-dropdown-menu")
+                    .append("<li><a href='"+MODULE+"/Account/login'>登录</a></li>")
+                    .append("<li><a href='"+MODULE+"/Account/register'>注册</a></li>");
             }
         },error:function () {
             alert("check error");
@@ -87,4 +94,22 @@ function user_dropdown() {
     }).mouseleave(function () {
         $('.user-status .user-dropdown-menu').removeClass('active');
     });
+}
+//上传文章封面
+function face_change(obj) {
+    var imgFile = obj.files[0];
+    var fr = new FileReader();
+    fr.onload = function () {
+        $("#portrait").attr("src",fr.result);
+    };
+    fr.onloadstart = function () {
+        $("#img-uploader span").removeClass("glyphicon-upload").addClass("glyphicon-option-horizontal");
+    };
+    fr.readAsDataURL(imgFile);
+}
+function tip_success() {
+    $(".tip_success").fadeToggle(500);
+}
+function tip_fail() {
+    $(".tip_fail").fadeToggle(500);
 }

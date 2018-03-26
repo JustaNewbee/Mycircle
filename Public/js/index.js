@@ -1,6 +1,5 @@
 $(function () {
     getUserSubmitList();
-    getRecommendArticleList();
     var input_field = $(".input-field");
     var input_label = $(".input-label");
     var input_label_span = $(".input-label span");
@@ -34,7 +33,7 @@ function getUserSubmitList() {
                     if(i==0) {
                         var a = '<a class="bg " href="'+MODULE+'/Circle/' + data[i][j]['circle_id'] + '" target="_blank" title="' + data[i][j]['circle_name'] + '">\n' +
                             '                                <div class="circle-img-mini fl" >\n' +
-                            '                                     <img src="'+PUBLIC+'/img/akari.jpg" class="img-face">\n' +
+                            '                                     <img src="'+data[i][j]['circle_avatar']+'" class="img-face">\n' +
                             '                                </div>\n' +
                             '                                <div class="circle-content fl">\n' +
                             '                                    <p class="line-limit" >' + data[i][j]["circle_name"] + '</p>\n' +
@@ -53,15 +52,17 @@ function getUserSubmitList() {
                     }
                 }
             }
+            $(".user-menu-circle li:odd").addClass('right');
         },error:function () {
             alert("error");
         }
     });
 }
-function getRecommendArticleList() {
+function getRecommendArticleList(current_page,need_page) {
     $.ajax({
         type:"post",
-        url:MODULE+"/Article/article_list",
+        url:MODULE+"/Article/article_list/?page="+current_page,
+        data:{need_page:need_page},
         success:function(data){
             for(i=0;i<data.length;i++) {
                 $div = '<div class="article bg">\n' +
@@ -79,7 +80,7 @@ function getRecommendArticleList() {
                     '                    <span>浏览量: '+data[i]['pageview']+'</span>\n' +
                     '                    <span>评论数: '+data[i]['comment']+'</span>\n' +
                     '                    <span>发布日期: '+data[i]['publish_date']+'</span>\n' +
-                    '                    <span title="'+data[i]['editor']+'">作者: <a href="#">'+data[i]['editor']+'</a></span>\n' +
+                    '                    <span title="'+data[i]['editor']+'">作者: <a href="#">'+data[i]['username']+'</a></span>\n' +
                     '                </div>\n' +
                     '\n' +
                     '            </div>';
@@ -99,7 +100,7 @@ function getCircleList() {
             for( i in data){
                 var add ='<a class="my-circle bg fl" href="'+MODULE+'/Circle/'+data[i]['circle_id']+'" target="_blank">\n' +
                     '                    <div class="circle-img fl" >\n' +
-                    '                        <img src="'+PUBLIC+'/img/akari.jpg" class="img-face">\n' +
+                    '                        <img src="'+data[i]['circle_avatar']+'" class="img-face">\n' +
                     '                    </div>\n' +
                     '                    <div class="circle-content fl">\n' +
                     '                        <p class="circle-name line-limit">'+data[i]['circle_name']+'</p>\n' +

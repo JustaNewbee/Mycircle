@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的文章-MyCircle</title>
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="__PUBLIC__/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="__PUBLIC__/layui/css/layui.css">
+    <script src="__PUBLIC__/js/jquery-3.2.1.js"></script>
+    <script>
+        var MODULE = "__ROOT__";
+    </script>
+    <script src="__PUBLIC__/js/my_circle.js"></script>
+</head>
+<body>
+<div class="main-body postpage">
+    <include file="Public:header"/>
+    <div class="container">
+        <include file="Public:asidebar"/>
+        <div class="wrapper">
+            <table class="post-list" id="post" lay-filter="post">
+            </table>
+            <script type="text/html" id="bar">
+                <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+                <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+                <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+            </script>
+        </div>
+    </div>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+</body>
+<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+<script src="__PUBLIC__/layui/layui.js"></script>
+<script>
+    $(function () {
+        layui.use('table', function(){
+            var table = layui.table;
+            table.render({
+                elem: '#post'
+                ,url: MODULE+'/Account/post' //数据接口
+                ,page: true //开启分页
+                ,even: true
+                ,cols: [[ //表头
+                    {field: 'article_id', title: 'ID', width:60, sort: true}
+                    ,{field: 'title', title: '标题', width:120,sort: true}
+                    ,{field: 'content', title: '内容', width:140}
+                    ,{field: 'pageview', title: '浏览量', width: 80,sort: true}
+                    ,{field: 'comment', title: '评论数', width: 80,sort: true}
+                    ,{field: 'publish_date', title: '发布日期', width:109}
+                    ,{field: 'circle', title: '所属圈', width: 100}
+                    ,{field: 'label', title: '标签', width: 100}
+                    ,{width:160, align:'center', toolbar: '#bar'}
+                ]]
+            });
+            //监听工具条
+            table.on('tool(post)', function(obj){
+                var data = obj.data;
+                //查看
+                if(obj.event === 'detail'){
+                    window.open(MODULE+"/Article/read/"+data.article_id)
+                }
+                //删除
+                else if(obj.event === 'del'){
+                    layer.confirm('真的要删？', function(index){
+                        $.ajax({
+                            url:MODULE+"/Account/del",
+                            type:'post',
+                            data:{id:data.article_id},
+                            success:function (res) {
+                                if(res){
+                                    obj.del();
+                                    layer.close(index);
+                                    layer.msg('删除成功',{icon: 1})
+                                }
+                            },error:function () {
+                                layer.alert('删除失败');
+                            }
+                        })
+//
+                    });
+                }
+                //编辑
+                else if(obj.event === 'edit'){
+                    window.open(MODULE+"/Article/write?article_id="+data.article_id);
+                }
+            });
+        });
+
+    })
+</script>
+</html>

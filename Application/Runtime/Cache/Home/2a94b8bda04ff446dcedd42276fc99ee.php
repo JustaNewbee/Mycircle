@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link href="/mycircle/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/mycircle/Public/CSS/main-style.css" rel="stylesheet" type="text/css" >
+    <link href="/mycircle/Public/CSS/pagination.css" rel="stylesheet" type="text/css" >
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script src="/mycircle/Public/js/my_circle.js"></script>
     <script>
         var MODULE="/mycircle";
         var PUBLIC="/mycircle/Public";
     </script>
-
+    <script src="/mycircle/Public/js/jquery.pagination.js"></script>
 </head>
 <body>
 <div class="main-body">
@@ -38,7 +39,7 @@
             <div class="fl user-status">
                 <ul class="user-status-list">
                     <li>
-                        <a href="/mycircle/Account/login">
+                        <a href="#">
                             <div class="top-face face fl">
                                 <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                             </div>
@@ -77,21 +78,23 @@
             </aside >
             <aside  class="user bg">
                 <div class="face side-face">
-                    <img src="/mycircle/Public/img/akari.jpg" class="img-face">
+                    <img src="<?php echo ($avatar); ?>" class="img-face">
                 </div>
                 <p class="welcome">欢迎你！<?php echo ($username); ?>~</p>
                 <div class="user-menu">
-                    <p>我加入的：</p>
+                    <p>最近加的：</p>
                     <ul class="user-menu-circle"></ul>
-                    <p class="cr">我写的：</p>
+                    <p class="view-more"><a href="#">查看更多</a></p>
+                    <p>最近写的：</p>
                     <ul class="user-menu-article"></ul>
+                    <p class="view-more"><a href="#">查看更多</a></p>
                 </div>
             </aside>
             <aside class="bg rank">
                 排行榜
             </aside>
         </aside>
-        <div class="article-list"></div>
+        <div class="article-list M-box m-style"></div>
         <ul class="bg-bubbles">
             <li></li>
             <li></li>
@@ -106,6 +109,19 @@
         </ul>
     </div>
 </div>
+<script>
+    $(function () {
+        $('.M-box').pagination({
+            mode: 'fixed',
+            pageCount: '<?php echo ($total); ?>'%5-1,
+            callback: function (api) {
+                getRecommendArticleList(api.getCurrent(),5);
+            }
+        },function (api) {
+            getRecommendArticleList(api.getCurrent(),5);
+        });
+    });
+</script>
 </body>
     <script src="/mycircle/Public/bootstrap/js/bootstrap.min.js"></script>
     <script src="/mycircle/Public/js/index.js"></script>

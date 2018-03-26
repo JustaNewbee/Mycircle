@@ -19,6 +19,9 @@ a,a:visited,a:hover,a:link,a:visited,a:active{
 input,select,option,textarea{
     outline: 0;
 }
+img[src=""]{
+    opacity: 0;
+}
 .fl{
     float: left;
 }
@@ -78,6 +81,7 @@ input,select,option,textarea{
     font-size: 14px;
     cursor: pointer;
     transition: all .5s ease-in-out;
+    float: right;
 }
 .nav_container .glyphicon-edit:before {
     padding-right: 5px;
@@ -171,15 +175,6 @@ input,select,option,textarea{
     color: #fff;
     background: rgb(217,83,79);
 }
-/*.user-status ul li{*/
-    /*float: left;*/
-    /*padding-left: 10px;*/
-    /*padding-right: 10px;*/
-/*}*/
-/*.user-status ul li a{*/
-    /*color: black;*/
-    /*text-shadow:0 0 5px #FFFFFF;*/
-/*}*/
 .top-face{
     width: 36px;
     height: 36px;
@@ -188,6 +183,7 @@ input,select,option,textarea{
     transition: all .25s ease-in-out;
 }
 .face:hover{
+    box-shadow: 0 0 50px 0 black;
     transform: scale(1.1,1.1);
 }
 .img-face{
@@ -205,6 +201,8 @@ input,select,option,textarea{
 }
 .article-list{
     width: 754px;
+    position: relative;
+    padding-bottom: 50px;
 }
 .article{
     margin-bottom: 5px;
@@ -545,23 +543,44 @@ input,select,option,textarea{
     overflow: hidden;
     padding: 10px;
 }
+.user-menu .view-more {
+    font-size: 14px;
+    text-align: right;
+    margin-top: 5px;
+}
+.user-menu .view-more a:hover {
+    border-bottom: 2px solid #fff;
+}
+.user-menu-circle:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
 .user-menu-circle li{
     float: left;
-    width: 45%;
-    margin: 5px;
+    width: 155px;
+    margin: 5px 0;
+}
+.user-menu-circle .right{
+    margin-left: 15px;
 }
 .user-menu-circle li a{
     padding: 5px;
     float: left;
     width: 100%;
-
 }
 .user-menu-circle li a div p{
     font-size: 15px;
     font-weight: bolder;
     line-height: 36px;
 }
-
+.user-menu-article li{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.user-menu-article li:hover {
+    box-shadow:0 2px 0 #aaaaaa;
+}
 /*侧边栏样式结束*/
 
 /*文章区开始*/
@@ -628,13 +647,20 @@ textarea{
 .create-container{
     width: 70%;
     margin: 80px auto;
-    padding: 10px;
+    padding: 20px 10px;
 }
 .circle-create{
-    width: 400px;
+    width: 100%;
+    color: #fff;
 }
 .circle-create h1{
     margin: 0;
+}
+.circle-create .tip_success,
+.circle-create .tip_fail {
+    text-align: center;
+    display: none;
+    margin-top: -16px;
 }
 .circle_class{
     width: 120px;
@@ -645,8 +671,51 @@ textarea{
     margin-left: 20px;
 }
 .circle-create input[type=submit]{
-    width: 200px;
+    margin-top: 20px;
 }
+.circle-create:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+.circle-create .left-form {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-right: 15px;
+    border-right: solid #fff 1px;
+}
+.circle-create .right-form {
+    width: 50%;
+    float: right;
+    padding: 10px;
+    padding-left: 15px;
+}
+.circle-create .right-form .img-uploader {
+    float: none;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+}
+.circle-create .right-form .img-uploader span{
+    width: 100%;
+    height: 100%;
+    line-height: 250px;
+    font-size: 100px;
+}
+.circle-create .right-form .img-uploader input[type=file]{
+    width: 100%;
+    height: 100%;
+    top: -250px;
+}
+.circle-create .right-form .img-uploader #portrait{
+    width: 100%;
+    height: 100%;
+    top: -500px;
+}
+
 /*创建兴趣圈部分结束*/
 /*上传文章*/
 .edit-container{
@@ -1026,5 +1095,140 @@ textarea{
     cursor: pointer;
     transition: all .35s ease-in-out;
 }
-
 /*circle页面*/
+/*data页面*/
+.datapage .container ,
+.postpage .container{
+    background: #fff;
+    color: #0f0f0f;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 600px;
+    margin-bottom: 20px;
+}
+ .container .data-bar {
+    float: left;
+    border-right: solid #dadada 1px;
+    background: rgb(250,250,250);
+    height: 100%;
+}
+.container .data-bar:after {
+    content: ' ';
+    display: table;
+    clear: both;
+}
+.container .data-bar h2 {
+    margin: 20px;
+}
+.container .data-bar nav li {
+
+}
+.container .data-bar nav li:hover {
+    background: #dadada;
+}
+.container .data-bar a {
+    color: inherit;
+    display: block;
+    padding: 15px 25px;
+
+}
+.datapage .img-uploader {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    float: none;
+    box-sizing:border-box;
+    position: relative;
+    z-index: 10;
+}
+.datapage .img-uploader span{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+}
+.datapage .img-uploader input[type="file"] {
+    width: 150px;
+    height: 150px;
+    top: -150px;
+    opacity: 0;
+}
+.datapage .img-uploader #portrait {
+    top: -300px;
+    height: 150px;
+    width: 150px;
+}
+.datapage .user-data {
+    float: left;
+    width: 959px;
+}
+.datapage .user-data .wrapper{
+    border-top: 1px solid #dadada;
+    margin-top: -96px;
+    padding-top: 96px;
+    position: relative;
+    z-index: 2;
+}
+.datapage .user-data .wrapper .inner-wrapper {
+    margin: 0 auto;
+    width: 270px;
+}
+.datapage .user-data .wrapper input[type='text'],
+.datapage .user-data .wrapper input[type='date'],
+.datapage .user-data .wrapper textarea{
+    width: 200px;
+    display: inline-block;
+}
+.datapage .user-data .wrapper .sex {
+    padding-left: 0;
+}
+.datapage .user-data .form-group {
+    margin-bottom: 20px;
+}
+.datapage label {
+    margin: 0;
+    margin-right: 15px;
+    cursor: pointer;
+    vertical-align: top;
+}
+.datapage .user-data .wrapper .sex label {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    margin-right: 0;
+    margin-bottom: 20px;
+}
+.datapage .user-data .wrapper .active label {
+    background: rgb(217,83,79);
+    color: #fff;
+}
+.datapage .user-data .wrapper .sex input[type='radio']{
+    opacity: 0;
+    position: absolute;
+    margin-left: 0;
+}
+.datapage .user-data .wrapper input[type='submit'] {
+    display: block;
+}
+.datapage .user-data .tip_success,
+.datapage .user-data .tip_fail {
+    text-align: center;
+    display: none;
+    margin-top: -16px;
+}
+.postpage .wrapper {
+    float: left;
+    width: 959px;
+}
+.postpage .wrapper .post-list+div {
+    height: 100%;
+    margin: 0;
+}

@@ -38,7 +38,7 @@
             <div class="fl user-status">
                 <ul class="user-status-list">
                     <li>
-                        <a href="/mycircle/Account/login">
+                        <a href="#">
                             <div class="top-face face fl">
                                 <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                             </div>
