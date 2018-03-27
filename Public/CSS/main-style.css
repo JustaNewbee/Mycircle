@@ -1234,6 +1234,9 @@ textarea{
     height: 100%;
     margin: 0;
 }
+.circlepage .container {
+    position: relative;
+}
 .circlepage .wrapper .card {
     display: inline-block;
     width: 290px;

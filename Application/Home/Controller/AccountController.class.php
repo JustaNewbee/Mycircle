@@ -122,11 +122,18 @@ class AccountController extends Controller
         M('circle')->where("'$cid'=circle_id")->setDec('circle_article_num');
         $this->ajaxReturn(true);
     }
+    public function mycircle(){
+        $this->assign('total',M('relation')->count(session('uid')));
+        $this->display();
+    }
     public function getMyCircle(){
         $relation = M('relation');
         $uid = session('uid');
-        $result = $relation->query("SELECT circle_name,circle_intro,circle_avatar FROM my_relation 
-        JOIN my_circle ON my_circle.circle_id=r_cid WHERE r_uid = '$uid'");
+        $current = $_POST['current'];
+        $page = $_POST['page'];
+        $result = $relation->query("SELECT circle_name,circle_intro,circle_avatar FROM my_relation
+        JOIN my_circle ON my_circle.circle_id=r_cid WHERE r_uid = $uid LIMIT $current,$page");
         $this->ajaxReturn($result);
+
     }
 }

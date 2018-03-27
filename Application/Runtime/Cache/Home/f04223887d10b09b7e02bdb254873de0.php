@@ -6,6 +6,7 @@
     <link href="/mycircle/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/mycircle/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/mycircle/Public/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/mycircle/Public/CSS/pagination.css" rel="stylesheet" type="text/css" >
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script>
         var MODULE = "/mycircle";
@@ -62,7 +63,8 @@
         </ul>
     </nav>
 </aside>
-        <div class="wrapper"></div>
+        <div class="wrapper M-box m-style">
+        </div>
     </div>
     <ul class="bg-bubbles">
         <li></li>
@@ -79,14 +81,27 @@
 </div>
 </body>
 <script src="/mycircle/Public/bootstrap/js/bootstrap.min.js"></script>
+<script src="/mycircle/Public/js/jquery.pagination.js"></script>
 <script>
     $(function () {
-        getCircleList();
+        var total = "<?php echo ($total); ?>";
+        total = Math.ceil(total/3);
+        $('.M-box').pagination({
+            mode: 'fixed',
+            pageCount: total,
+            callback: function (api) {
+                getCircleList(api.getCurrent(),3);
+            }
+        },function (api) {
+            getCircleList(api.getCurrent(),3);
+        });
+
     });
-    function getCircleList(code,current,page) {
+    function getCircleList(current,page) {
         $.ajax({
-            url:MODULE+'/Account/getMyCircle',
-            data:{current:current,page:page},
+            type:'post',
+            url: MODULE+'/Account/getMyCircle',
+            data: {current:current,page:page},
             success:function (data) {
                 for(var i=0;i<data.length;i++){
                     circleDisplay($('.wrapper'),data[i]);
