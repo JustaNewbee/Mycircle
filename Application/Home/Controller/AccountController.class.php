@@ -129,8 +129,8 @@ class AccountController extends Controller
     public function getMyCircle(){
         $relation = M('relation');
         $uid = session('uid');
-        $current = $_POST['current'];
         $page = $_POST['page'];
+        $current = ($_POST['current']-1)*$page;
         $result = $relation->query("SELECT circle_name,circle_intro,circle_avatar FROM my_relation
         JOIN my_circle ON my_circle.circle_id=r_cid WHERE r_uid = $uid LIMIT $current,$page");
         $this->ajaxReturn($result);

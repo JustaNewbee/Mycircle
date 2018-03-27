@@ -113,7 +113,7 @@
     $(function () {
         var total = '<?php echo ($total); ?>';
         var show =  5;
-        total = Math.ceil(total/show)
+        total = Math.ceil(total/show);
         $('.M-box').pagination({
             mode: 'fixed',
             pageCount: total,
