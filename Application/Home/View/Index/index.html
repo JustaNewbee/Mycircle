@@ -77,19 +77,16 @@
 <script>
     $(function () {
         var total = '{$total}';
-        if(total%5==0){
-            total = total/5;
-        }else {
-            total = total%5-1;
-        }
+        var show =  5;
+        total = Math.ceil(total/show)
         $('.M-box').pagination({
             mode: 'fixed',
             pageCount: total,
             callback: function (api) {
-                getRecommendArticleList(api.getCurrent(),5);
+                getRecommendArticleList(api.getCurrent(),show);
             }
         },function (api) {
-            getRecommendArticleList(api.getCurrent(),5);
+            getRecommendArticleList(api.getCurrent(),show);
         });
     });
 </script>
