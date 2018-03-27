@@ -62,9 +62,7 @@
         </ul>
     </nav>
 </aside>
-        <div class="wrapper">
-            <h2>23333</h2>
-        </div>
+        <div class="wrapper"></div>
     </div>
     <ul class="bg-bubbles">
         <li></li>
@@ -81,5 +79,34 @@
 </div>
 </body>
 <script src="/mycircle/Public/bootstrap/js/bootstrap.min.js"></script>
-
+<script>
+    $(function () {
+        getCircleList();
+    });
+    function getCircleList(code,current,page) {
+        $.ajax({
+            url:MODULE+'/Account/getMyCircle',
+            data:{current:current,page:page},
+            success:function (data) {
+                for(var i=0;i<data.length;i++){
+                    circleDisplay($('.wrapper'),data[i]);
+                }
+            },error:function () {
+                alert('get circle error');
+            }
+        })
+    }
+    function circleDisplay(obj,data) {
+        $model = '<div class="card">\n' +
+            '                <img src="'+data['circle_avatar']+'">\n' +
+            '                <span class="title">'+data['circle_name']+'</span>\n' +
+            '                <span class="intro">'+data['circle_intro']+'</span>\n' +
+            '                <span class="divider"></span>\n' +
+            '                <a class="quit" href="#">退出</a>\n' +
+            '                <a class="edit" href="#">发文</a>\n' +
+            '                <a class="detail" href="#">查看</a>\n' +
+            '            </div>';
+        obj.append($model);
+    }
+</script>
 </html>

@@ -111,9 +111,15 @@
 </div>
 <script>
     $(function () {
+        var total = '<?php echo ($total); ?>';
+        if(total%5==0){
+            total = total/5;
+        }else {
+            total = total%5-1;
+        }
         $('.M-box').pagination({
             mode: 'fixed',
-            pageCount: '<?php echo ($total); ?>'%5-1,
+            pageCount: total,
             callback: function (api) {
                 getRecommendArticleList(api.getCurrent(),5);
             }

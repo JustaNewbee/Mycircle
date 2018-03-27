@@ -1234,3 +1234,77 @@ textarea{
     height: 100%;
     margin: 0;
 }
+.circlepage .wrapper .card {
+    display: inline-block;
+    width: 290px;
+    height: 130px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-bottom: 0;
+    position: relative;
+    box-shadow: 0 3px 20px 0 #0f0f0f;
+    background-image: linear-gradient(20deg, rgb(60,6,118) 0%,rgb(90,13,155) 25%,rgb(128,22,123) 50%,rgb(185,55,103) 75% ,rgb(171,20,159) 100%);
+}
+.circlepage .wrapper .card img {
+    width: 72px;
+    height: 72px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 3px 20px 0 #0f0f0f;
+    position: relative;
+    z-index: 10;
+}
+.circlepage .wrapper .card .title {
+    display: block;
+    position: absolute;
+    width: calc(100% - 122px);
+    left: calc(100% - 190px);
+    top: 12px;
+    font-size: 22px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.circlepage .wrapper .card .divider {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border-top: solid 1px #c3c3c3;
+    position: absolute;
+    top: 92px;
+    left: 0;
+    box-shadow: 0 3px 10px 0 #0f0f0f;
+}
+.circlepage .wrapper .card .intro {
+    display: block;
+    position: absolute;
+    width: calc(100% - 122px);
+    left: calc(100% - 190px);
+    top: 48px;
+    font-size: 16px;
+    color: #c2c2c2;
+    line-height: 20px;
+    max-height: 40px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.circlepage .wrapper .card a {
+    font-size: 16px;
+    float: right;
+    margin-top: 13px;
+    display: inline-block;
+    padding: 6px 19px;
+    margin-right: -10px;
+    margin-left: 10px;
+}
+.circlepage .wrapper .card a:hover {
+    background: rgba(255,255,255,0.2);
+
+}

@@ -20,7 +20,7 @@ class ArticleController extends Controller{
     public function write(){
         $circle = M('circle');
         if(isset($_GET['circle'])) {
-            $result = $circle->find($_GET['circle_id']);
+            $result = $circle->find($_GET['circle']);
             $this->assign("circle_name",$result['circle_name']);
         }
         if(isset($_GET['article_id'])) {
