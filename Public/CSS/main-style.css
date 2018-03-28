@@ -1298,7 +1298,7 @@ textarea{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.circlepage .wrapper .card a {
+.circlepage .wrapper .card .btn-card {
     font-size: 16px;
     float: right;
     margin-top: 13px;
@@ -1306,7 +1306,9 @@ textarea{
     padding: 6px 19px;
     margin-right: -10px;
     margin-left: 10px;
+    color: #fff;
+    cursor: pointer;
 }
-.circlepage .wrapper .card a:hover {
+.circlepage .wrapper .card .btn-card:hover {
     background: rgba(255,255,255,0.2);
 }

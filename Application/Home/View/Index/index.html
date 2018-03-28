@@ -81,6 +81,7 @@
         total = Math.ceil(total/show);
         $('.M-box').pagination({
             mode: 'fixed',
+            showData: show,
             pageCount: total,
             callback: function (api) {
                 getRecommendArticleList(api.getCurrent(),show);
