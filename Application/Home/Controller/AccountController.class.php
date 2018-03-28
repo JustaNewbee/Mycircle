@@ -131,7 +131,7 @@ class AccountController extends Controller
         $uid = session('uid');
         $page = $_POST['page'];
         $current = ($_POST['current']-1)*$page;
-        $result = $relation->query("SELECT circle_name,circle_intro,circle_avatar FROM my_relation
+        $result = $relation->query("SELECT circle_id,circle_name,circle_intro,circle_avatar FROM my_relation
         JOIN my_circle ON my_circle.circle_id=r_cid WHERE r_uid = $uid LIMIT $current,$page");
         $this->ajaxReturn($result);
 

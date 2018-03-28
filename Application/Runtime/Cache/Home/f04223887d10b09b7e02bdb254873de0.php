@@ -7,6 +7,7 @@
     <link href="/mycircle/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/mycircle/Public/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/mycircle/Public/CSS/pagination.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="/mycircle/Public/layui/css/layui.css">
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script>
         var MODULE = "/mycircle";
@@ -82,18 +83,47 @@
 </body>
 <script src="/mycircle/Public/bootstrap/js/bootstrap.min.js"></script>
 <script src="/mycircle/Public/js/jquery.pagination.js"></script>
+<script src="/mycircle/Public/layui/layui.js"></script>
 <script>
+    var total = "<?php echo ($total); ?>";
+    var show = 3;
+    var current;
     $(function () {
-        var total = "<?php echo ($total); ?>";
         total = Math.ceil(total/3);
         $('.M-box').pagination({
             mode: 'fixed',
             pageCount: total,
             callback: function (api) {
-                getCircleList(api.getCurrent(),3);
+                current = api.getCurrent();
+                getCircleList(current,show);
             }
         },function (api) {
-            getCircleList(api.getCurrent(),3);
+            current = api.getCurrent();
+            getCircleList(current,show);
+        });
+        $('.wrapper').on('click','.card a',function () {
+            var id = $(this).parent(".card").data("id");
+            if($(this).hasClass('detail')){
+                window.open(MODULE+"/Circle/"+id);
+            }
+            if($(this).hasClass('edit')){
+                window.open(MODULE+"/Article/write?circle="+id);
+            }
+            if($(this).hasClass('quit')){
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.confirm('确定退出？',function (index) {
+                        $.post(MODULE+"/Circle/quit",{circle_id:id},function(data){
+                            if(!data){
+                                $('.warpper').remove('.card');
+                                getCircleList(current,show);
+                            }
+                        });
+                        layer.close(index);
+                    });
+                });
+
+            }
         });
 
     });
@@ -112,14 +142,14 @@
         })
     }
     function circleDisplay(obj,data) {
-        $model = '<div class="card">\n' +
+        $model = '<div class="card" data-id="'+data['circle_id']+'">\n' +
             '                <img src="'+data['circle_avatar']+'">\n' +
             '                <span class="title">'+data['circle_name']+'</span>\n' +
             '                <span class="intro">'+data['circle_intro']+'</span>\n' +
             '                <span class="divider"></span>\n' +
-            '                <a class="quit" href="#">退出</a>\n' +
-            '                <a class="edit" href="#">发文</a>\n' +
-            '                <a class="detail" href="#">查看</a>\n' +
+            '                <a class="quit" href="javascipt: ;">退出</a>\n' +
+            '                <a class="edit" href="javascipt: ;">发文</a>\n' +
+            '                <a class="detail" href="javascipt: ;">进入</a>\n' +
             '            </div>';
         obj.append($model);
     }
