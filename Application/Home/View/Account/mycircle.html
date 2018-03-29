@@ -41,10 +41,11 @@
 <script src="__PUBLIC__/layui/layui.js"></script>
 <script>
     var total = "{$total}";
-    var show = 3;
+    var show = 9;
     var current;
+    var page;
     $(function () {
-        total = Math.ceil(total/3);
+        total = Math.ceil(total/show);
         $('.M-box').pagination({
             showData:  show,
             pageCount: total,
@@ -53,7 +54,11 @@
                 getCircleList(current,show);
             }
         },function (api) {
+            page = api;
             current = api.getCurrent();
+            if("{$total}"<=show){
+                $('.page-wrapper').hide();
+            }
             getCircleList(current,show);
         });
 
