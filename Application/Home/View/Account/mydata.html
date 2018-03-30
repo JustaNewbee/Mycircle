@@ -79,6 +79,7 @@
 <script>
     $(function () {
         var return_src = $('#portrait').attr('src');
+        $('.data-bar a:eq(0)').addClass('active');
         $('.sex input').each(function () {
            if(this.value=='{$sex}') {
                $(this).parents(".sex").addClass('active');

@@ -29,6 +29,16 @@ function getUserSubmitList() {
             var join_list = $(".user-menu-circle");
             var article_list = $(".user-menu-article");
             for( i in data){
+                if(i==0&&data[i].length==0){
+                    var str = "还没有加入兴趣圈，点此加入"
+                    $a = '<a class="go-to" href="Circle/">'+str+'</a>';
+                    join_list.append($a);
+                }
+                if(i==1&&data[i].length==0){
+                    var str = "还没有写过文章"
+                    $a = '<span class="tip">'+str+'</span>';
+                    article_list.append($a);
+                }
                 for( j in data[i]){
                     if(i==0) {
                         var a = '<a class="bg " href="'+MODULE+'/Circle/' + data[i][j]['circle_id'] + '" target="_blank" title="' + data[i][j]['circle_name'] + '">\n' +
@@ -50,6 +60,14 @@ function getUserSubmitList() {
                             '</li>';
                         article_list.append($li).append("<hr>");
                     }
+                }
+                if(i==0&&data[i].length>4){
+                    $p = '<p class="view-more"><a href="Account/mycircle" target="_blank">查看更多</a></p>';
+                    join_list.append($p);
+                }
+                if(i==1&&data[i].length>4){
+                    $p = '<p class="view-more"><a href="Account/mypost" target="_blank">查看更多</a></p>';
+                    article_list.append($p);
                 }
             }
             $(".user-menu-circle li:odd").addClass('right');

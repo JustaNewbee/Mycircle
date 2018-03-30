@@ -543,14 +543,22 @@ img[src=""]{
     overflow: hidden;
     padding: 10px;
 }
-.user-menu .view-more {
+.user-menu .view-more,
+.user-menu .go-to,
+.user-menu .tip {
     font-size: 14px;
     text-align: right;
     margin-top: 5px;
 }
-.user-menu .view-more a:hover {
+.user-menu .go-to:after {
+    content: "\e127";
+    font-family: 'Glyphicons Halflings';
+}
+.user-menu .view-more a:hover,
+.user-menu .go-to:hover {
     border-bottom: 2px solid #fff;
 }
+
 .user-menu-circle:after {
     content: " ";
     display: table;
@@ -964,7 +972,9 @@ textarea{
     border: none;
     font-size: 20px;
     vertical-align: middle;
+    color: #fff;
     transition: all .5s ease-in-out;
+    cursor: pointer;
 }
 .search-field a:hover {
     color: rgb(217,89,71);
@@ -1129,14 +1139,21 @@ textarea{
     font-weight: 600;
     border-bottom: 1px solid #eee;
 }
-.container .data-bar nav li:hover {
-    background: #dadada;
-}
+
 .container .data-bar a {
     color: inherit;
     display: block;
     padding: 15px 25px;
-
+}
+.container .data-bar a:hover{
+    background: #dadada;
+}
+.container .data-bar .active {
+    background: rgb(217,83,79);
+    color: #fff;
+}
+.container .data-bar .active:hover {
+    background: rgb(217,83,79);
 }
 .datapage .img-uploader {
     width: 150px;
