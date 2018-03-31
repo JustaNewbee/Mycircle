@@ -57,9 +57,6 @@
         },function (api) {
             page = api;
             current = api.getCurrent();
-            if("{$total}"<=show){
-                $('.page-wrapper').hide();
-            }
             getCircleList(current,show);
         });
 

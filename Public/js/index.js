@@ -1,5 +1,6 @@
 $(function () {
     getUserSubmitList();
+    getTopicList();
     var input_field = $(".input-field");
     var input_label = $(".input-label");
     var input_label_span = $(".input-label span");
@@ -30,12 +31,15 @@ function getUserSubmitList() {
             var article_list = $(".user-menu-article");
             for( i in data){
                 if(i==0&&data[i].length==0){
-                    var str = "还没有加入兴趣圈，点此加入"
-                    $a = '<a class="go-to" href="Circle/">'+str+'</a>';
+                    var str1 = "还没有加入兴趣圈，点此加入";
+                    var str2 = "创建一个";
+                    $a = '<a class="go-to" href="Circle/">'+str1+'</a>';
+                    join_list.append($a).append("<span style='font-size: 14px; margin: 0 5px;'>或</span>");
+                    $a = '<a class="go-to" href="Circle/circle_create" target="_blank">'+str2+'</a>';
                     join_list.append($a);
                 }
                 if(i==1&&data[i].length==0){
-                    var str = "还没有写过文章"
+                    var str = "还没有写过文章";
                     $a = '<span class="tip">'+str+'</span>';
                     article_list.append($a);
                 }
@@ -85,7 +89,7 @@ function getRecommendArticleList(current_page,need_page) {
             for(i=0;i<data.length;i++) {
                 $div = '<div class="article bg">\n' +
                     '                <div class="article-img fl">\n' +
-                    '                    <img src="'+PUBLIC+'/img/akari.jpg" class="img-face">\n' +
+                    '                    <img src="'+data[i]['cover']+'" class="img-face">\n' +
                     '                </div>\n' +
                     '                <div class="article-title ">\n' +
                     '                    <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" title="'+data[i]['title']+'" target="_blank">'+data[i]['title']+'</a>\n' +
@@ -109,10 +113,11 @@ function getRecommendArticleList(current_page,need_page) {
         }
     });
 }
-function getCircleList() {
+function getCircleList(current_page,need_page) {
     $.ajax({
-        type:"post",
-        url:MODULE+"/Circle/circle_display"+window.location.search,
+        type: "post",
+        url: MODULE + "/Circle/circle_display"+window.location.search,
+        data: {current:current_page,need:need_page},
         success:function (data) {
             var div_circle =  $(".circle-display");
             for( i in data){
@@ -129,11 +134,30 @@ function getCircleList() {
                     '                </a>';
                 div_circle.append(add);
             }
-            $(".circle-display a:odd").addClass("my-circle-right");
+            $(".circle-display a:even").addClass("my-circle-right");
 
         },error:function () {
             alert("GEt Circle Error");
         }
     });
     category_position();
+}
+function getTopicList() {
+    $.ajax({
+        url:MODULE + '/Article/getTopicPostList',
+        type: 'post',
+        success:function (data) {
+            for(i in data){
+                $li= '<li>\n' +
+                    '       <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" target="_blank" title="'+data[i]['title']+'">\n' +
+                    '            '+data[i]['title']+
+                    '       </a>\n' +
+                    '</li>';
+
+                $('.rank-list').append($li);
+            }
+        },error:function () {
+
+        }
+    })
 }

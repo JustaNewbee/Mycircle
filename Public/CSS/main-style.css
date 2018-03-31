@@ -90,11 +90,12 @@ img[src=""]{
     background: rgb(217,83,79);
 }
 .nav-menu{
-    margin-left: 15%;
+    margin-top: 3px;
+    margin-left: 100px;
     position: relative;
 }
 .nav-menu-list{
-    margin-left: 15px;
+    margin-left: 50px;
 }
 .nav-menu-list li{
     float: left;
@@ -102,36 +103,26 @@ img[src=""]{
 }
 .nav-menu-list li a{
     width: 100%;
-    color: black;
+    color: #000;
     padding-left: 15px;
     padding-right: 15px;
-    text-shadow:0 0 5px #FFFFFF;
+    text-shadow:0 0 5px #fff;
 }
 
 .li-bottom{
     position: absolute;
     top: 32px;
-    left: 170px;
+    left: 205px;
     transition: left 0.5s ease;
-    border-top: 4px solid #ea6f6e;
+    border-top: 3px solid #ea6f6e;
 }
 .nav-menu-list li:nth-child(1):hover~.li-bottom{
-    left: 170px;
+    left: 205px;
     width: 40px;
 }
 .nav-menu-list li:nth-child(2):hover~.li-bottom{
-    left: 240px;
+    left: 275px;
     width: 60px;
-
-}
-.nav-menu-list li:nth-child(3):hover~.li-bottom{
-    left: 330px;
-    width: 80px;
-
-}
-.nav-menu-list li:nth-child(4):hover~.li-bottom{
-    left: 480px;
-    width: 80px;
 
 }
 .logo{
@@ -195,7 +186,7 @@ img[src=""]{
 
 .container{
     margin: 80px auto;
-    margin-bottom: 0;
+    margin-bottom: 50px;
     padding: 0;
     width: 1120px;
 }
@@ -371,22 +362,29 @@ img[src=""]{
     opacity: 1;
 }
 /*兴趣圈区导航栏效果结束*/
-.circle-container .circle-display{
+.circle-container .circle-display {
     margin-top: 40px;
+    position: relative;
+    padding-bottom: 40px;
 }
-.circle-container .my-circle{
+.circle-container .circle-display:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.circle-container .my-circle {
     width: 350px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding: 5px 10px;
 }
-.circle-container .my-circle-right{
+.circle-container .my-circle-right {
     margin-left: 50px;
 }
-.circle-container .circle-img,.circle-img-mini{
+.circle-container .circle-img,.circle-img-mini {
     border-radius: 50%;
     overflow: hidden;
 }
-.circle-container .circle-img{
+.circle-container .circle-img {
     width: 72px;
     height: 72px;
 }
@@ -524,12 +522,14 @@ img[src=""]{
 }
 .user{
     margin-bottom: 20px;
+    padding: 10px 0;
     display: none;
 }
 .face{
     border: solid 0;
     border-radius: 50%;
     overflow: hidden;
+    display: block;
 }
 .side-face{
     margin: 0 auto;
@@ -543,12 +543,16 @@ img[src=""]{
     overflow: hidden;
     padding: 10px;
 }
+.user-menu .go-to {
+    margin: 0 5px;
+}
 .user-menu .view-more,
 .user-menu .go-to,
 .user-menu .tip {
     font-size: 14px;
     text-align: right;
     margin-top: 5px;
+    margin-left: 5px;
 }
 .user-menu .go-to:after {
     content: "\e127";
@@ -1002,8 +1006,8 @@ textarea{
 }
 .container .outer-wrapper .circle-header .circle-portrait {
     float: left;
-    width: 100px;
-    border-radius: 4px;
+    width: 120px;
+    border-radius: 50%;
     overflow: hidden;
 }
 .container .outer-wrapper .circle-header .circle-portrait img {
@@ -1111,7 +1115,7 @@ textarea{
     transition: all .35s ease-in-out;
 }
 /*circle页面*/
-/*data页面*/
+/*个人页面*/
 .datapage .container ,
 .postpage .container ,
 .circlepage .container {
@@ -1333,4 +1337,50 @@ textarea{
 }
 .circlepage .wrapper .card .btn-card:hover {
     background: rgba(255,255,255,0.2);
+}
+/*排行榜*/
+.rank {
+    border-radius: 4px;
+}
+.rank .rank-banner {
+    padding: 5px 0 5px 15px;
+    background: rgba(0,0,0,0.6);
+}
+.rank .rank-banner span{
+    letter-spacing: 2px;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.rank .rank-banner:before {
+    content: "\e104";
+    font-size: 16px;
+    font-family: 'Glyphicons Halflings';
+    vertical-align: middle;
+
+}
+.rank .rank-list li {
+    padding: 5px 15px;
+    border-bottom: 1px solid #dadada;
+    background: rgba(255,255,255,0.1);
+    vertical-align: middle;
+    transition: all 0.25s ease;
+}
+.rank .rank-list li:hover{
+    background: rgba(255,255,255,0.7);
+    color: #000;
+}
+.rank .rank-list li a {
+    color: inherit;
+    font-size: 14px;
+    max-width: 80%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    transition: all 0.25s ease;
+}
+.rank .rank-list li a:hover {
+    color: rgb(217,83,79);
 }

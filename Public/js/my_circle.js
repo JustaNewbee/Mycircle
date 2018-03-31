@@ -1,6 +1,9 @@
+var name;
+var avatar;
 $(function () {
     getLoginState();
     searchPlaceholder();
+    ajaxController();
     $(".user-login").submit(function () {
         $.ajax({
             type:"post",
@@ -43,9 +46,14 @@ function category_position(){
 }
 function getLoginState() {
     $.ajax({
+        async: false,
         url:MODULE+"/Account/check_login",
-        success:function(confirm){
-            if(confirm){
+        success:function(data){
+            if(data['head']){
+                avatar = data['src'];
+                name = data['name'];
+                $('.face img').attr('src',avatar);
+                $('.welcome').text("欢迎你！"+name+" ~");
                 $(".user").show();
                 $(".user-status .user-dropdown-menu")
                     .append("<li><a href='"+MODULE+"/Account/mydata'>我的信息</a></li>")
@@ -112,4 +120,12 @@ function tip_success() {
 }
 function tip_fail() {
     $(".tip_fail").fadeToggle(500);
+}
+function ajaxController() {
+    $(document).ajaxStart(function () {
+        $('.page-wrapper').hide();
+    });
+    $(document).ajaxComplete(function () {
+        $('.page-wrapper').show();
+    })
 }

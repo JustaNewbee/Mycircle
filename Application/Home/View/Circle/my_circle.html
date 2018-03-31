@@ -21,7 +21,7 @@
         <div class="outer-wrapper">
             <div class="circle-header">
                 <div class="circle-portrait">
-                    <img src="__PUBLIC__/img/akari.jpg"/>
+                    <img src="{$avatar}"/>
                 </div>
                 <div class="circle-wrapper">
                     <div class="circle-title">
@@ -93,7 +93,7 @@
             success:function (data) {
                 for(i = 0;i<data.length;i++){
                     $li = '<li>\n' +
-                        '<a class="circle-article-title" href="#">'+data[i]['title']+'</a>\n' +
+                        '<a class="circle-article-title" href="'+MODULE+'/Article/read/'+data[i]['article_id']+'">'+data[i]['title']+'</a>\n' +
                         '<p class="circle-article-intro">'+data[i]['content']+'</p>\n' +
                         '</li>';
                     $(".circle-article-list").append($li);

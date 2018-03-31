@@ -42,10 +42,10 @@
                 </form>
             </aside >
             <aside  class="user bg">
-                <div class="face side-face">
-                    <img src="{$avatar}" class="img-face">
-                </div>
-                <p class="welcome">欢迎你！{$username} ～</p>
+                <a class="face side-face" href="Account/mydata">
+                    <img src="__PUBLIC__/img/akari.jpg" class="img-face">
+                </a>
+                <p class="welcome"></p>
                 <div class="user-menu">
                     <p>最近加的：</p>
                     <ul class="user-menu-circle"></ul>
@@ -53,8 +53,9 @@
                     <ul class="user-menu-article"></ul>
                 </div>
             </aside>
-            <aside class="bg rank">
-                排行榜
+            <aside class="rank bg">
+                <p class="rank-banner"><span>文章排行</span></p>
+                <ul class="rank-list"></ul>
             </aside>
         </aside>
         <div class="article-list M-box m-style"></div>
@@ -75,7 +76,7 @@
 <script>
     $(function () {
         var total = '{$total}';
-        var show =  5;
+        var show =  8;
         total = Math.ceil(total/show);
         $('.M-box').pagination({
             mode: 'fixed',
