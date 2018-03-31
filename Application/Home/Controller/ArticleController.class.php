@@ -8,10 +8,13 @@
 namespace Home\Controller;
 use Think\Controller;
 class ArticleController extends Controller{
+    public $default = '/mycircle/Public/img/akari.jpg';
     public function read(){
         $article =  M('article');
         if(isset($_GET['aid'])) {
-            $result = $article->find($_GET['aid']);
+            $aid = $_GET['aid'];
+            $result = $article->find($aid);
+            $article->where("article_id = '$aid'")->setInc('pageview');
             $this->assign("title",$result['title']);
             $this->assign("content",$result['content']);
         }
@@ -29,6 +32,7 @@ class ArticleController extends Controller{
             $this->assign('title',$result['title']);
             $this->assign('content',$result['content']);
             $this->assign('label',$result['label']);
+            $this->assign('cover',$result['cover']);
         }
         $this->assign("uid",session("uid"));
         $this->display();
@@ -42,6 +46,12 @@ class ArticleController extends Controller{
             $data['label'] = $_POST['label'];
             $data['editor'] = session("uid");
             $data['publish_date'] = date("Y-m-d");
+            if(isset($_POST['cover'])){
+                $data['cover'] = $_POST['cover'];
+            }
+            else{
+                $data['cover'] = $this->default;
+            }
             $aid = $article-> add($data);
             $data['w_aid'] = $aid;
             $data['w_uid'] = session("uid");
@@ -75,7 +85,7 @@ class ArticleController extends Controller{
             $current = ($_GET['page']-1)*$need;
             $result = $article->query("SELECT article_id, 
             pageview, comment, publish_date,content,title,
-            username ,circle,p_cid
+            username ,circle,p_cid,cover
             FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id
             JOIN my_user ON my_user.uid = my_article.editor  ORDER BY publish_date DESC LIMIT $current,$need");
         }
@@ -101,5 +111,13 @@ class ArticleController extends Controller{
         $reg = array("\t","\n","\r","&nbsp;","&emsp;");
         return str_replace($reg, '', $str);
     }
-
+    public function upload(){
+        $circle = new \Home\Controller\CircleController();
+        $circle->upload('/upload/article/post/');
+    }
+    public function getTopicPostList(){
+        $article = M('article');
+        $data = $article->select();
+        $this->ajaxReturn($data);
+    }
 }

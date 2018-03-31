@@ -8,18 +8,21 @@
 namespace Home\Controller;
 use Think\Controller;
 class CircleController extends Controller{
-    public function circle_index(){
+    public $default = '/mycircle/Public/img/akari.jpg';
+    public function index(){
+        $this->assign('total',M('circle')->count('circle_id'));
         $this->display();
     }
     public function circle_display(){
         $category = $_GET['category'];
         $circle = M('circle');
+        $need = $_POST['need'];
+        $current = ($_POST['current']-1)*$need;
         if(isset($category)){
-            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class='$category'");
+            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class = $category LIMIT $current,$need");
         }else{
-            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id");
+            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id LIMIT $current,$need");
         }
-       // $result = $circle -> getField("circle_id,circle_name,circle_intro",true);
         $this->ajaxReturn($result);
     }
     public function  get_circle_class(){
@@ -33,11 +36,7 @@ class CircleController extends Controller{
             $this->ajaxReturn($result);
         }
     }
-    public function circle_create(){
-        $this->display();
-    }
     public function create_circle(){
-        $default = '/mycircle/Public/img/akari.jpg';
         $circle = M('circle');
         $circle_name = $_POST['circle_name'];
         $circle_intro = $_POST['circle_intro'];
@@ -45,7 +44,7 @@ class CircleController extends Controller{
         if(isset($_POST['circle_avatar'])){
             $circle_avatar = $_POST['circle_avatar'];
         }else{
-            $circle_avatar = $default;
+            $circle_avatar = $this->default;
         }
         $insert_data['circle_name'] = $circle_name;
         $insert_data['circle_intro'] = $circle_intro;
@@ -65,6 +64,7 @@ class CircleController extends Controller{
             $this->assign("id",$_GET['id']);
             $this->assign("class",$class['class_name']);
             $this->assign("category",$class['class_id']);
+            $this->assign("avatar",$data['circle_avatar']);
         }
         $this->display();
     }
@@ -134,12 +134,6 @@ class CircleController extends Controller{
             return;
         }
         $this->ajaxReturn(false);
-//        $relation = M('relation');
-//        $uid = session('uid');
-//        $cid = $_GET['cid'];
-//        if($relation->where("r_uid = '$uid' and r_cid = '$cid'")->find()){
-//            $this->ajaxReturn('unjoin');
-//        }
     }
     public function upload($savepath=null){
         $upload = new \Think\Upload();// 实例化上传类

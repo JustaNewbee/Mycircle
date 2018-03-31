@@ -8,8 +8,8 @@
 
 namespace Home\Controller;
 use Think\Controller;
-class AccountController extends Controller
-{
+class AccountController extends Controller{
+    public $default = '/mycircle/Public/img/akari.jpg';
     public function user_login(){
         $login = M('user');
         $username = $_POST['username'];
@@ -25,10 +25,14 @@ class AccountController extends Controller
     }
     public function check_login(){
         if(session("uid")){
-            $this->ajaxReturn(true);
+            $uid = session('uid');
+            $data['head'] = true;
+            $data['name'] = session("username");
+            $data['src'] = M('data')->where("d_uid = '$uid'")->getField('d_avatar');
         }else{
-            $this->ajaxReturn(false);
+            $data['head'] = false;
         }
+        $this->ajaxReturn($data);
     }
     public function user_sign(){
         $register = M('user');
@@ -64,28 +68,28 @@ class AccountController extends Controller
     public function mydata(){
         $uid = session('uid');
         $data = M('data');
-        $result = $data->find($uid);
+        $result = $data->where("d_uid = '$uid'")->find();
         $this->assign('uid',session('uid'));
         $this->assign('uname',session('username'));
         $this->assign('intro',$result['d_intro']);
         $this->assign('sex',$result['d_sex']);
         $this->assign('date',$result['d_birthday']);
-        $this->assign('avatar',$result['d_avatar']);
+        if(!is_null($result['d_avatar'])){
+            $this->assign('avatar',$result['d_avatar']);
+        }else{
+            $this->assign('avatar',$this->default);
+        }
         $this->display();
     }
     public function change_data(){
-        $default = '/mycircle/Public/img/akari.jpg';
         $uid = session('uid');
         $data['d_sex'] = $_POST['sex'];
         $data['d_intro'] = $_POST['intro'];
         $data['d_birthday'] =$_POST['date'];
         $data['d_uid'] = $uid;
-        $data['d_avatar'] = $default;
-        if(!is_null($_POST['src'])){
-            $data['d_avatar'] = $_POST['src'];
-        }
+        $data['d_avatar'] = $_POST['src'];
         $dt = M('data');
-        if($dt->find($uid)){
+        if($dt->where("d_uid = '$uid'")->find()){
             $dt->where("d_uid = '$uid'")->save($data);
         }else{
             $dt->where("d_uid = '$uid'")->add($data);
