@@ -10,4 +10,12 @@ class IndexController extends Controller {
         $article = M('article');
         $this->assign("total",$article->count("article_id"));
     }
+    public function _initialize(){
+        $article = M('article');
+        $rank = $article -> field('title,pageview,comment')->select();
+        for($i = 0;$i<count($rank);$i++){
+
+        }
+        dump($rank);
+    }
 }
