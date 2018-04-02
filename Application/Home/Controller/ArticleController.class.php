@@ -117,7 +117,40 @@ class ArticleController extends Controller{
     }
     public function getTopicPostList(){
         $article = M('article');
-        $data = $article->select();
-        $this->ajaxReturn($data);
+        $article = M('article');
+        $rank = $article -> field('title,pageview,comment')->select();
+        $rank = $this->quick_sort($rank);
+        $this->ajaxReturn($rank);
+    }
+    public function quick_sort($arr) {
+        //先判断是否需要继续进行
+        $length = count($arr);
+        if($length <= 1) {
+            return $arr;
+        }
+        //如果没有返回，说明数组内的元素个数 多余1个，需要排序
+        //选择一个标尺
+        //选择第一个元素
+        $base_num = $arr[0];
+        $base = $arr[0]['pageview'] + $arr[0]['comment']*2;
+        //遍历 除了标尺外的所有元素，按照大小关系放入两个数组内
+        //初始化两个数组
+        $left_array = array();//比
+        $right_array = array();//大于标尺的
+        for($i=1; $i<$length; $i++) {
+            $current = $arr[$i]['pageview'] + $arr[$i]['comment']*2;
+            if($base < $current) {
+                //放入左边数组
+                $left_array[] = $arr[$i];
+            } else {
+                //放入右边
+                $right_array[] = $arr[$i];
+            }
+        }
+        //递归
+        $left_array = $this->quick_sort($left_array);
+        $right_array = $this->quick_sort($right_array);
+        //合并
+        return array_merge($left_array, array($base_num), $right_array);
     }
 }
