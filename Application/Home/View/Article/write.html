@@ -67,7 +67,7 @@
 <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
 <script src="__PUBLIC__/layui/layui.js"></script>
 <script>
-    var return_src;
+    var src;
     $(function () {
         if(getString('article_id')){
             $('#portrait').attr('src','{$cover}');
@@ -78,7 +78,7 @@
             setLabel();
         }
         //上传文章封面
-        return_src = $('#portrait').attr('src');
+        src = $('#portrait').attr('src');
         $("#upload-btn").change(function () {
             var face = $('#upload-btn');
             var fd = new FormData();
@@ -92,7 +92,7 @@
                 data: fd,
                 success:function (data) {
                     if(data['head']==true){
-                        return_src = data['content'];
+                        src = data['content'];
                         layui.use('layer', function(){
                             var layer = layui.layer;
                             layer.msg('上传成功', {icon: 1,area: '100px'});
@@ -102,7 +102,7 @@
                             var layer = layui.layer;
                             layer.msg(data['content'], {icon: 2,area: '230px'});
                         });
-                        $("#portrait").attr("src",return_src);
+                        $("#portrait").attr("src",src);
                     }
                 },error:function () {
                     alert('文件上传错误');
@@ -154,7 +154,7 @@
         $.ajax({
             type:"post",
             url:MODULE+"/Article/article_submit",
-            data:{content:ue.getContent(),title:$(".edit-input-title").val(),circle_name:"{$circle_name}",id:$id,label:getLabel(),action:$action,cover:return_src},
+            data:{content:ue.getContent(),title:$(".edit-input-title").val(),circle_name:"{$circle_name}",id:$id,label:getLabel(),action:$action,cover:src},
             success:function (data) {
                 alert("发表成功");
                 window.location.href=data;

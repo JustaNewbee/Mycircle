@@ -597,33 +597,68 @@ img[src=""]{
 
 /*文章区开始*/
 .article-container{
-    width: 65%;
+    width: 754px;
 }
-.bord{
+.article-container .wrapper{
     padding: 20px;
 }
-.title h2{
+.article-container .title h2{
     text-align: center;
     font-weight: bolder;
-    color: #111111;
+    color: #fff;
     letter-spacing: 2px;
 }
-.content{
-    margin-top: 40px;
-    background: rgba(255,255,255,0.4);
-    padding: 10px;
+.article-container .status {
+    text-align: center;
 }
-.content p img {
-    max-width: 100%;
-}
-.article p img {
-    width: 100px;
+.article-container .status span {
+    display: inline-block;
+    padding: 3px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #dadada;
+    background: transparent;
 
 }
+.article-container .content{
+    margin-top: 40px;
+    color: #fff;
+    padding: 10px;
+}
+.article-container .tag {
+    float: right;
+}
+.article-container .tag span {
+    color: #dadada;
+    font-size: 12px;
+    margin: 0 5px;
+    padding: 3px 20px;
+}
+.article-container .tag .article-label {
+    border-radius: 50px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.article-container .tag .article-label:hover {
+    border-color: rgb(217,83,79);
+}
+.article-container .wrapper:after {
+    display: table;
+    content: '';
+    clear: both;
+}
+.article-container .content p img {
+    max-width: 100%;
+}
+.article-container .article p img {
+    width: 100px;
+}
+
 /*文章区结束*/
 /*评论区*/
 .comment-container{
-    width: 65%;
+    width: 754px;
     margin-top: 40px;
     clear: both;
     padding: 20px;
@@ -1357,7 +1392,16 @@ textarea{
     font-size: 16px;
     font-family: 'Glyphicons Halflings';
     vertical-align: middle;
-
+}
+.rank .rank-banner .refresh {
+    float: right;
+    font-size: 16px;
+    margin-top: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.rank .rank-banner .refresh:hover {
+    color: rgb(217,83,79);
 }
 .rank .rank-list li {
     padding: 5px 15px;
@@ -1370,6 +1414,9 @@ textarea{
     background: rgba(255,255,255,0.7);
     color: #000;
 }
+.rank .rank-list li:hover img {
+    filter: contrast(200%);
+}
 .rank .rank-list li a {
     color: inherit;
     font-size: 14px;
@@ -1380,6 +1427,11 @@ textarea{
     white-space: nowrap;
     vertical-align: middle;
     transition: all 0.25s ease;
+}
+.rank .rank-list li img {
+    display: inline-block;
+    height: 25px;
+    float: right;
 }
 .rank .rank-list li a:hover {
     color: rgb(217,83,79);

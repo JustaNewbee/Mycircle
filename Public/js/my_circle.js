@@ -1,5 +1,5 @@
-var name;
-var avatar;
+var name; //用户名
+var avatar; //用户头像
 $(function () {
     getLoginState();
     searchPlaceholder();
@@ -31,6 +31,7 @@ $(function () {
     });
     user_dropdown();
 });
+//获取链接里的参数
 function getString(name) {
         var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
         var r = window.location.search.substr(1).match(reg);
@@ -39,11 +40,13 @@ function getString(name) {
         }
         return "";
 }
+//兴趣圈分类定位显示
 function category_position(){
         var category = getString("category");
         var li = ".circle-nav ul li:eq("+category+")";
         $(li).css("border-bottom","solid 2px rgb(217,83,79)");
 }
+//获取登陆信息
 function getLoginState() {
     $.ajax({
         async: false,
@@ -74,6 +77,7 @@ function getLoginState() {
     });
 
 }
+//搜索框
 function searchPlaceholder() {
         var placeholder_txt = "搜索文章或者兴趣圈";
         var temp = "";
@@ -96,6 +100,7 @@ function searchPlaceholder() {
             setTimeout(function(){inputPlaceholder(0,"")},400);
         }
 }
+//用户下拉菜单
 function user_dropdown() {
     $(".user-status-list:first-child").mouseenter(function () {
         $('.user-status .user-dropdown-menu').addClass('active')
@@ -115,12 +120,14 @@ function face_change(obj) {
     };
     fr.readAsDataURL(imgFile);
 }
+//图片上传提示
 function tip_success() {
     $(".tip_success").fadeToggle(500);
 }
 function tip_fail() {
     $(".tip_fail").fadeToggle(500);
 }
+//控制分页器加载显示
 function ajaxController() {
     $(document).ajaxStart(function () {
         $('.page-wrapper').hide();

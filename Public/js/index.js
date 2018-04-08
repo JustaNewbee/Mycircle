@@ -148,16 +148,19 @@ function getTopicList() {
         type: 'post',
         success:function (data) {
             for(i in data){
-                $li= '<li>\n' +
-                    '       <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" target="_blank" title="'+data[i]['title']+'">\n' +
+                var html = '<li>';
+                html += '       <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" target="_blank" title="'+data[i]['title']+'">\n' +
                     '            '+data[i]['title']+
-                    '       </a>\n' +
-                    '</li>';
-
-                $('.rank-list').append($li);
+                    '       </a>\n';
+                if(i<3) {
+                    var index = parseInt(1)+parseInt(i);
+                    html += '<img src="'+PUBLIC+'/img/'+index+'.png">';
+                }
+                html += '</li>';
+                $('.rank-list').append(html);
             }
         },error:function () {
 
         }
-    })
+    });
 }

@@ -23,11 +23,16 @@
                 </aside>
             </aside>
             <div class="article-container bg ">
-                <div class="bord">
+                <div class="wrapper">
                     <div class="title">
                         <h2>{$title}</h2>
                     </div>
+                    <div class="status">
+                        <span class="author">作者: {$editor}</span>
+                        <span class="date">日期: {$date}</span>
+                    </div>
                     <div class="content">{$content}</div>
+                    <div class="tag"><span>标签:</span></div>
                 </div>
             </div>
             <div class="comment-container bg">
@@ -55,5 +60,17 @@
     </div>
 </body>
     <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
-
+<script>
+    $(function () {
+        var str = '{$label}';
+        var arr = str.split('/');
+        var label = '';
+        for(var i=0;i<arr.length;i++){
+            if(arr[i]!=""){
+                label += '<span class="article-label">'+arr[i]+'</span>';
+            }
+        }
+        $('.tag').append(label);
+    })
+</script>
 </html>

@@ -17,6 +17,11 @@ class ArticleController extends Controller{
             $article->where("article_id = '$aid'")->setInc('pageview');
             $this->assign("title",$result['title']);
             $this->assign("content",$result['content']);
+            $this->assign("label",$result['label']);
+            $this->assign("date",$result['publish_date']);
+            $editor = $result['editor'];
+            $editor = M('user')->where("uid = '$editor'")->getField('username');
+            $this->assign("editor",$editor);
         }
         $this->display();
     }
@@ -70,6 +75,9 @@ class ArticleController extends Controller{
             $upd['title'] = $_POST['title'];
             $upd['content'] = $_POST['content'];
             $upd['label'] = $_POST['label'];
+            if(isset($_POST['cover'])){
+                $upd['cover'] = $_POST['cover'];
+            }
             $article->where("'$aid'=article_id")->save($upd);
             $url = __ROOT__."/Article/read/".$aid;
             $this->ajaxReturn($url);
