@@ -20,8 +20,9 @@
     <include file="Public:header"/>
     <div class="container">
         <aside class="sidebar fr">
-            <aside class="circle-user bg">
-                用户模块
+            <aside class="history bg">
+                <p class="banner"><span>最近看过</span></p>
+                <ul class="history-list"></ul>
             </aside>
             <aside class="bg rank">
                 兴趣圈排行
@@ -77,6 +78,50 @@
             },function (api) {
                 getCircleList(api.getCurrent(),show);
             });
+            history_circle();
+            if(show>='{$total}') {
+                $('.page-wrapper').remove();
+            }
         });
+        function history_circle() {
+            var history = JSON.parse('{$history_circle}');
+            for(var i = history.length-1;i>=0;i--){
+                var li = '<li><a href="Circle/'+history[i].id+'">' +
+                    ' <div class="circle-avatar">' +
+                    '    <img src="'+history[i].avatar+'">' +
+                    ' </div>' +
+                    ' <p class="circle-name">'+history[i].name+'</p>' +
+                    ' <p class="time">'+getMyTime(history[i].time)+'</p>' +
+                    '</a></li>';
+                $('.history-list').append(li);
+            }
+        }
+        function getMyTime(time) {
+            var date = new Date();
+            var year =time[5] + 1900;
+            var month = time[4] + 1;
+            var day = time[3];
+            var hour = time[2];
+            var minute = time[1];
+            var second = time[0];
+            if(date.getFullYear()-year>0){
+                return date.getFullYear()-year+"年前";
+            }
+            else if(date.getMonth()+1-month>0){
+                return date.getMonth()+1-month+'月前';
+            }
+            else if(date.getDate()-day>0){
+                return date.getDate()-day+'天前';
+            }
+            else if(date.getHours()-hour>0){
+                return date.getHours()-hour+'小时前';
+            }
+            else if(date.getMinutes()-minute>0){
+                return date.getMinutes()-minute+'分钟前';
+            }
+            else {
+                return date.getSeconds()-second+'秒前';
+            }
+        }
     </script>
 </html>

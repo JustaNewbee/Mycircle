@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=2.0, user-scalable=no" />
     <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="__PUBLIC__/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="__PUBLIC__/CSS/pagination.css" rel="stylesheet" type="text/css" >
     <script src="__PUBLIC__/js/jquery-3.2.1.js"></script>
     <script src="__PUBLIC__/js/my_circle.js"></script>
     <script>
@@ -28,7 +29,7 @@
                         <h2>{$title}</h2>
                     </div>
                     <div class="status">
-                        <span class="author">作者: {$editor}</span>
+                        <span class="author">作者: <a href="#">{$editor}</a></span>
                         <span class="date">日期: {$date}</span>
                     </div>
                     <div class="content">{$content}</div>
@@ -40,9 +41,12 @@
                     <div class="comment-face face fl">
                         <img src="__PUBLIC__/img/akari.jpg" class="img-face">
                     </div>
-                    <textarea  class="comment-textarea " name="comment" placeholder="测试中" cols="40" rows="3" wrap="hard"></textarea>
-                    <input type="button" class="shoot-btn  btn " value="发送">
+                    <textarea class="comment-textarea" name="comment" placeholder="在此回复" cols="40" rows="3" wrap="hard"></textarea>
+                    <input type="button" class="shoot-btn  btn" value="发送">
                 </div>
+            </div>
+            <div class="comment-area">
+                <ul class="comment-list M-box m-style"></ul>
             </div>
         </div>
         <ul class="bg-bubbles">
@@ -60,17 +64,74 @@
     </div>
 </body>
     <script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/js/jquery.pagination.js"></script>
 <script>
     $(function () {
         var str = '{$label}';
         var arr = str.split('/');
         var label = '';
+        var show = 10;
+        var total = '{$total}';
+        total = Math.ceil(total/show);
         for(var i=0;i<arr.length;i++){
             if(arr[i]!=""){
                 label += '<span class="article-label">'+arr[i]+'</span>';
             }
         }
         $('.tag').append(label);
-    })
+//        $('.M-box').pagination({
+//            mode: 'fixed',
+//            showData: show,
+//            pageCount: total,
+//            callback: function (api) {
+//                getComment(api.getCurrent(),show);
+//            }
+//        },function (api) {
+//            getComment(api.getCurrent(),show);
+//        });
+        getComment();
+        shootComment();
+    });
+    function shootComment(){
+        $('.shoot-btn').click(function () {
+           if($('.comment-textarea').val()==""){
+               alert("评论不能为空");
+               $('.comment-textarea').focus();
+               return false;
+           }
+            $.ajax({
+                url: MODULE + '/Article/shootComment',
+                type: 'post',
+                data: {content:$('.comment-textarea').val(),id:'{$id}'},
+                success:function () {
+                    $('.comment-list').empty();
+                    getComment();
+                    $('.comment-textarea').val("");
+                },error:function () {
+                    alert("发送失败");
+                }
+            })
+        })
+    }
+    function getComment(current,page) {
+        $.ajax({
+            type: 'post',
+            data: {id:'{$id}',current:current,page:page},
+            url: MODULE + '/Article/getComment',
+            success:function (data) {
+                for(i in data) {
+                    var li = "<li>";
+                    li += '<div class="comment-user-avatar"><img src="'+data[i]['d_avatar']+'"></div>';
+                    li += '<div class="right-wrapper">' + '<p class="reviewer">'+data[i]['username']+'</p>';
+                    li += '<p class="comment-content">'+data[i]['content']+'</p>' +
+                        '<span class="floor">#'+(data.length-parseInt(i))+'</span><span class="date">'+data[i]['date']+'</span><a class="reply">回复</a>' +
+                        '</div></li>';
+                    $('.comment-list').append(li);
+                }
+            },error:function () {
+                alert("error");
+            }
+        })
+    }
 </script>
 </html>

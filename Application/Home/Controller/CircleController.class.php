@@ -10,7 +10,13 @@ use Think\Controller;
 class CircleController extends Controller{
     public $default = '/mycircle/Public/img/akari.jpg';
     public function index(){
-        $this->assign('total',M('circle')->count('circle_id'));
+        $category = $_GET['category'];
+        if(isset($category)){
+            $this->assign('total',M('circle')->where("circle_class = $category")->count('circle_id'));
+        }else {
+            $this->assign('total', M('circle')->count('circle_id'));
+        }
+        $this->assign("history_circle",$_COOKIE['history_circle']);
         $this->display();
     }
     public function circle_display(){
@@ -19,13 +25,13 @@ class CircleController extends Controller{
         $need = $_POST['need'];
         $current = ($_POST['current']-1)*$need;
         if(isset($category)){
-            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class = $category LIMIT $current,$need");
+            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class = $category and checked = 'pass' LIMIT $current,$need");
         }else{
-            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id LIMIT $current,$need");
+            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE checked = 'pass' LIMIT $current,$need");
         }
         $this->ajaxReturn($result);
     }
-    public function  get_circle_class(){
+    public function get_circle_class(){
         $select = $_POST['select'];
         $circle = M('class');
         if($select){
@@ -53,6 +59,7 @@ class CircleController extends Controller{
         $circle->data($insert_data)->add();
     }
     public function my_circle(){
+        $flag = true;
         $circle = M('circle');
         if(isset($_GET['id'])) {
             $data = $circle->find($_GET['id']);
@@ -65,9 +72,28 @@ class CircleController extends Controller{
             $this->assign("class",$class['class_name']);
             $this->assign("category",$class['class_id']);
             $this->assign("avatar",$data['circle_avatar']);
+            if(!$_COOKIE['history_circle']){
+                $arr = array();
+            }else {
+                $arr = $_COOKIE['history_circle'];
+                $arr = json_decode($arr);
+                for($i = 0; $i<count($arr);$i++){
+                    if($arr[$i]->id==$_GET['id']){
+                        $flag = false;
+                    }
+                }
+            }
+            $history = array('id'=>$_GET['id'],'avatar'=>$data['circle_avatar'],'name'=>$data['circle_name'],'time'=>localtime());
+            if($flag) array_push($arr,$history);
+            if(count($arr)>=6) {
+                array_shift($arr);
+            }
+            $arr = json_encode($arr,JSON_UNESCAPED_UNICODE);
+            setcookie('history_circle',$arr,time()+3600*24*365*3);
         }
         $this->display();
     }
+
 //    加入兴趣圈操作
     public function join(){
         if($this->redirect_login()){

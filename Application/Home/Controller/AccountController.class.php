@@ -47,6 +47,9 @@ class AccountController extends Controller{
         $username = $_POST['username'];
         $password = $_POST['password'];
         $result = $login->where("username='$username' and password='$password'")->find();
+        $data['d_avatar'] = $this->default;
+        $data['d_uid'] = $result['uid'];
+        M('data')->add($data);
         session("uid",$result['uid']);
         session("username",$result['username']);
     }

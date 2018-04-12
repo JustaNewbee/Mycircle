@@ -619,7 +619,12 @@ img[src=""]{
     font-size: 12px;
     color: #dadada;
     background: transparent;
-
+}
+.article-container .status a {
+    color: inherit;
+}
+.article-container .status a:hover{
+    color: #fff;
 }
 .article-container .content{
     margin-top: 40px;
@@ -642,6 +647,7 @@ img[src=""]{
 }
 .article-container .tag .article-label:hover {
     border-color: rgb(217,83,79);
+    color: #fff;
 }
 .article-container .wrapper:after {
     display: table;
@@ -673,6 +679,59 @@ img[src=""]{
 .comment-textarea{
     width: 100%;
     margin-top: -48px;
+    padding: 5px 10px;
+}
+.comment-area {
+    width: 754px;
+    margin-top: 40px;
+}
+.comment-list {
+    padding-bottom: 40px;
+    position: relative;
+}
+.comment-list li {
+    margin-bottom: 20px;
+}
+.comment-user-avatar:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.comment-user-avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    float: left;
+}
+.comment-user-avatar img {
+    width: 100%;
+    height: 100%;
+}
+.comment-list .right-wrapper {
+    margin-left: 102px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dadada;
+}
+.comment-list .reviewer {
+    color: #fff;
+    font-size: 18px;
+}
+.comment-list .comment-content {
+    color: #b8b8b8;
+    font-size: 14px;
+}
+.comment-list span {
+    color: #dadada;
+    font-size: 12px;
+}
+.comment-list .date {
+    margin-left: 20px;
+}
+.comment-list .reply {
+    margin-left: 20px;
+    color: #dadada;
+    font-size: 12px;
 }
 .shoot-btn{
     padding: 0;
@@ -1042,11 +1101,13 @@ textarea{
 .container .outer-wrapper .circle-header .circle-portrait {
     float: left;
     width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
 }
 .container .outer-wrapper .circle-header .circle-portrait img {
     width: 100%;
+    height: 100%;
 }
 .outer-wrapper .circle-header .circle-wrapper {
     float: left;
@@ -1376,12 +1437,20 @@ textarea{
 /*排行榜*/
 .rank {
     border-radius: 4px;
+    overflow: hidden;
 }
-.rank .rank-banner {
+.rank:hover .banner{
+    background: rgba(0,0,0,0.8);
+}
+.rank:hover .rank-list li {
+    color: #000;
+    background: rgba(255,255,255,0.8);
+}
+.banner {
     padding: 5px 0 5px 15px;
     background: rgba(0,0,0,0.6);
 }
-.rank .rank-banner span{
+.banner span{
     letter-spacing: 2px;
     font-size: 16px;
     vertical-align: middle;
@@ -1411,7 +1480,7 @@ textarea{
     transition: all 0.25s ease;
 }
 .rank .rank-list li:hover{
-    background: rgba(255,255,255,0.7);
+    background: rgba(255,255,255,0.6);
     color: #000;
 }
 .rank .rank-list li:hover img {
@@ -1434,5 +1503,38 @@ textarea{
     float: right;
 }
 .rank .rank-list li a:hover {
-    color: rgb(217,83,79);
+    color: rgb(217, 83, 79);
+}
+.history {
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.history .history-list .circle-avatar {
+    overflow: hidden;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.history .history-list li {
+    padding: 6px 10px;
+    border-bottom: 1px solid #dadada;
+    background: rgba(255,255,255,0.1);
+}
+
+.history .history-list li img{
+    width: 100%;
+    height: 100%;
+}
+.history .circle-name {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.history .time {
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10px;
 }

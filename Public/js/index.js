@@ -134,7 +134,7 @@ function getCircleList(current_page,need_page) {
                     '                </a>';
                 div_circle.append(add);
             }
-            $(".circle-display a:even").addClass("my-circle-right");
+            $(".circle-display .my-circle:odd").addClass("my-circle-right");
 
         },error:function () {
             alert("GEt Circle Error");

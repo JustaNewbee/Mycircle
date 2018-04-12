@@ -55,7 +55,9 @@ function getLoginState() {
             if(data['head']){
                 avatar = data['src'];
                 name = data['name'];
-                $('.face img').attr('src',avatar);
+                if(avatar!=null){
+                    $('.face img').attr('src',avatar);
+                }
                 $('.welcome').text("欢迎你！"+name+" ~");
                 $(".user").show();
                 $(".user-status .user-dropdown-menu")

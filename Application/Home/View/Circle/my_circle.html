@@ -41,7 +41,8 @@
                         <li><a class="glyphicon glyphicon-edit write" id="write"></a></li>
                     </ul>
                 </div>
-                <ul class="circle-article-list"></ul>
+                <ul class="circle-article-list">
+                </ul>
             </div>
         </div>
     </div>
@@ -91,12 +92,13 @@
             data:{circle_id:"{$id}"},
             url:MODULE+"/Article/article_list",
             success:function (data) {
+                $(".circle-article-list").append('<li><a class="circle-article-title">欢迎来到{$name}</a><p class="circle-article-intro">欢迎发表文章</p></li>');
                 for(i = 0;i<data.length;i++){
                     $li = '<li>\n' +
                         '<a class="circle-article-title" href="'+MODULE+'/Article/read/'+data[i]['article_id']+'">'+data[i]['title']+'</a>\n' +
                         '<p class="circle-article-intro">'+data[i]['content']+'</p>\n' +
                         '</li>';
-                    $(".circle-article-list").append($li);
+                    $(".circle-article-list li").before($li);
                 }
             },error:function () {
                 alert("get article list error");

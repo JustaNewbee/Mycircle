@@ -19,9 +19,12 @@ class ArticleController extends Controller{
             $this->assign("content",$result['content']);
             $this->assign("label",$result['label']);
             $this->assign("date",$result['publish_date']);
+            $this->assign("id",$aid);
             $editor = $result['editor'];
             $editor = M('user')->where("uid = '$editor'")->getField('username');
             $this->assign("editor",$editor);
+            $total = M('comment')->count($aid);
+            $this->assign("total",$total);
         }
         $this->display();
     }
@@ -160,5 +163,22 @@ class ArticleController extends Controller{
         $right_array = $this->quick_sort($right_array);
         //合并
         return array_merge($left_array, array($base_num), $right_array);
+    }
+    public function shootComment(){
+        $comment = M('comment');
+        $data['reviewer'] = session('uid');
+        $data['content'] = $_POST['content'];
+        $data['post_id'] = $_POST['id'];
+        $data['date'] = date("Y-m-d H:i:s");
+        $comment->add($data);
+    }
+    public function getComment(){
+        $comment = M('comment');
+        $id = $_POST['id'];
+        $page = $_POST['page'];
+        $current = ($_POST['current']-1)*$page;
+        //$result = $comment->query("SELECT reviewer,date,content,username,d_avatar FROM my_comment JOIN my_user ON my_user.uid = my_comment.reviewer JOIN my_data ON my_data.d_uid = my_comment.reviewer where post_id = '$id' ORDER BY comment_id DESC LIMIT $current,$page");
+        $result = $comment->query("SELECT reviewer,date,content,username,d_avatar FROM my_comment JOIN my_user ON my_user.uid = my_comment.reviewer JOIN my_data ON my_data.d_uid = my_comment.reviewer where post_id = '$id' ORDER BY comment_id DESC");
+        $this->ajaxReturn($result);
     }
 }
