@@ -59,7 +59,9 @@
             current = api.getCurrent();
             getCircleList(current,show);
         });
-
+        if(show>='{$total}') {
+            $('.page-wrapper').remove();
+        }
         $('.wrapper').on('click','.btn-card',function () {
             var id = $(this).parent(".card").data("id");
             if($(this).hasClass('detail')){

@@ -89,6 +89,9 @@
         },function (api) {
             getRecommendArticleList(api.getCurrent(),show);
         });
+        if(show>='{$total}') {
+            $('.page-wrapper').remove();
+        }
         $('.refresh').click(function(){
             $('.rank-list').empty();
             getTopicList();
