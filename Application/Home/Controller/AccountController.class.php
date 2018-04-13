@@ -130,7 +130,9 @@ class AccountController extends Controller{
         $this->ajaxReturn(true);
     }
     public function mycircle(){
-        $this->assign('total',M('relation')->count(session('uid')));
+        $id = session('uid');
+        $this->assign('total',M('relation')->where("r_uid = $id")->count());
+        $this->assign('total_create',M('circle')->where("circle_creator = $id")->count());
         $this->display();
     }
     public function getMyCircle(){
@@ -141,6 +143,14 @@ class AccountController extends Controller{
         $result = $relation->query("SELECT circle_id,circle_name,circle_intro,circle_avatar FROM my_relation
         JOIN my_circle ON my_circle.circle_id=r_cid WHERE r_uid = $uid LIMIT $current,$page");
         $this->ajaxReturn($result);
-
+    }
+    public function getMyCreateCircle() {
+        $circle = M('circle');
+        $uid = session('uid');
+        $page = $_POST['page'];
+        $current = ($_POST['current']-1)*$page;
+        $result = $circle->query("SELECT circle_id,circle_name,circle_intro,circle_avatar FROM my_circle
+        WHERE circle_creator = $uid LIMIT $current,$page");
+        $this->ajaxReturn($result);
     }
 }

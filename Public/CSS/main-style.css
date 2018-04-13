@@ -1356,8 +1356,17 @@ textarea{
     height: 100%;
     margin: 0;
 }
-.circlepage .container {
+.circlepage .wrapper .join-circle-wrapper, .circlepage .wrapper .create-circle-wrapper{
     position: relative;
+}
+.circlepage .wrapper .page-wrapper {
+    bottom: -50px;
+    right: 23px;
+    margin-bottom: 0;
+}
+.circlepage .wrapper .title {
+    margin-left: 20px;
+    margin-top: 10px;
 }
 .circlepage .wrapper .card {
     display: inline-block;

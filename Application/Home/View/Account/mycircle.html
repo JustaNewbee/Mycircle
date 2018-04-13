@@ -19,7 +19,15 @@
     <include file="Public:header"/>
     <div class="container">
         <include file="Public:asidebar"/>
-        <div class="wrapper M-box m-style">
+        <div class="wrapper">
+            <div class="join-circle-wrapper">
+                <h3 class="title">我加入的：</h3>
+                <div class="join-circle-list M-box m-style"></div>
+            </div>
+            <div class="create-circle-wrapper">
+                <h3 class="title">我创建的：</h3>
+                <div class="create-circle-list M-box m-style"></div>
+            </div>
         </div>
     </div>
     <ul class="bg-bubbles">
@@ -41,27 +49,49 @@
 <script src="__PUBLIC__/layui/layui.js"></script>
 <script>
     var total = "{$total}";
-    var show = 9;
+    var show = 6;
     var current;
-    var page;
+    var current2;
+    var total_create = "{$total_create}";
     $(function () {
         $('.data-bar a:eq(1)').addClass('active');
         total = Math.ceil(total/show);
-        $('.M-box').pagination({
+        $('.join-circle-wrapper .M-box').pagination({
             showData:  show,
             pageCount: total,
+            mode: 'fixed',
             callback: function (api) {
                 current = api.getCurrent();
                 getCircleList(current,show);
+
             }
         },function (api) {
-            page = api;
             current = api.getCurrent();
             getCircleList(current,show);
+            if(show>='{$total}') {
+                $('.join-circle-wrapper .page-wrapper').remove();
+            }
         });
-        if(show>='{$total}') {
-            $('.page-wrapper').remove();
-        }
+
+        total_create = Math.ceil(total_create/show);
+        $('.create-circle-wrapper .M-box').pagination({
+            showData:  3,
+            pageCount: total_create,
+            mode: 'fixed',
+            callback: function (api) {
+                current = api.getCurrent();
+                getCreateCircleList(current,3);
+
+            }
+        },function (api) {
+            current2 = api.getCurrent();
+            getCreateCircleList(current2,3);
+            if(show>='{$total_create}') {
+                $('.create-circle-wrapper .page-wrapper').remove();
+            }
+        });
+
+
         $('.wrapper').on('click','.btn-card',function () {
             var id = $(this).parent(".card").data("id");
             if($(this).hasClass('detail')){
@@ -95,7 +125,21 @@
             data: {current:current,page:page},
             success:function (data) {
                 for(var i=0;i<data.length;i++){
-                    circleDisplay($('.wrapper'),data[i]);
+                    circleDisplay($('.join-circle-list'),data[i]);
+                }
+            },error:function () {
+                alert('get circle error');
+            }
+        })
+    }
+    function getCreateCircleList(current,page) {
+        $.ajax({
+            type: 'post',
+            url: MODULE + '/Account/getMyCreateCircle',
+            data: {current:current,page:page},
+            success:function (data) {
+                for(var i=0;i<data.length;i++){
+                    circleDisplay($('.create-circle-list'),data[i]);
                 }
             },error:function () {
                 alert('get circle error');
