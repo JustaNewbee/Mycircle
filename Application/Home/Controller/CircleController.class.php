@@ -56,6 +56,7 @@ class CircleController extends Controller{
         $insert_data['circle_intro'] = $circle_intro;
         $insert_data['circle_class'] = $circle_class;
         $insert_data['circle_avatar'] = $circle_avatar;
+        $insert_data['circle_creator'] = session('uid');
         $circle->data($insert_data)->add();
     }
     public function my_circle(){
@@ -72,6 +73,10 @@ class CircleController extends Controller{
             $this->assign("class",$class['class_name']);
             $this->assign("category",$class['class_id']);
             $this->assign("avatar",$data['circle_avatar']);
+            $creator_id = $data['circle_creator'];
+            $creator = M('data')->join("my_user on my_user.uid = my_data.d_uid")->where("d_uid = $creator_id")->find();
+            $this->assign("creator",$creator['username']);
+            $this->assign("creator_avatar",$creator['d_avatar']);
             if(!$_COOKIE['history_circle']){
                 $arr = array();
             }else {
