@@ -14,6 +14,9 @@ class ArticleController extends Controller{
         if(isset($_GET['aid'])) {
             $aid = $_GET['aid'];
             $result = $article->find($aid);
+            if(is_null($result)){
+                $this->error('文章不存在',__ROOT__,3);
+            }
             $article->where("article_id = '$aid'")->setInc('pageview');
             $this->assign("title",$result['title']);
             $this->assign("content",$result['content']);
@@ -90,7 +93,9 @@ class ArticleController extends Controller{
         $article = M('article');
         if(isset($_POST['circle_id'])){
             $cid = $_POST['circle_id'];
-            $result = $article->query("SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id JOIN my_circle ON my_circle.circle_id = my_post.p_cid WHERE circle_id = '$cid' ORDER BY publish_date DESC");
+            $need = $_POST['page'];
+            $current = ($_POST['current']-1)*$need;
+            $result = $article->query("SELECT * FROM my_article JOIN my_post ON my_post.p_aid = my_article.article_id JOIN my_circle ON my_circle.circle_id = my_post.p_cid WHERE circle_id = '$cid' ORDER BY publish_date DESC LIMIT $current,$need");
         }else{
             $need = $_POST['need_page'];
             $current = ($_GET['page']-1)*$need;
@@ -128,10 +133,9 @@ class ArticleController extends Controller{
     }
     public function getTopicPostList(){
         $article = M('article');
-        $article = M('article');
-        $rank = $article -> field('title,pageview,comment')->select();
-        $rank = $this->quick_sort($rank);
-        $this->ajaxReturn($rank);
+        $rank = $article -> field('title,pageview,comment')->limit(10)->select();
+        $rank = array_chunk($this->quick_sort($rank),10);
+        $this->ajaxReturn($rank[0]);
     }
     public function quick_sort($arr) {
         //先判断是否需要继续进行
@@ -153,7 +157,8 @@ class ArticleController extends Controller{
             if($base < $current) {
                 //放入左边数组
                 $left_array[] = $arr[$i];
-            } else {
+            }
+            else {
                 //放入右边
                 $right_array[] = $arr[$i];
             }
@@ -171,6 +176,8 @@ class ArticleController extends Controller{
         $data['post_id'] = $_POST['id'];
         $data['date'] = date("Y-m-d H:i:s");
         $comment->add($data);
+        $aid = $_POST['id'];
+        M('article')->where("article_id = $aid")->setInc('comment');
     }
     public function getComment(){
         $comment = M('comment');
@@ -180,5 +187,28 @@ class ArticleController extends Controller{
         //$result = $comment->query("SELECT reviewer,date,content,username,d_avatar FROM my_comment JOIN my_user ON my_user.uid = my_comment.reviewer JOIN my_data ON my_data.d_uid = my_comment.reviewer where post_id = '$id' ORDER BY comment_id DESC LIMIT $current,$page");
         $result = $comment->query("SELECT reviewer,date,content,username,d_avatar FROM my_comment JOIN my_user ON my_user.uid = my_comment.reviewer JOIN my_data ON my_data.d_uid = my_comment.reviewer where post_id = '$id' ORDER BY comment_id DESC");
         $this->ajaxReturn($result);
+    }
+    public function getRandomPost(){
+        $article = M('article');
+        $min = $article->min('article_id');
+        $max = $article->max('article_id');
+        if($article->count()<10) {
+            $rank = $article->field('title,article_id')->select();
+        }
+        else {
+            $random_array = array();
+            for ($i=0;$i<10; $i++){
+                $random = rand($min,$max);
+                if(in_array($random,$random_array)){
+                    $i--;
+                }else if(is_null($article->where("article_id = $random")->find())){
+                    $i--;
+                }else{
+                    array_push($random_array,$random);
+                    $rank[$i] = $article->where("article_id = $random")->field('title,article_id')->find();
+                }
+            }
+        }
+        $this->ajaxReturn($rank);
     }
 }

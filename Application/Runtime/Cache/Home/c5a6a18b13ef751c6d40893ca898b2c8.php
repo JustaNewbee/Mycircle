@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
     <link href="/mycircle/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/mycircle/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/mycircle/Public/CSS/pagination.css" rel="stylesheet" type="text/css">
     <script src="/mycircle/Public/js/jquery-3.2.1.js"></script>
     <script src="/mycircle/Public/js/my_circle.js"></script>
     <script>
         var MODULE ="/mycircle";
         var PUBLIC ="/mycircle/Public";
     </script>
-
+    <script src="/mycircle/Public/js/jquery.pagination.js"></script>
 </head>
 <body>
 <div class="main-body">
@@ -29,23 +30,19 @@
             </ul>
         </div>
         <div class="search-field">
-            <form>
-                <input type="search"  class="search" name="search"  maxlength="20"/>
-                <a class="glyphicon glyphicon-search" name="searchSubmit"></a>
+            <form id="#search">
+                <input type="search"  class="search" name="search" id="input_search" maxlength="20"/>
+                <a class="glyphicon glyphicon-search" name="searchSubmit" id="search-btn"></a>
             </form>
         </div>
         <div class="fr nav-user">
             <div class="fl user-status">
                 <ul class="user-status-list">
                     <li>
-                        <a href="#">
-                            <div class="top-face face fl">
-                                <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
-                            </div>
+                        <a class="top-face face fl">
+                            <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                         </a>
-                        <ul class="user-dropdown-menu">
-
-                        </ul>
+                        <ul class="user-dropdown-menu"></ul>
                     </li>
                 </ul>
             </div>
@@ -53,10 +50,10 @@
     </div>
 </header>
     <div class="container bg">
-        <div class="outer-wrapper">
+        <div class="outer-wrapper left-wrapper">
             <div class="circle-header">
                 <div class="circle-portrait">
-                    <img src="/mycircle/Public/img/akari.jpg"/>
+                    <img src="<?php echo ($avatar); ?>"/>
                 </div>
                 <div class="circle-wrapper">
                     <div class="circle-title">
@@ -76,9 +73,20 @@
                         <li><a class="glyphicon glyphicon-edit write" id="write"></a></li>
                     </ul>
                 </div>
-                <ul class="circle-article-list"></ul>
+                <ul class="circle-article-list M-box m-style">
+                </ul>
             </div>
         </div>
+        <aside class="sidebar right-wrapper">
+            <div class="notice">
+                <p class="banner">公告</p>
+                <p class="content"><?php echo ($notice); ?></p>
+            </div>
+            <div class="rank recommend">
+                <p class="banner">本圈推荐文章</p>
+                <ul class="rank-list"></ul>
+            </div>
+        </aside>
     </div>
     <ul class="bg-bubbles">
         <li></li>
@@ -97,6 +105,22 @@
 </body>
 <script>
     $(function () {
+        var total = '<?php echo ($total); ?>';
+        var show =  5;
+        total = Math.ceil(total/show);
+        $('.M-box').pagination({
+            mode: 'fixed',
+            showData: show,
+            pageCount: total,
+            callback: function (api) {
+                circle_post(api.getCurrent(),show);
+            }
+        },function (api) {
+            circle_post(api.getCurrent(),show);
+        });
+        if(show>='<?php echo ($total); ?>') {
+            $('.page-wrapper').remove();
+        }
         $(".btn").click(function () {
             if($(this).hasClass('active')){
                 $.post(MODULE+'/Circle/quit',{circle_id:"<?php echo ($id); ?>"});
@@ -120,28 +144,57 @@
                }
             });
         });
-        $.ajax({
-            type:"post",
-            dataType:"json",
-            data:{circle_id:"<?php echo ($id); ?>"},
-            url:MODULE+"/Article/article_list",
-            success:function (data) {
-                for(i = 0;i<data.length;i++){
-                    $li = '<li>\n' +
-                        '<a class="circle-article-title" href="#">'+data[i]['title']+'</a>\n' +
-                        '<p class="circle-article-intro">'+data[i]['content']+'</p>\n' +
-                        '</li>';
-                    $(".circle-article-list").append($li);
+        function circle_post(current,page) {
+            $.ajax({
+                type:"post",
+                dataType:"json",
+                data:{circle_id:"<?php echo ($id); ?>",current:current,page:page},
+                url:MODULE+"/Article/article_list",
+                success:function (data) {
+                    if(data.length==0){
+                        $(".circle-article-list").append('<li><a class="circle-article-title">欢迎来到<?php echo ($name); ?></a><p class="circle-article-intro">欢迎发表文章</p></li>').css('display','');
+                    }
+                    for(i = 0;i<data.length;i++){
+                        var $li = '<li>' +
+                            '<a class="circle-article-title" href="'+MODULE+'/Article/read/'+data[i]['article_id']+'">'+data[i]['title']+'</a>\n' +
+                            '<p class="circle-article-intro">'+data[i]['content']+'</p>\n' +
+                            '</li>';
+                        $(".circle-article-list").append($li);
+                    }
+                },error:function () {
+                    alert("get article list error");
                 }
-            },error:function () {
-                alert("get article list error");
-            }
-        });
+            });
+        }
         $.post(MODULE+"/Circle/join_status",{cid:"<?php echo ($id); ?>"},function (data) {
             if(data){
                 $("#join").text("已加入").addClass('active');
             }
-        })
+        });
+        getRecommendList();
+        function getRecommendList() {
+            $.ajax({
+                url:MODULE + '/Circle/recommendPost',
+                data:{circle_id:'<?php echo ($id); ?>'},
+                type: 'post',
+                success:function (data) {
+                    for(i in data){
+                        var html = '<li>';
+                        html += '       <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" target="_blank" title="'+data[i]['title']+'">\n' +
+                            '            '+data[i]['title']+
+                            '       </a>\n';
+                        if(i<3) {
+                            var index = parseInt(1)+parseInt(i);
+                            html += '<img src="'+PUBLIC+'/img/'+index+'.png">';
+                        }
+                        html += '</li>';
+                        $('.rank-list').append(html);
+                    }
+                },error:function () {
+                    alert('error');
+                }
+            });
+        }
     })
 </script>
 <script src="/mycircle/Public/bootstrap/js/bootstrap.min.js"></script>

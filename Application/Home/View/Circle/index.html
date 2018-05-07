@@ -20,12 +20,15 @@
     <include file="Public:header"/>
     <div class="container">
         <aside class="sidebar fr">
+            <a class="go-to" href="__ROOT__/Circle/circle_create" target="_blank">点此创建一个兴趣圈</a>
             <aside class="history bg">
                 <p class="banner"><span>最近看过</span></p>
                 <ul class="history-list"></ul>
             </aside>
-            <aside class="bg rank">
-                兴趣圈排行
+            <aside class="rank bg">
+                <p class="banner rank-banner"><span>兴趣圈排行</span>
+                    <span class="glyphicon glyphicon-refresh refresh"></span></p>
+                <ul class="rank-list circle"></ul>
             </aside>
         </aside>
         <div class="circle-container fl">
@@ -66,7 +69,7 @@
     <script>
         $(function () {
             var total = '{$total}';
-            var show =  8;
+            var show =  10;
             total = Math.ceil(total/show);
             $('.M-box').pagination({
                 mode: 'fixed',
@@ -78,15 +81,27 @@
             },function (api) {
                 getCircleList(api.getCurrent(),show);
             });
+            $('.refresh').click(function(){
+                $('.rank-list').empty();
+                getTopicCircleList();
+            });
+            getTopicCircleList();
             history_circle();
+            addChildClass();
             if(show>='{$total}') {
                 $('.page-wrapper').remove();
             }
         });
         function history_circle() {
-            var history = JSON.parse('{$history_circle}');
+            var history = '{$history_circle}';
+            if(history==""){
+                var $p = '<p class="tip">最近没有任何访问记录</p>';
+                $('.history-list').append($p);
+                return;
+            }
+            history = JSON.parse(history);
             for(var i = history.length-1;i>=0;i--){
-                var li = '<li><a href="Circle/'+history[i].id+'">' +
+                var li = '<li><a href="__ROOT__/Circle/'+history[i].id+'">' +
                     ' <div class="circle-avatar">' +
                     '    <img src="'+history[i].avatar+'">' +
                     ' </div>' +
@@ -122,6 +137,18 @@
             else {
                 return date.getSeconds()-second+'秒前';
             }
+        }
+        function addChildClass() {
+            var child_class = '{$child_class}';
+            if(child_class=="")  return;
+            child_class = JSON.parse(child_class);
+            var $list = '<ul class="circle-nav-child">';
+            $list += '<li><a href="?category='+child_class[0]['parent_id']+'">全部</li>';
+            for(var i=0;i<child_class.length;i++){
+                $list += '<li><a href="?category='+child_class[i]['parent_id']+'&child='+child_class[i]['class_id']+'">'+child_class[i]['class_name']+'</li>';
+            }
+            $list += '</ul>';
+            $('.circle-nav').append($list);
         }
     </script>
 </html>

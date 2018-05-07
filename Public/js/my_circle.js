@@ -4,6 +4,7 @@ $(function () {
     getLoginState();
     searchPlaceholder();
     ajaxController();
+    search();
     $(".user-login").submit(function () {
         $.ajax({
             type:"post",
@@ -25,7 +26,7 @@ $(function () {
                     alert("用户名或者密码错误");
                 }
             },error:function () {
-                alert("Login error");
+                console("Login error");
             }
         });
     });
@@ -42,9 +43,10 @@ function getString(name) {
 }
 //兴趣圈分类定位显示
 function category_position(){
-        var category = getString("category");
-        var li = ".circle-nav ul li:eq("+category+")";
-        $(li).css("border-bottom","solid 2px rgb(217,83,79)");
+    var category = getString("category");
+    var li = ".circle-nav ul li:eq("+category+")";
+    $(li).css("border-bottom","solid 2px rgb(217,83,79)");
+
 }
 //获取登陆信息
 function getLoginState() {
@@ -55,17 +57,21 @@ function getLoginState() {
             if(data['head']){
                 avatar = data['src'];
                 name = data['name'];
+                role = data[''];
                 if(avatar!=null){
                     $('.face img').attr('src',avatar);
                 }
                 $('.welcome').text("欢迎你！"+name+" ~");
                 $(".user").show();
-                $(".user-status .user-dropdown-menu")
-                    .append("<li><a href='"+MODULE+"/Account/mydata'>我的信息</a></li>")
-                    .append("<li><a href='"+MODULE+"/Account/mycircle'>我的兴趣圈</a></li>")
-                    .append("<li><a href='"+MODULE+"/Account/mypost'>我的文章</a></li>")
-                    .append("<li><a href='"+MODULE+"/Account/setting'>设置</a></li>")
-                    .append("<li><a href='"+MODULE+"/Account/logout'>退出</a></li>");
+                var $menu = $(".user-status .user-dropdown-menu");
+                    $menu.append("<li><a target='_blank' href='"+MODULE+"/Account/mydata'>我的信息</a></li>")
+                    .append("<li><a target='_blank' href='"+MODULE+"/Account/mycircle'>我的兴趣圈</a></li>")
+                    .append("<li><a target='_blank' href='"+MODULE+"/Account/mypost'>我的文章</a></li>")
+                    .append("<li><a target='_blank' href='"+MODULE+"/Account/setting'>设置</a></li>");
+                    if(data['role']=='admin'){
+                        $menu.append("<li><a target='_blank' href='"+MODULE+"/MyAdmin'>管理</a></li>");
+                    }
+                    $menu.append("<li><a href='"+MODULE+"/Account/logout'>退出</a></li>");
             }
             else{
                 $(".user-login-window").show();
@@ -137,4 +143,10 @@ function ajaxController() {
     $(document).ajaxComplete(function () {
         $('.page-wrapper').show();
     })
+}
+function search() {
+    $('#search-btn').click(function () {
+        window.open(MODULE+"/Index/search/?key="+$('#input_search').val());
+    });
+
 }

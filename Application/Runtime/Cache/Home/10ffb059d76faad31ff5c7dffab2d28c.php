@@ -28,23 +28,19 @@
             </ul>
         </div>
         <div class="search-field">
-            <form>
-                <input type="search"  class="search" name="search"  maxlength="20"/>
-                <a class="glyphicon glyphicon-search" name="searchSubmit"></a>
+            <form id="#search">
+                <input type="search"  class="search" name="search" id="input_search" maxlength="20"/>
+                <a class="glyphicon glyphicon-search" name="searchSubmit" id="search-btn"></a>
             </form>
         </div>
         <div class="fr nav-user">
             <div class="fl user-status">
                 <ul class="user-status-list">
                     <li>
-                        <a href="#">
-                            <div class="top-face face fl">
-                                <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
-                            </div>
+                        <a class="top-face face fl">
+                            <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                         </a>
-                        <ul class="user-dropdown-menu">
-
-                        </ul>
+                        <ul class="user-dropdown-menu"></ul>
                     </li>
                 </ul>
             </div>
@@ -56,10 +52,10 @@
     <h2>个人中心</h2>
     <nav>
         <ul>
-            <li><a href="/mycircle/Account/mydata">我的信息</a></li>
-            <li><a href="/mycircle/Account/mycircle">我的兴趣圈</a></li>
-            <li><a href="/mycircle/Account/mypost">我的文章</a></li>
-            <li><a href="#">设置</a></li>
+            <li><a href="mydata">我的信息</a></li>
+            <li><a href="mycircle">我的兴趣圈</a></li>
+            <li><a href="mypost">我的文章</a></li>
+            <li><a href="setting">设置</a></li>
         </ul>
     </nav>
 </aside>
@@ -91,6 +87,7 @@
 <script src="/mycircle/Public/layui/layui.js"></script>
 <script>
     $(function () {
+        $('.data-bar a:eq(2)').addClass('active');
         layui.use('table', function(){
             var table = layui.table;
             table.render({

@@ -19,8 +19,10 @@
         <include file="Public:header"/>
         <div class="container">
             <aside class="fr sidebar">
-                <aside class="bg rank">
-                    排行榜
+                <aside class="rank more bg">
+                    <p class="banner"><span>更多文章</span>
+                        <span class="glyphicon glyphicon-refresh refresh"></span></p>
+                    <ul class="rank-list more"></ul>
                 </aside>
             </aside>
             <div class="article-container bg ">
@@ -70,27 +72,20 @@
         var str = '{$label}';
         var arr = str.split('/');
         var label = '';
-        var show = 10;
-        var total = '{$total}';
-        total = Math.ceil(total/show);
         for(var i=0;i<arr.length;i++){
             if(arr[i]!=""){
                 label += '<span class="article-label">'+arr[i]+'</span>';
             }
         }
         $('.tag').append(label);
-//        $('.M-box').pagination({
-//            mode: 'fixed',
-//            showData: show,
-//            pageCount: total,
-//            callback: function (api) {
-//                getComment(api.getCurrent(),show);
-//            }
-//        },function (api) {
-//            getComment(api.getCurrent(),show);
-//        });
+        $('.refresh').click(function(){
+            $('.rank-list.more').empty();
+            getRandomPost();
+        });
+        getRandomPost();
         getComment();
         shootComment();
+
     });
     function shootComment(){
         $('.shoot-btn').click(function () {
@@ -132,6 +127,24 @@
                 alert("error");
             }
         })
+    }
+    function getRandomPost() {
+        $.ajax({
+            url:MODULE + '/Article/getRandomPost',
+            type: 'post',
+            success:function (data) {
+                for(i in data){
+                    var html = '<li>';
+                    html += '       <a href="'+MODULE+'/Article/read/'+data[i]['article_id']+'" target="_blank" title="'+data[i]['title']+'">\n' +
+                        '            '+data[i]['title']+
+                        '       </a>\n';
+                    html += '</li>';
+                    $('.rank-list.more').append(html);
+                }
+            },error:function () {
+                alert('error');
+            }
+        });
     }
 </script>
 </html>

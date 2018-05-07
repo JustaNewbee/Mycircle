@@ -98,6 +98,7 @@
                success:function (res) {
                    if(res){
                        alert('保存成功');
+                       window.location.reload();
                    }
                }
            })
@@ -128,7 +129,7 @@
                     alert('文件上传错误');
                 }
             });
-    });
+        });
     });
 </script>
 </body>

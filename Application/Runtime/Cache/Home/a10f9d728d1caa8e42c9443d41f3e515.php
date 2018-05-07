@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录页面</title>
+    <title>登录页面-MyCircle</title>
     <link href="/mycircle/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/mycircle/Public/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
     <link href="/mycircle/Public/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
@@ -37,14 +37,10 @@
             <div class="fl user-status">
                 <ul class="user-status-list">
                     <li>
-                        <a href="#">
-                            <div class="top-face face fl">
-                                <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
-                            </div>
+                        <a class="top-face face fl">
+                            <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                         </a>
-                        <ul class="user-dropdown-menu">
-
-                        </ul>
+                        <ul class="user-dropdown-menu"></ul>
                     </li>
                 </ul>
             </div>

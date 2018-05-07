@@ -30,6 +30,7 @@
             </div>
         </div>
     </div>
+    <p class='tip'>审核中……</p>
     <ul class="bg-bubbles">
         <li></li>
         <li></li>
@@ -72,25 +73,30 @@
                 $('.join-circle-wrapper .page-wrapper').remove();
             }
         });
-
-        total_create = Math.ceil(total_create/show);
+        total_create = Math.ceil(total_create/3);
         $('.create-circle-wrapper .M-box').pagination({
             showData:  3,
             pageCount: total_create,
             mode: 'fixed',
             callback: function (api) {
-                current = api.getCurrent();
-                getCreateCircleList(current,3);
+                current2 = api.getCurrent();
+                getCreateCircleList(current2,3);
 
             }
         },function (api) {
             current2 = api.getCurrent();
             getCreateCircleList(current2,3);
-            if(show>='{$total_create}') {
+            if('{$total_create}'<=3) {
                 $('.create-circle-wrapper .page-wrapper').remove();
             }
         });
-
+        $('.create-circle-wrapper').on('click','.locked',function (e) {
+            e.stopPropagation();
+        }).on('mouseover','.locked',function (e) {
+            $('.tip').css({'display':'block','top':e.pageY+10,'left':e.pageX+10});
+        }).on('mouseout','.locked',function () {
+            $('.tip').css('display','');
+        });
 
         $('.wrapper').on('click','.btn-card',function () {
             var id = $(this).parent(".card").data("id");
@@ -113,7 +119,9 @@
                         layer.close(index);
                     });
                 });
-
+            }
+            if($(this).hasClass('admin')){
+                window.open(MODULE + '/MyAdmin/mycircle?circle=' + $(this).parents(".card").data("id"));
             }
         });
 
@@ -147,7 +155,8 @@
         })
     }
     function circleDisplay(obj,data) {
-        $model = '<div class="card" data-id="'+data['circle_id']+'">\n' +
+
+        var model = '<div class="card" data-id="'+data['circle_id']+'">\n' +
             '                <img src="'+data['circle_avatar']+'">\n' +
             '                <span class="title">'+data['circle_name']+'</span>\n' +
             '                <span class="intro">'+data['circle_intro']+'</span>\n' +
@@ -156,7 +165,22 @@
             '                <span class="btn-card edit">发文</span>\n' +
             '                <span class="btn-card detail">进入</span>\n' +
             '            </div>';
-        obj.append($model);
+        if(obj.is('.create-circle-list')) {
+             model = '<div class="card" data-id="'+data['circle_id']+'">\n';
+             if(data['checked']=='unpass'){
+                 model = '<div class="card locked" data-id="'+data['circle_id']+'">\n';
+             }
+             model += '                <img src="'+data['circle_avatar']+'">\n' +
+                '                <span class="title">'+data['circle_name']+'</span>\n' +
+                '                <span class="intro">'+data['circle_intro']+'</span>\n' +
+                '                <span class="divider"></span>\n' +
+                '                <span class="btn-card admin">管理</span>\n' +
+                '                <span class="btn-card edit">发文</span>\n' +
+                '                <span class="btn-card detail">进入</span>\n' +
+                '            </div>';
+        }
+        if(data.length==0) model = '<p>暂无</p>';
+        obj.append(model);
     }
 </script>
 </html>

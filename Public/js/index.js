@@ -157,10 +157,33 @@ function getTopicList() {
                     html += '<img src="'+PUBLIC+'/img/'+index+'.png">';
                 }
                 html += '</li>';
-                $('.rank-list').append(html);
+                $('.rank-list.post').append(html);
             }
         },error:function () {
-
+            alert('error');
+        }
+    });
+}
+function getTopicCircleList() {
+    $.ajax({
+        url:MODULE + '/Circle/getTopicCircleList',
+        type: 'post',
+        success:function (data) {
+            for(i in data){
+                var html = '<li>';
+                html += '<div class="circle-avatar"><img src="'+data[i]['circle_avatar']+'"></div>'
+                html += '       <a href="'+MODULE+'/Circle/'+data[i]['circle_id']+'" target="_blank" title="'+data[i]['circle_name']+'">\n' +
+                    '            '+data[i]['circle_name']+
+                    '       </a>\n';
+                if(i<3) {
+                    var index = parseInt(1)+parseInt(i);
+                    html += '<img src="'+PUBLIC+'/img/'+index+'.png">';
+                }
+                html += '</li>';
+                $('.rank-list.circle').append(html);
+            }
+        },error:function () {
+            alert('error');
         }
     });
 }

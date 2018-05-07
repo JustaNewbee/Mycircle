@@ -69,15 +69,16 @@ $(function () {
             }
         });
     });
-    $(".circle-create").submit(function () {
+    $("#create").click(function () {
         $.ajax({
             type:"post",
-            url:MODULE +"/Circle/create_circle",
+            url: MODULE +"/Circle/create_circle",
             data:{circle_name:$("#circle_name").val(),circle_intro:$("#circle_intro").val(),
             circle_class:$("#circle_class").val(),circle_avatar:circle_avatar_src},
-            success:function (url) {
-                window.location.reload();
-            },error:function () {
+            success:function () {
+                window.location.href = MODULE;
+            },
+            error:function () {
                 alert("error");
             }
         })

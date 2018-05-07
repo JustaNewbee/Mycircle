@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的信息-MyCircle</title>
+    <link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__PUBLIC__/CSS/main-style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="__PUBLIC__/CSS/signup-style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="__PUBLIC__/js/jquery-3.2.1.js"></script>
+    <script>
+        var MODULE = "__ROOT__";
+    </script>
+    <script src="__PUBLIC__/js/my_circle.js"></script>
+</head>
+<body>
+<div class="main-body settingpage">
+    <include file="Public:header"/>
+    <div class="container">
+        <include file="Public:asidebar"/>
+        <form id="changePassword">
+            <h3>更改密码：</h3>
+            <input type="password" placeholder="输入旧密码" id="oldPassword" class="form-control">
+            <input type="password" placeholder="输入新密码" id="inputPassword" class="form-control">
+            <input type="password" placeholder="确认新密码" id="confirmPassword" class="form-control">
+            <input type="submit" class="btn btn-changePw" value="更改">
+        </form>
+    </div>
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<script>
+    $(function () {
+        $('.data-bar a:eq(3)').addClass('active');
+        $('#changePassword').submit(function () {
+            if($('#inputPassword').val()!=$('#confirmPassword').val()){
+                alert('前后密码不一致');
+                return false;
+            }
+            $.ajax({
+                type:"post",
+                data:{old_password:$('#oldPassword').val(),password:$("#inputPassword").val()},
+                url:MODULE+"/Account/changePassword",
+                success:function (msg) {
+                    if(msg['head']){
+                        alert("更改成功");
+                    }else {
+                        alert(msg['content']);
+                    }
+                },
+                error:function () {
+                    alert("change password fail");
+                }
+            })
+        });
+    });
+
+</script>
+</body>
+<script src="__PUBLIC__/bootstrap/js/bootstrap.min.js"></script>
+</html>

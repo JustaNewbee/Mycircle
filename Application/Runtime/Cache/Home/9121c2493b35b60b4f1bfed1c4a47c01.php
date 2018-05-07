@@ -29,23 +29,19 @@
             </ul>
         </div>
         <div class="search-field">
-            <form>
-                <input type="search"  class="search" name="search"  maxlength="20"/>
-                <a class="glyphicon glyphicon-search" name="searchSubmit"></a>
+            <form id="#search">
+                <input type="search"  class="search" name="search" id="input_search" maxlength="20"/>
+                <a class="glyphicon glyphicon-search" name="searchSubmit" id="search-btn"></a>
             </form>
         </div>
         <div class="fr nav-user">
             <div class="fl user-status">
                 <ul class="user-status-list">
                     <li>
-                        <a href="#">
-                            <div class="top-face face fl">
-                                <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
-                            </div>
+                        <a class="top-face face fl">
+                            <img src="/mycircle/Public/img/akari.jpg" class="img-face" alt="头像">
                         </a>
-                        <ul class="user-dropdown-menu">
-
-                        </ul>
+                        <ul class="user-dropdown-menu"></ul>
                     </li>
                 </ul>
             </div>
@@ -70,7 +66,7 @@
                         <option selected value="">请选择</option>
                     </select>
                 </div>
-                <input type="submit" class="btn user-btn">
+                <input type="submit" id="create" class="btn user-btn">
             </div>
             <div class="form-group right-form">
                 <h3>请选择头像：</h3>

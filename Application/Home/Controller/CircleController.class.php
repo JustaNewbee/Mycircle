@@ -13,6 +13,7 @@ class CircleController extends Controller{
         $category = $_GET['category'];
         if(isset($category)){
             $this->assign('total',M('circle')->where("circle_class = $category")->count('circle_id'));
+            $this->assign('child_class',json_encode(M('class')->where("parent_id = $category")->select()));
         }else {
             $this->assign('total', M('circle')->count('circle_id'));
         }
@@ -21,11 +22,16 @@ class CircleController extends Controller{
     }
     public function circle_display(){
         $category = $_GET['category'];
+        $child = $_GET['child'];
         $circle = M('circle');
         $need = $_POST['need'];
         $current = ($_POST['current']-1)*$need;
-        if(isset($category)){
-            $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class = $category and checked = 'pass' LIMIT $current,$need");
+        if(!is_null($category)){
+            if(!is_null($child)){
+                $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class = '$category' and checked = 'pass' and class_id = '$child' LIMIT $current,$need");
+            }else {
+                $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE circle_class = $category and checked = 'pass' LIMIT $current,$need");
+            }
         }else{
             $result = $circle -> query("SELECT circle_id,circle_name,circle_people_num,circle_article_num,circle_intro,class_name,circle_avatar FROM my_circle INNER JOIN my_class ON my_circle.circle_class = my_class.class_id WHERE checked = 'pass' LIMIT $current,$need");
         }
@@ -63,7 +69,13 @@ class CircleController extends Controller{
         $flag = true;
         $circle = M('circle');
         if(isset($_GET['id'])) {
-            $data = $circle->find($_GET['id']);
+            $id = $_GET['id'];
+            $data = $circle->where("circle_id = $id")->find();
+            if($data['checked']=='unpass') {
+                $this->error('页面不存在','../Circle',3);
+                return ;
+            }
+            $this->assign('total',M('post')->where("p_cid = $id")->count());
             $class = M('class')->find($data['circle_class']);
             $this->assign("name",$data['circle_name']);
             $this->assign("intro",$data["circle_intro"]);
@@ -73,6 +85,10 @@ class CircleController extends Controller{
             $this->assign("class",$class['class_name']);
             $this->assign("category",$class['class_id']);
             $this->assign("avatar",$data['circle_avatar']);
+            if(is_null($data['notice'])){
+                $this->assign("notice","暂无公告");
+            }
+            else $this->assign("notice",$data['notice']);
             $creator_id = $data['circle_creator'];
             $creator = M('data')->join("my_user on my_user.uid = my_data.d_uid")->where("d_uid = $creator_id")->find();
             $this->assign("creator",$creator['username']);
@@ -98,7 +114,6 @@ class CircleController extends Controller{
         }
         $this->display();
     }
-
 //    加入兴趣圈操作
     public function join(){
         if($this->redirect_login()){
@@ -190,5 +205,47 @@ class CircleController extends Controller{
             $data['content'] = $info['savepath'].$info['savename'];
         }
         $this->ajaxReturn($data);
+    }
+    public function recommendPost(){
+        $article = M('article');
+        $cid = $_POST['circle_id'];
+        $rec = $article ->join("my_post on my_post.p_aid = my_article.article_id")->where("p_cid = $cid")->field('article_id,title,pageview,comment')->limit(5)->select();
+        $this->ajaxReturn($rec);
+    }
+    public function getTopicCircleList(){
+        $circle = M('circle');
+        $rank = $circle -> field('circle_id,circle_name,circle_people_num,circle_article_num,circle_avatar')->select();
+        $rank = array_chunk($this->quick_sort($rank),5);
+        $this->ajaxReturn($rank[0]);
+    }
+    public function quick_sort($arr) {
+        //先判断是否需要继续进行
+        $length = count($arr);
+        if($length <= 1) {
+            return $arr;
+        }
+        //如果没有返回，说明数组内的元素个数 多余1个，需要排序
+        //选择第一个元素
+        $base_num = $arr[0];
+        $base = $arr[0]['circle_people_num'] + $arr[0]['circle_people_num']*2;
+        //遍历 除了标尺外的所有元素，按照大小关系放入两个数组内
+        //初始化两个数组
+        $left_array = array();
+        $right_array = array();
+        for($i=1; $i<$length; $i++) {
+            $current = $arr[$i]['circle_people_num'] + $arr[$i]['circle_people_num']*2;
+            if($base < $current) {
+                //放入左边数组
+                $left_array[] = $arr[$i];
+            } else {
+                //放入右边
+                $right_array[] = $arr[$i];
+            }
+        }
+        //递归
+        $left_array = $this->quick_sort($left_array);
+        $right_array = $this->quick_sort($right_array);
+        //合并
+        return array_merge($left_array, array($base_num), $right_array);
     }
 }

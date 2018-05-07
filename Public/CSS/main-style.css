@@ -361,6 +361,12 @@ img[src=""]{
     right: -2px;
     opacity: 1;
 }
+.circle-nav-child {
+    margin-left: 15px;
+}
+.circle-nav-child li a{
+    font-size: 14px;
+}
 /*兴趣圈区导航栏效果结束*/
 .circle-container .circle-display {
     margin-top: 40px;
@@ -543,23 +549,23 @@ img[src=""]{
     overflow: hidden;
     padding: 10px;
 }
-.user-menu .go-to {
+.go-to {
     margin: 0 5px;
 }
 .user-menu .view-more,
-.user-menu .go-to,
+.go-to,
 .user-menu .tip {
     font-size: 14px;
     text-align: right;
     margin-top: 5px;
     margin-left: 5px;
 }
-.user-menu .go-to:after {
+.go-to:after {
     content: "\e127";
     font-family: 'Glyphicons Halflings';
 }
 .user-menu .view-more a:hover,
-.user-menu .go-to:hover {
+.go-to:hover {
     border-bottom: 2px solid #fff;
 }
 
@@ -762,8 +768,8 @@ textarea{
 .circle-create h1{
     margin: 0;
 }
-.circle-create .tip_success,
-.circle-create .tip_fail {
+.tip_success,
+.tip_fail {
     text-align: center;
     display: none;
     margin-top: -16px;
@@ -1095,6 +1101,40 @@ textarea{
     padding: 20px 30px;
     color: #fff;
 }
+.outer-wrapper.left-wrapper {
+    width: 658px;
+    float: left;
+    position: relative;
+    padding-bottom: 60px;
+}
+.outer-wrapper.left-wrapper .page-wrapper {
+    right: 20px;
+}
+.sidebar.right-wrapper {
+    float: right;
+    padding: 20px 30px;
+    width: 460px;
+}
+.sidebar.right-wrapper .notice{
+    border-radius: 4px;
+    overflow: hidden;
+}
+.sidebar.right-wrapper .notice .content{
+    background: rgba(255,255,255,0.8);
+    color: #000;
+    padding: 15px;
+    font-size: 14px;
+}
+.sidebar .recommend {
+    margin-top: 20px;
+}
+.sidebar .recommend .rank-list {
+    background: rgba(255,255,255,0.8);
+}
+.sidebar .recommend .rank-list li {
+    border-bottom: 1px solid #ccc;
+    color: #000;
+}
 .container .outer-wrapper .circle-header .circle-title {
     margin: 0;
 }
@@ -1134,9 +1174,6 @@ textarea{
 }
 .circle-header .circle-intro {
     margin: 10px 0;
-}
-.outer-wrapper .article-wrapper {
-    width: 658px;
 }
 .circle-article-nav ul {
     border-bottom: 1px solid #dadada;
@@ -1214,7 +1251,8 @@ textarea{
 /*个人页面*/
 .datapage .container ,
 .postpage .container ,
-.circlepage .container {
+.circlepage .container,
+.settingpage .container {
     background: #fff;
     color: #0f0f0f;
     border-radius: 5px;
@@ -1363,8 +1401,9 @@ textarea{
     bottom: -50px;
     right: 23px;
     margin-bottom: 0;
+    z-index: 3;
 }
-.circlepage .wrapper .title {
+.circlepage .wrapper h3.title {
     margin-left: 20px;
     margin-top: 10px;
 }
@@ -1379,6 +1418,30 @@ textarea{
     position: relative;
     box-shadow: 0 3px 20px 0 #0f0f0f;
     background-image: linear-gradient(20deg, rgb(60,6,118) 0%,rgb(90,13,155) 25%,rgb(128,22,123) 50%,rgb(185,55,103) 75% ,rgb(171,20,159) 100%);
+}
+.circlepage .wrapper .locked {
+    opacity: 0.5;
+    cursor: pointer;
+}
+.circlepage .wrapper .locked:after {
+    content: "\e044";
+    font-family: 'Glyphicons Halflings';
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: -4px;
+    font-size: 50px;
+    right: -5px;
+}
+.circlepage .tip {
+    position: absolute;
+    border: solid 1px #000;
+    background: transparent;
+    color: #000;
+    z-index: 10;
+    display: none;
+    transition: all .1s linear;
+    padding: 5px 10px;
 }
 .circlepage .wrapper .card img {
     width: 72px;
@@ -1473,14 +1536,14 @@ textarea{
     font-family: 'Glyphicons Halflings';
     vertical-align: middle;
 }
-.rank .rank-banner .refresh {
+.rank .refresh {
     float: right;
     font-size: 16px;
     margin-top: 7px;
     margin-right: 10px;
     cursor: pointer;
 }
-.rank .rank-banner .refresh:hover {
+.rank .refresh:hover {
     color: rgb(217,83,79);
 }
 .rank .rank-list li {
@@ -1493,6 +1556,22 @@ textarea{
 .rank .rank-list li:hover{
     background: rgba(255,255,255,0.6);
     color: #000;
+}
+.rank .rank-list .circle-avatar{
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.rank .rank-list .circle-avatar img {
+    float: none;
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
 }
 .rank .rank-list li:hover img {
     filter: contrast(200%);
@@ -1516,11 +1595,22 @@ textarea{
 .rank .rank-list li a:hover {
     color: rgb(217, 83, 79);
 }
+.rank.more {
+    position: fixed;
+    width: 350px;
+}
 .history {
     border-radius: 4px;
+    margin-top: 10px;
     overflow: hidden;
     margin-bottom: 20px;
     transition: all .25s ease;
+}
+.history .tip {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
 }
 .history:hover .banner {
     background: rgba(0,0,0,0.8);
@@ -1568,4 +1658,187 @@ textarea{
     margin-left: 10px;
     color: inherit;
     transition: all .25s ease;
+}
+.inner-wrapper {
+    transition: all 0.25s linear;
+    overflow: hidden;
+}
+.outer-wrapper .layui-form {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: none;
+}
+.outer-wrapper .layui-form .layui-laypage-count{
+    color: #ccc;
+}
+.outer-wrapper .banner {
+    color: #fff;
+    position: relative;
+}
+.outer-wrapper .banner .icon:after {
+    content: "\e252";
+    font-family: 'Glyphicons Halflings';
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.active .banner .icon:after {
+    content: "\e253";
+}
+.class-wrapper .inner-wrapper{
+    background: #f9f8f8;
+    padding: 10px;
+}
+.class-wrapper .parent-list,
+.class-wrapper .child-list {
+    display: inline-block;
+    border-left: 1px #dadada solid;
+    border-right: 1px #dadada solid;
+    color: #000;
+    width: 200px;
+    overflow: auto;
+    margin: 10px 0;
+    box-shadow: 0 0 35px -1px #000;
+}
+.class-wrapper option {
+    padding: 10px 15px;
+}
+.class-wrapper option:hover,
+.class-wrapper option:active,
+.class-wrapper option:focus {
+    background: rgb(217,83,79) !important;
+    color: #ffffff;
+}
+.class-wrapper .btn {
+    padding: 8px 40px;
+    background: transparent;
+    width: 160px;
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 35px -1px #000;
+}
+.class-wrapper .btn:hover {
+    color: #fff;
+    background: rgba(217,83,79,0.8);
+    border: 1px solid rgba(217,83,79,0.8);
+}
+.class-wrapper .input-class {
+    display: inline-block;
+    width: 200px;
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 35px -1px #000;
+}
+.class-wrapper .child-list {
+    display: none;
+}
+#changePassword {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 250px;
+}
+#changePassword input {
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 35px -1px #000;
+    margin: 10px 0 20px;
+}
+#changePassword h3 {
+    margin-bottom: 20px;
+}
+#changePassword .btn-changePw {
+    display: block;
+    width: 250px;
+    background: transparent;
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 35px -1px #000;
+}
+#changePassword .btn-changePw:hover {
+    color: #fff;
+    background: rgba(217,83,79,0.8);
+    border: 1px solid rgba(217,83,79,0.8);
+}
+.settingpage .container {
+    position: relative;
+}
+.search-result {
+    padding: 25px 50px;
+}
+.search-result .title {
+    color: #fff;
+    margin-left: 10px;
+}
+.search-result .key {
+    color: rgb(217,83,79);
+}
+.circle-admin:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.circle-admin .title {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.circle-admin label {
+    color: #fff;
+    display: block;
+}
+.circle-admin input,.circle-admin textarea {
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 35px -1px #000;
+    margin: 10px 0 20px;
+    padding: 5px 15px;
+    width: 350px;
+    display: inline-block;
+}
+.circle-admin .btn-alert {
+    display: block;
+    width: 350px;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: 0 0 35px -1px #000;
+    padding: 5px 25px;
+    color: #000;
+}
+.left-container,.right-container {
+    float: left;
+    width: 50%;
+    padding: 20px;
+}
+.circle-admin .btn-alert:hover {
+    color: #fff;
+    background: rgba(217,83,79,0.8);
+    border: 1px solid rgba(217,83,79,0.8);
+}
+.right-container .img-uploader {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+    float: none;
+    box-sizing:border-box;
+    position: relative;
+    z-index: 10;
+}
+.right-container .img-uploader span{
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+}
+.right-container .img-uploader input[type="file"] {
+    width: 250px;
+    height: 250px;
+    top: -250px;
+    opacity: 0;
+}
+.right-container .img-uploader #portrait {
+    top: -500px;
+    height: 250px;
+    width: 250px;
 }
